@@ -82,13 +82,6 @@ export default {
   left: 50%;
   transform: translate(-50%,-50%);
   white-space: nowrap;
-  // // background-color: #000;//修正
-  // /* デフォルトの値を宣言*/
-  // --color: orange;
-  // /* CSS変数を背景と幅に割り当て */
-  // background-color: var(--color);
-
-  //デフォルト
   background-color: #f4891e;
 
   color: #fff;
