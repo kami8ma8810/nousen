@@ -166,9 +166,6 @@ query Index {
 query {
   metadata {
     siteName
-    siteDescription
-    siteUrl
-    siteOgImage
   }
 }
 </static-query>
@@ -191,19 +188,7 @@ export default {
   metaInfo() {
     return {
       title: 'TOP',
-      link: [
-        {
-          key: `canonical`,
-          rel: `canonical`,
-          href: this.$static.metadata.siteUrl + location.pathname,
-        },
-      ],
       meta: [
-        {
-          key: `og:url`,
-          property: `og:url`,
-          content: this.$static.metadata.siteUrl + location.pathname,
-        },
         {
           key: `og:title`,
           property: `og:title`,
