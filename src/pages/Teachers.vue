@@ -45,12 +45,32 @@ query Teachers {
 }
 </page-query>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
 <script>
 import { documentToHtmlString } from '../../node_modules/@contentful/rich-text-html-renderer';
 import Hero from '@/components/Hero.vue';
 import Teacher from '@/components/teachers/Teacher.vue';
 export default {
   mame: 'teachers',
+  metaInfo() {
+    return {
+      title: '講師を知る',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `講師を知る | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero,
     Teacher

@@ -68,6 +68,9 @@
         }
       }
     }
+    metadata {
+      siteName
+    }
   }
 </static-query>
 
@@ -83,6 +86,18 @@ import IconArrowRight from '@/components/icons/IconArrowRight.vue'
 import { documentToHtmlString } from '../../node_modules/@contentful/rich-text-html-renderer';
 export default {
   name: "kyuusui",
+  metaInfo() {
+    return {
+      title: '給水装置工事主任技術者',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `給水装置工事主任技術者 | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero,
     Point,

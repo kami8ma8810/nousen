@@ -91,10 +91,31 @@
   </Layout>
 </template>
 
+
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
 <script>
 import Hero from '@/components/Hero.vue';
 import FaqCard from '@/components/faq/FaqCard.vue';
 export default {
+  metaInfo() {
+    return {
+      title: 'よくあるご質問',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `よくあるご質問 | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero,
     FaqCard

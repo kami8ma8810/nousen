@@ -162,6 +162,17 @@ query Index {
 }
 </page-query>
 
+<static-query>
+query {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+    siteOgImage
+  }
+}
+</static-query>
+
 <script>
 // @ is an alias to /src
 import IconBase from '@/components/IconBase.vue'
@@ -176,6 +187,30 @@ export default {
     IconDoubleArrowRight,
     Reason,
     News
+  },
+  metaInfo() {
+    return {
+      title: 'TOP',
+      link: [
+        {
+          key: `canonical`,
+          rel: `canonical`,
+          href: this.$static.metadata.siteUrl + location.pathname,
+        },
+      ],
+      meta: [
+        {
+          key: `og:url`,
+          property: `og:url`,
+          content: this.$static.metadata.siteUrl + location.pathname,
+        },
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `TOP | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
   }
 }
 </script>

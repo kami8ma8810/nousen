@@ -24,12 +24,32 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
 <script>
 import Hero from '@/components/Hero.vue';
 import Ippan from '@/components/benefits/Ippan.vue';
 import Jinzai from '@/components/benefits/Jinzai.vue';
 export default {
   name: 'benefits',
+  metaInfo() {
+    return {
+      title: '給付制度',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `給付制度 | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   data() {
     return {
       isActive: 1

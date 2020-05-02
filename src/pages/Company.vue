@@ -130,9 +130,29 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
 <script>
 import Hero from '@/components/Hero.vue';
 export default {
+  metaInfo() {
+    return {
+      title: '会社概要',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `会社概要 | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero,
   }

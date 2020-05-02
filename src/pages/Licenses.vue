@@ -448,6 +448,9 @@
       attention
       memo
     }
+    metadata {
+      siteName
+    }
   }
 </static-query>
 
@@ -457,6 +460,18 @@ import License from '@/components/licenses/License.vue';
 import { documentToHtmlString } from '../../node_modules/@contentful/rich-text-html-renderer';
 export default {
   name: 'licenses',
+  metaInfo() {
+    return {
+      title: '学べる資格と講習会',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `学べる資格と講習会 | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero,
     License

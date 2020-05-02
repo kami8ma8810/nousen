@@ -81,9 +81,29 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
 <script>
 import Hero from '@/components/Hero.vue';
 export default {
+  metaInfo() {
+    return {
+      title: '特定商取引法に基づく表記',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `特定商取引法に基づく表記 | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero
   }

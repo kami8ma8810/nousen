@@ -69,6 +69,9 @@
         }
       }
     }
+    metadata {
+      siteName
+    }
   }
 </static-query>
 
@@ -84,6 +87,18 @@ import IconArrowRight from '@/components/icons/IconArrowRight.vue'
 import { documentToHtmlString } from '../../node_modules/@contentful/rich-text-html-renderer';
 export default {
   name: "koujishi1",
+  metaInfo() {
+    return {
+      title: '第一種電気工事士',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `第一種電気工事士 | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero,
     Point,

@@ -14,11 +14,30 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
 
 <script>
 import Hero from '@/components/Hero.vue';
 export default {
   name: "kenchiku_s_application",
+  metaInfo() {
+    return {
+      title: '1・2級 建築施工管理技士講習お申し込み',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `1・2級 建築施工管理技士講習お申し込み | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero,
   },

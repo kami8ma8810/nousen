@@ -80,6 +80,14 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
 <script>
 import Hero from '@/components/Hero.vue';
 import Point from '@/components/private_lecture/Point.vue';
@@ -88,6 +96,18 @@ import IconBase from '@/components/IconBase.vue';
 import IconFingerDiagonallyUp from '@/components/icons/IconFingerDiagonallyUp.vue';
 import IconFingerRight from '@/components/icons/IconFingerRight.vue'
 export default {
+  metaInfo() {
+    return {
+      title: '出張講習',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `出張講習 | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero,
     Point,

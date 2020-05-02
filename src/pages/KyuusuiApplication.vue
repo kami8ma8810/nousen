@@ -14,11 +14,30 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
 
 <script>
 import Hero from '@/components/Hero.vue';
 export default {
   name: "kyuusui_application",
+  metaInfo() {
+    return {
+      title: '給水装置工事主任技術者講習会お申し込み',
+      meta: [
+        {
+          key: `og:title`,
+          property: `og:title`,
+          content: `給水装置工事主任技術者講習会お申し込み | ${this.$static.metadata.siteName}`,
+        },
+      ]
+    }
+  },
   components: {
     Hero,
   },
