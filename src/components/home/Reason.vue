@@ -1,0 +1,240 @@
+<template>
+  <article :class="['reason-contents',`reason-contents${reasonNumber}`]">
+    <h4 class="reason-title">
+      <p>
+        <i>{{reasonNumber}}</i>
+        <span>{{myTitle}}</span>
+        <!-- わかりやすい講習 -->
+      </p>
+    </h4>
+    <div class="reason-catch-set scroll-animation-item">
+      <!-- <img :src="myImage" alt=""> -->
+      <picture>
+        <source media="(min-width: 415px)" :srcset="myImage" alt="「勉強の時間がない」という問題を解決しよう。">
+        <source media="(max-width: 414px)" :srcset="myImageSp" alt="「勉強の時間がない」という問題を解決しよう。">
+        <img :src="myImage" alt="「勉強の時間がない」という問題を解決しよう。">
+      </picture>
+      <div class="reason-catch">
+        <p v-html="myCatch">
+          <!-- 必要なことだけ、<br>
+          「学び方」を学べます。 -->
+        </p>
+      </div>
+    </div>
+    <div class="reason-explain-contents">
+      <div v-for="(explain,index) in explanation" :key="index" class="reason-explanation">
+          <p v-html="explain"></p>
+      </div>
+      <div class="reason-more" v-if="moreLink">
+        <g-link :to="moreLink" class="reason-more-inner">
+          <span v-html="moreText">
+            <!-- 詳しい講師紹介はこちら -->
+          </span>
+          <IconBase class="icon" width="25" height="25"><IconFingerRight /></IconBase>
+        </g-link>
+      </div>
+    </div>
+  </article>
+</template>
+
+<script>
+import IconBase from '@/components/IconBase.vue'
+import IconFingerRight from '@/components/icons/IconFingerRight.vue'
+export default {
+  name: 'reason',
+  components: {
+    IconBase,
+    IconFingerRight
+  },
+  props: {
+    reasonNumber: String,
+    myTitle: String,
+    myImage: String,
+    myImageSp: String,
+    myCatch: String,
+    explanation: Array,
+    moreLink: String,
+    moreText: String,
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.reason-contents + .reason-contents {
+  margin-top: 400px;
+  @media print, screen and (max-width: 1000px) {
+    margin-top: 200px;
+  }
+}
+.reason-title {
+  font-size: 27px;
+  color: #ed6c00;
+  letter-spacing: 0.2em;
+  position: relative;
+  text-align: center;
+  @media print, screen and (max-width: 1000px) {
+    font-size: 18px;
+  }
+  p {
+    background-color: #fff;
+    padding: 0.5em 0;
+  }
+  i {
+    font-size: 45px;
+    margin-right: 0.5em;
+    @media print, screen and (max-width: 1000px) {
+      font-size: 20px;
+    }
+  }
+}
+.reason-catch-set {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+  filter: grayscale(100%);
+  transition: filter 1s;
+  &.is-show {
+    filter: grayscale(0%);
+  }
+}
+.reason-catch {
+  background-color: #fff;
+  border-top: 5px solid #000;
+  border-bottom: 5px solid #000;
+  display: inline-block;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  @media print, screen and (max-width: 1000px) {
+    width: 80%;
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  &:after {
+    content: "";
+    height: 500px;
+    width: 5px;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @media print, screen and (max-width: 1000px) {
+      height: 300px;
+      top: -300px;
+    }
+  }
+}
+.reason-explain-contents {
+  max-width: 830px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.reason-explanation {
+  padding: 30px;
+  font-size: 18px;
+  border: 4px solid #000;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  @media print, screen and (max-width: 1000px) {
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 30px;
+  }
+  &:before {
+    content: url("../../assets/img/icon/finger_diagonallyright_orange.svg");
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    width: 20px;
+    height: 25px;
+    display: block;
+    background-color: #fff;
+    padding: 8px 3px;
+  }
+  p {
+    margin: 0;
+  }
+  ::v-deep i {
+    background: -webkit-linear-gradient(to right, #f4b073 50%, transparent 50%);
+    background: -moz-linear-gradient(to right, #f4b073 50%, transparent 50%);
+    background: linear-gradient(to right, #f4b073 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: 200% 1em; 
+    background-position: 100% .5em;
+    transition: background-position 0.5s ease-in-out;
+    &.is-show {
+      background-position: 0% 0;
+    }
+  }
+  ::v-deep span {
+    font-size: 13px;
+    color: #4d4d4d;
+  }
+}
+.reason-more {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.reason-more-inner {
+  background-color: #f4891e;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  padding: 10px 3em;
+  font-weight: bold;
+  margin-top: 100px;
+  font-size: 20px;
+  .icon {
+    margin-left: 10px;
+  }
+}
+.reason-contents1 {
+  .reason-catch {
+    &:after {
+      content: "";
+      height: 300px;
+      top: -300px;
+      @media print, screen and (max-width: 1000px) {
+        height: 200px;
+        top: -200px;
+      }
+    }
+  }
+}
+.reason-contents4 {
+  .reason-explain-contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .reason-explanation {
+    @media print, screen and (min-width: 1001px) {
+      width: calc(50% - (30px * 2) - 20px);
+      margin-top: 30px;
+    }
+  }
+  .reason-explanation:last-child {
+    @media print, screen and (min-width: 1001px) {
+      width: 100%;
+    }
+  }
+}
+</style>

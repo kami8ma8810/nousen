@@ -1,0 +1,95 @@
+<template>
+  <Layout>
+    <div class="benefits">
+      <Hero
+        :backImgOver="require('../assets/img/benefits/benefits_hero.jpg')"
+        :backImgUnder="require('../assets/img/benefits/benefits_hero_sp.jpg')"
+        title="給付制度"
+      />
+      <div class="benefits-contents">
+        <div class="tab-wrapper">
+          <div :class="['tab',{'active':isActive === 1}]" v-on:click="tabToggle(1)">
+            一般教育訓練給付金
+          </div>
+          <div :class="['tab',{'active':isActive === 2}]" v-on:click="tabToggle(2)">
+            人材開発支援助成金
+          </div>
+        </div>
+        <div class="contents-wrapper">
+            <Ippan v-show="isActive === 1" />
+            <Jinzai v-show="isActive === 2" />
+        </div>
+      </div>
+    </div>
+  </Layout>
+</template>
+
+<script>
+import Hero from '@/components/Hero.vue';
+import Ippan from '@/components/benefits/Ippan.vue';
+import Jinzai from '@/components/benefits/Jinzai.vue';
+export default {
+  name: 'benefits',
+  data() {
+    return {
+      isActive: 1
+    }
+  },
+  components: {
+    Hero,
+    Ippan,
+    Jinzai
+  },
+  methods: {
+    tabToggle: function(num) {
+      this.isActive = num
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.benefits {
+  padding-bottom: 100px;
+}
+.benefits-contents {
+  max-width: 970px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  @media print, screen and (max-width: 1000px) {
+   width: 90%;
+  }
+}
+.tab-wrapper {
+  display: flex;
+  .tab {
+    cursor: pointer;
+    background-color: #e6e6e6;
+    max-width: 290px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #666666;
+    margin-right: 10px;
+    @media print, screen and (max-width: 1000px) {
+      font-size: 14px;
+    }
+    &.active {
+      background-color: #f9f9f9;
+      border-top: 5px solid #f4891e;
+      box-sizing: border-box;
+    }
+  }
+}
+.contents-wrapper {
+  background-color: #f9f9f9;
+  padding: 70px 50px 100px 50px;
+  @media print, screen and (max-width: 1000px) {
+   padding: 70px 5% 100px 5%;
+  }
+}
+</style>
