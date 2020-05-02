@@ -32,7 +32,7 @@ export default {
         {
           key: `canonical`,
           rel: `canonical`,
-          href: location.href
+          href: this.$static.metadata.siteUrl,
         },
       ],
       meta: [
@@ -41,7 +41,7 @@ export default {
         {
           key: `og:url`,
           property: `og:url`,
-          content: location.href,
+          content: this.$static.metadata.siteUrl,
         },
         {
           key: `og:site_name`,
