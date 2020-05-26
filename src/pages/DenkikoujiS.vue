@@ -5,7 +5,7 @@
         <Hero
           :backImgOver="require('../assets/img/license_page/denkikouji_s/denkikouji_s_hero.jpg')"
           :backImgUnder="require('../assets/img/license_page/denkikouji_s/denkikouji_s_hero_sp.jpg')"
-          title="第二種電気工事士<br>合格のための受験指導"
+          title="1・2級電気工事施工管理技士<br>合格のための受験指導"
           color="#00a73c"
           :icon="require('../assets/img/icon/qualification/denkikoujisekou.svg')"
         />
