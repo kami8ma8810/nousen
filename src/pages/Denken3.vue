@@ -10,7 +10,10 @@
           :icon="require('../assets/img/icon/qualification/denken.svg')"
         />
         <Point
-          :points='["担当講師が執筆したオリジナルテキスト（教科書）を使用記載項目を絞り、合格点の60点を超える力を的確に身に付けます（目標は70点前後）。","効果的な学習をサポートする副教材も特徴。講義の中での例題としての活用はもちろん、自宅学習にも使える解説付き問題集や4科目分の添削課題も付いています。","初めて受験する方には、おすすめの基礎講座もご用意しています。第三種電気主任技術者の学習をはじめる前に、押さえておくべき電気の法則や数学の公式を総ざらい。しばらく理系の学習から離れていた方は、ぜひご活用ください。"]'
+          :points='["担当講師が執筆したオリジナルテキスト（教科書）を使用記載。項目を絞り、合格点の60点を超える力を的確に身に付けます（目標は70点前後）。","効果的な学習をサポートする副教材も特徴。講義の中での例題としての活用はもちろん、自宅学習にも使える解説付き問題集や4科目分の添削課題も付いています。","初めて受験する方には、おすすめの基礎講座もご用意しています。第三種電気主任技術者の学習をはじめる前に、押さえておくべき電気の法則や数学の公式を総ざらい。しばらく理系の学習から離れていた方は、ぜひご活用ください。"]'
+        />
+        <News
+          :contents="richtextToHTML($static.news.newsField)"
         />
         <div class="exam-link-wrapper">
           <g-link to="/licenses/#denken" class="exam-link">
@@ -70,6 +73,9 @@
 
 <static-query>
   query Denken3 {
+    news:contentfulQualificationNews(id: "41kikEtCP4v1CbTnaW9n5L") {
+      newsField
+    }
     tuugaku:contentfulQualification(id:"6VzS8vwSpwUI40fOLwAeNd") {
       tuitionFee
       capacity
@@ -80,7 +86,7 @@
       capacity
       benefits
     }
-    tuugakuVenue:allContentfulDenken3Venue {
+    tuugakuVenue:allContentfulDenken3Venue(order: ASC) {
       edges {
         node {
           city
@@ -104,6 +110,7 @@
 <script>
 import Hero from '@/components/Hero.vue';
 import Point from '@/components/licensePage/Point.vue';
+import News from '@/components/licensePage/News.vue';
 import Info from '@/components/licensePage/Info.vue';
 import Venue from '@/components/licensePage/Venue.vue';
 import Application from '@/components/licensePage/Application.vue';
@@ -128,6 +135,7 @@ export default {
   components: {
     Hero,
     Point,
+    News,
     Info,
     Venue,
     Application,
@@ -184,6 +192,7 @@ export default {
   display: flex;
   text-align: center;
   margin-top: -70px;
+  font-weight: bold;
   .tab {
     font-size: 20px;
     color: #666666;

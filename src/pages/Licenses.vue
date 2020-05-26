@@ -311,7 +311,7 @@
           abbreviation="給水装置工事" 
           formalName="給水装置工事主任技術者" 
           introText="「給水装置工事主任技術者」 が驚くほどよくわかる。" 
-          licenseCatch="実務経験の年数や工事の規模など受験のハードルは低くありませんが、<br>条件を満たしていればぜひ取っておきたい資格です。" 
+          licenseCatch="" 
           :pointItems="[
           {
             dt: '取得後の展望',

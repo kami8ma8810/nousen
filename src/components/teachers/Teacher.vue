@@ -200,7 +200,7 @@ export default {
     }
   }
   .denken:before {
-    content: "電機主任技術者";
+    content: "電気主任技術者";
     background-color: #e60039;
   }
   .denkikouji:before {

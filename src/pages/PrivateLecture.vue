@@ -4,7 +4,7 @@
       <Hero
         :backImgOver="require('../assets/img/private_lecture/private_lecture_hero.jpg')"
         :backImgUnder="require('../assets/img/private_lecture/private_lecture_hero_sp.jpg')"
-        title="出張講習"
+        title="出張講習のご案内"
       />
       <div class="contents">
         <section class="message">

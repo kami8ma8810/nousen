@@ -150,7 +150,7 @@
             </a>
           </div>
           <p class="sns-link twitter-link">
-            <a href="https://twitter.com/gpJyl90oArw2BNX" target="_blank">
+            <a href="https://twitter.com/nouryoku1983" target="_blank">
               <img src="../assets/img/common/twitter.svg" alt="twitter">
             </a>
           </p>

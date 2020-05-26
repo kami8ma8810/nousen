@@ -53,7 +53,7 @@
       capacity
       benefits
     }
-    allContentfulKoujishi2Venue {
+    allContentfulKoujishi2Venue(order: ASC) {
       edges {
         node {
           city
