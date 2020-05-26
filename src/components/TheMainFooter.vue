@@ -30,11 +30,12 @@
                 プライバシーポリシー
               </g-link>
             </p>
-            <p class="sns-link twitter-link">
+            <div class="sns-link twitter-link">
               <a href="https://twitter.com/gpJyl90oArw2BNX" target="_blank">
+                <p>公式ツイッター</p>
                 <img src="../assets/img/common/twitter.svg" alt="twitter">
               </a>
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -85,7 +86,7 @@
   }
   .information {
     font-weight: bold;
-    max-width: 650px;
+    max-width: 750px;
     width: 100%;
     @media print,screen and(min-width: 1001px) {
       display: flex;
@@ -130,12 +131,16 @@
 }
 
 .sns-link {
-  display: block;
-  width: 30px;
-  @media print,screen and(max-width: 1000px) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  a {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      width: 36px;
+      margin-left: 10px;
+      @media print,screen and(max-width: 1000px) {
+        width: 20px;
+      }
+    }
   }
 }
 .application {
