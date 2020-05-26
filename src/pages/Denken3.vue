@@ -184,6 +184,7 @@ export default {
   display: flex;
   text-align: center;
   margin-top: -70px;
+  font-weight: bold;
   .tab {
     font-size: 20px;
     color: #666666;
