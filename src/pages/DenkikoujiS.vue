@@ -104,7 +104,7 @@
         }
       }
     }
-    denkikoujiSekou2Venue:allContentfulDenkikoujiSekou2Venue {
+    denkikoujiSekou2Venue:allContentfulDenkikoujiSekou2Venue(order: ASC) {
       edges {
         node {
           city

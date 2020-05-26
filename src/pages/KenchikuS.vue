@@ -104,7 +104,7 @@
         }
       }
     }
-    kenchiku2Venue:allContentfulKenchikuSekou2Venue {
+    kenchiku2Venue:allContentfulKenchikuSekou2Venue(order: ASC) {
       edges {
         node {
           city

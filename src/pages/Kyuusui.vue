@@ -53,7 +53,7 @@
       capacity
       benefits
     }
-    allContentfulKyuusuiVenue {
+    allContentfulKyuusuiVenue(order: ASC) {
       edges {
         node {
           city

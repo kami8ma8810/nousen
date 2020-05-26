@@ -80,7 +80,7 @@
       capacity
       benefits
     }
-    tuugakuVenue:allContentfulDenken3Venue {
+    tuugakuVenue:allContentfulDenken3Venue(order: ASC) {
       edges {
         node {
           city

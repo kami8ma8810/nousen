@@ -104,7 +104,7 @@
         }
       }
     }
-    doboku2Venue:allContentfulDobokuSekou2Venue {
+    doboku2Venue:allContentfulDobokuSekou2Venue(order: ASC) {
       edges {
         node {
           city
