@@ -24,7 +24,7 @@
             <div class="address-map">
               <div class="address-wrap">
                 <p class="address-title">
-                  {{city}}会場 {{hall}}
+                  <span>{{city}}会場</span> {{hall}}
                 </p>
                 <div class="address" v-html="richtextToHTML(address)">
                 </div>
@@ -184,6 +184,10 @@ export default {
 .address-title {
   font-weight: bold;
   font-size: 18px;
+  span {
+    font-size: 14px;
+    margin-right: 0.5em;
+  }
 }
 .address-map {
   border-top: 1px solid #999;
