@@ -121,7 +121,7 @@
           :myImageSp="require('../assets/img/front/section03_background_sp.jpg')"
           myCatch="2万名から支持されています。"
           :explanation='["私たち能センの正式名称は、「<i class=scroll-animation-item>一般社団法人 能力開発研修センター</i>」です。",
-          "<i>設立は1983年</i>。資格取得を目指す方々に長年支持され続けています。<br><span>（受講生：約2万2000名、参加企業：約1万2000社 ※直近20年の実績）</span>",
+          "<i>設立は1983年</i>。資格取得を目指す方々に長年支持され続けています。<br><span>（受講生：約2万2000名、参加企業：約1万2000社 ※直近20年の実績（2020年現在））</span>",
           "10年以上にわたって指名をいただく企業も多数。<i class=scroll-animation-item>業界から高い信頼</i>をいただいています。"]'
           />
           <Reason
