@@ -48,7 +48,7 @@
 
 <static-query>
   query Koujishi2 {
-    contentfulQualification(id:"2tUPl86sWerPUqJi8Tgf6w") {
+    contentfulQualification(id:"PgVXdfFKQA4IbD0F09PXr") {
       tuitionFee
       capacity
       benefits
