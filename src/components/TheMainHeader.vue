@@ -155,7 +155,7 @@
             </a>
           </p>
         </section>
-        <button class="close underdisplay">
+        <button class="close underdisplay" @click="isMenuOpen = false">
           <img src="../assets/img/common/toggle_menu/close_button.svg" alt="close">
         </button>
       </div>
