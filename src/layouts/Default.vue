@@ -59,7 +59,8 @@ export default {
 	data() {
 		return {
 			intersectionObserver: null,
-			position: 0
+      position: 0,
+      googleForm: null,
 		}
 	},
 	methods: {
@@ -78,6 +79,18 @@ export default {
         this.intersectionObserver.observe(target);
       });
     },
+    returnScrollPosition: function() {
+      //スクロールポイント　コンテンツのトップ位置からヘッダーの高さを差し引いた値
+      const scrollTopPosition = (document.querySelector('.contents').getBoundingClientRect().top + window.pageYOffset) - document.querySelector(".main-header").clientHeight;
+      
+      this.$SmoothScroll(
+        scrollTopPosition,
+        400, //duration
+        null,//callback
+        null,//context
+        'y'  //軸
+      )
+    }
 	},
 	mounted() {
 		document.onscroll = (e) => {
@@ -86,7 +99,17 @@ export default {
 		}
     const targets = Array.from(document.querySelectorAll('.scroll-animation-item'));
     this.startIntersectionObserver(targets);
+
+    //googleformがある場合は次の質問に行くたびにスクロールポイントをトップに戻す
+    this.googleForm = document.querySelectorAll(".google_form")[0];
+    if(this.googleForm) {
+      // this.googleForm.addEventListener('load',this.returnScrollPosition(),false);
+      this.googleForm.onload = this.returnScrollPosition;
+    }
   },
+  // destoryed() {
+  //   this.googleForm[0].removeEventListener('load',this.returnScrollPosition());
+  // },
 }
 </script>
 
