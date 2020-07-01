@@ -1,5 +1,11 @@
 <template>
   <div class="news">
+    <h3 class="news-head">
+      <span class="news-head-inner">
+        <IconBase class="icon" width="30" height="30"><IconFukidashi /></IconBase>
+        お知らせ
+      </span>
+    </h3>
     <section class="news-inner" v-if="contents">
       <div v-html="contents">
       </div>
@@ -8,7 +14,13 @@
 </template>
 
 <script>
+import IconBase from '@/components/IconBase.vue'
+import IconFukidashi from '@/components/icons/IconFukidashi.vue'
 export default {
+  components: {
+    IconBase,
+    IconFukidashi
+  },
   props: {
     contents: String,
   }
@@ -20,11 +32,31 @@ export default {
     max-width: 970px;
     width: 100%;
     margin: 0 auto;
-    margin-top: -20px;
     z-index: 0;
     position: relative;
+    margin-top: 80px;
+}
+.news-head {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  margin-top: -1em;
+}
+.news-head-inner {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 1em;
+  text-align: center;
+  svg {
+    vertical-align: middle;
+  }
 }
 .news-inner {
   padding: 50px;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 </style>
