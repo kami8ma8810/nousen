@@ -6,8 +6,11 @@
         お知らせ
       </span>
     </h3>
-    <section class="news-inner" v-if="contents">
-      <div v-html="contents">
+    <section class="news-inner">
+      <div v-html="contents" v-if="contents">
+      </div>
+      <div v-else class="no-contents">
+        ただいまお知らせはございません。
       </div>
     </section>
   </div>
@@ -29,12 +32,15 @@ export default {
 
 <style lang="scss" scoped>
 .news {
-    max-width: 970px;
-    width: 100%;
-    margin: 0 auto;
-    z-index: 0;
-    position: relative;
-    margin-top: 80px;
+  max-width: 970px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 0;
+  position: relative;
+  margin-top: 80px;
+  @media print, screen and (max-width: 1000px) {
+    width: 90%;
+  }
 }
 .news-head {
   position: absolute;
@@ -55,8 +61,15 @@ export default {
   }
 }
 .news-inner {
-  padding: 50px;
+  padding: 60px 50px 50px 50px;
   border-top: 3px solid #fff;
   border-bottom: 3px solid #fff;
+  @media print, screen and (max-width: 1000px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.no-contents {
+  text-align: center;
 }
 </style>
