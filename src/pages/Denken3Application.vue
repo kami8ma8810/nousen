@@ -8,7 +8,7 @@
         />
       </header>
       <div class="contents">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0yJEv3gFnvg7Irw92c-w0vQGoM9z1fgDpKfMDiAWSDfYEKA/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+        <iframe class="google_form" src="https://docs.google.com/forms/d/e/1FAIpQLSf0yJEv3gFnvg7Irw92c-w0vQGoM9z1fgDpKfMDiAWSDfYEKA/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
       </div>
     </div>
   </Layout>
