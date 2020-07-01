@@ -21,6 +21,12 @@ module.exports = {
         environment: 'master',
         typeName: 'Contentful'
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-169928700-1'
+      }
     }
   ]
 }

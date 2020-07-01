@@ -155,7 +155,7 @@
             </a>
           </p>
         </section>
-        <button class="close underdisplay">
+        <button class="close underdisplay" @click="isMenuOpen = false">
           <img src="../assets/img/common/toggle_menu/close_button.svg" alt="close">
         </button>
       </div>
@@ -616,6 +616,9 @@ export default {
         width: 210px;
         margin-top: 30px;
       }
+      @media print,screen and(max-width: 1000px) {
+        padding: 0.5em 0;
+      }
       &:before {
         height: 50px;
         width: 50px;
@@ -711,7 +714,7 @@ export default {
     padding-bottom: 30px;
     @media print,screen and(min-width: 1001px) {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
       justify-content: center;
     }

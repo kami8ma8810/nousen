@@ -4,6 +4,7 @@
       <div class="main-footer-top">
         <div class="main-footer-top-inner">
           <div class="logo">
+            <a href="https://jeea.or.jp/" target="_blank" class="jeea-link">公益社団法人電気技術者協会 <br class="under_display">維持会員</a>
             <div class="logo-inner">
               <img src="../assets/img/common/main_logo.svg" alt="能セン 学び方を学ぶ">
             </div>
@@ -78,11 +79,26 @@
 }
 .main-footer-top {
   .logo {
-    max-width: 100px;
+    max-width: 240px;
     width: 100%;
+  }
+  .under_display {
+    @media print,screen and(min-width: 1001px) {
+      display: none;
+    }
+  }
+  .jeea-link {
+    font-size: 13px;
+    line-height: 1.5em;
+    display: block;
+    @media print,screen and(max-width: 1000px) {
+      font-size: 10px;
+    }
   }
   .logo-inner {
     width: 100%;
+    max-width: 100px;
+    margin-top: 10px;
   }
   .information {
     font-weight: bold;

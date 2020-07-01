@@ -12,6 +12,9 @@
         <Point
           :points='["＜筆記＞近年の出題傾向から分析した、頻繁に出題される項目をわかりやすく解説。","＜筆記＞「得意な分野を生かして合格点を獲得する」学習方法を指導します。","＜技能＞試験同様の電材をご用意。","＜技能＞基礎作業、複線図の書き方から公表問題の作成、品評まで複数の講師で対策します。電気の作業が不慣れな方は、優先的に講師がサポート。初心者の方も安心です。"]'
         />
+        <News
+          :contents="richtextToHTML($static.news.newsField)"
+        />
         <div class="exam-link-wrapper">
           <g-link to="/licenses/#koujishi2" class="exam-link">
             受験資格や試験日の確認はこちら
@@ -48,7 +51,10 @@
 
 <static-query>
   query Koujishi2 {
-    contentfulQualification(id:"2tUPl86sWerPUqJi8Tgf6w") {
+    news:contentfulQualificationNews(id: "2HosbK7Ssj3mcSVrFiziQL") {
+      newsField
+    }
+    contentfulQualification(id:"PgVXdfFKQA4IbD0F09PXr") {
       tuitionFee
       capacity
       benefits
@@ -77,6 +83,7 @@
 <script>
 import Hero from '@/components/Hero.vue';
 import Point from '@/components/licensePage/Point.vue';
+import News from '@/components/licensePage/News.vue';
 import Info from '@/components/licensePage/Info.vue';
 import Venue from '@/components/licensePage/Venue.vue';
 import Application from '@/components/licensePage/Application.vue';
@@ -101,6 +108,7 @@ export default {
   components: {
     Hero,
     Point,
+    News,
     Info,
     Venue,
     Application,
