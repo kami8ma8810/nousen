@@ -39,6 +39,7 @@
             :tuitionFee="richtextToHTML($static.tuugaku.tuitionFee)"
             :capacity="$static.tuugaku.capacity"
             :benefits="richtextToHTML($static.tuugaku.benefits)"
+            :cpds="richtextToHTML($static.tuugaku.cpds)"
           />
           <h3 class="body-title">各会場の開催日程</h3>
             <Venue v-for="(items,index) in $static.tuugakuVenue.edges" :key="index"
@@ -60,6 +61,7 @@
             :tuitionFee="richtextToHTML($static.tuushin.tuitionFee)"
             :capacity="$static.tuushin.capacity"
             :benefits="richtextToHTML($static.tuushin.benefits)"
+            :cpds="richtextToHTML($static.tuushin.cpds)"
           />
            <Application
             formLink="/denken3-application"
@@ -80,11 +82,13 @@
       tuitionFee
       capacity
       benefits
+      cpds
     }
     tuushin:contentfulQualification(id:"2ZbX0D7OZ3NaL5F058SAIr") {
       tuitionFee
       capacity
       benefits
+      cpds
     }
     tuugakuVenue:allContentfulDenken3Venue(order: ASC) {
       edges {

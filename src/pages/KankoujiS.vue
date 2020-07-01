@@ -39,6 +39,7 @@
             :tuitionFee="richtextToHTML($static.kankouji1.tuitionFee)"
             :capacity="$static.kankouji1.capacity"
             :benefits="richtextToHTML($static.kankouji1.benefits)"
+            :cpds="richtextToHTML($static.kankouji1.cpds)"
           />
           <h3 class="body-title">各会場の開催日程</h3>
             <Venue v-for="(items,index) in $static.kankouji1Venue.edges" :key="index"
@@ -60,6 +61,7 @@
             :tuitionFee="richtextToHTML($static.kankouji2.tuitionFee)"
             :capacity="$static.kankouji2.capacity"
             :benefits="richtextToHTML($static.kankouji2.benefits)"
+            :cpds="richtextToHTML($static.kankouji2.cpds)"
           />
           <h3 class="body-title">各会場の開催日程</h3>
             <Venue v-for="(items,index) in $static.kankouji2Venue.edges" :key="index"
@@ -89,11 +91,13 @@
       tuitionFee
       capacity
       benefits
+      cpds
     }
     kankouji2:contentfulQualification(id:"11Xdt0KjaRq4DehZa37qKu") {
       tuitionFee
       capacity
       benefits
+      cpds
     }
     kankouji1Venue:allContentfulKankoujiSekou1Venue {
       edges {

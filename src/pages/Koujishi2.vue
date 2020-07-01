@@ -29,6 +29,7 @@
             :tuitionFee="richtextToHTML($static.contentfulQualification.tuitionFee)"
             :capacity="$static.contentfulQualification.capacity"
             :benefits="richtextToHTML($static.contentfulQualification.benefits)"
+            :cpds="richtextToHTML($static.contentfulQualification.cpds)"
           />
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue v-for="(items,index) in $static.allContentfulKoujishi2Venue.edges" :key="index"
@@ -58,6 +59,7 @@
       tuitionFee
       capacity
       benefits
+      cpds
     }
     allContentfulKoujishi2Venue(order: ASC) {
       edges {
