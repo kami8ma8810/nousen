@@ -1,6 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import * as VueGoogleMaps from 'vue2-google-maps'
-
+import smoothScroll from 'vue-smoothscroll'
 
 export default function (Vue) {
   Vue.component('Layout', DefaultLayout)
@@ -12,4 +12,5 @@ export default function (Vue) {
       language: 'ja'
     }
   })
+  Vue.use(smoothScroll)
 }

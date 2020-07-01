@@ -9,6 +9,7 @@
   "dependencies": {
     "@gridsome/source-contentful": "^0.5.0",
     "gridsome": "^0.7.0",
+    "vue-smoothscroll": "^0.2.0",
     "vue2-google-maps": "^0.10.7"
   },
   "devDependencies": {
