@@ -3,7 +3,7 @@
     <div class="home">
       <section class="section01">
         <div class="qualification-list-wrapper">
-          <transition-group appear name="appear-animation" tag="div" class="qualification-list-wrap">
+          <transition-group v-if="afterImgLoad" appear name="appear-animation" tag="div" class="qualification-list-wrap">
             <div class="item item01 denken" key="item01">
               <g-link to="/denken3">
                 <span>電験</span><br>
@@ -196,7 +196,20 @@ export default {
         },
       ]
     }
-  }
+  },
+  data() {
+    return {
+      afterImgLoad: false,
+    }
+  },
+  mounted() {
+    //トップの背景の読み込みが終わってからアニメーションさせる
+    var image = new Image();
+      image.onload = () =>{
+          this.afterImgLoad = true;
+      }
+      image.src = require('../assets/img/front/section01/main_background.jpg');
+    }
 }
 </script>
 
