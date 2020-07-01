@@ -39,6 +39,7 @@
             :tuitionFee="richtextToHTML($static.doboku1.tuitionFee)"
             :capacity="$static.doboku1.capacity"
             :benefits="richtextToHTML($static.doboku1.benefits)"
+            :cpds="richtextToHTML($static.doboku1.cpds)"
           />
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue v-for="(items,index) in $static.doboku1Venue.edges" :key="index"
@@ -60,6 +61,7 @@
             :tuitionFee="richtextToHTML($static.doboku2.tuitionFee)"
             :capacity="$static.doboku2.capacity"
             :benefits="richtextToHTML($static.doboku2.benefits)"
+            :cpds="richtextToHTML($static.doboku2.cpds)"
           />
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue v-for="(items,index) in $static.doboku2Venue.edges" :key="index"
@@ -89,11 +91,13 @@
       tuitionFee
       capacity
       benefits
+      cpds
     }
     doboku2:contentfulQualification(id:"2frd3fKgxZXU32RDgH5XxS") {
       tuitionFee
       capacity
       benefits
+      cpds
     }
     doboku1Venue:allContentfulDobokuSekou1Venue {
       edges {

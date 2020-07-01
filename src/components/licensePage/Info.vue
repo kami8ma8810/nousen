@@ -27,6 +27,15 @@
         </div>
       </div>
     </section>
+     <section class="cpds info-section" v-if="cpds">
+      <div class="head">
+        CPDS
+      </div>
+      <div class="body">
+        <div class="body-inner" v-html="cpds">
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -35,7 +44,8 @@ export default {
   props: {
     tuitionFee: String,
     capacity: String,
-    benefits: String
+    benefits: String,
+    cpds: String,
   }
 }
 </script>
