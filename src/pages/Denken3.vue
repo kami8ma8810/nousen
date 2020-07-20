@@ -154,7 +154,7 @@ export default {
   },
   methods: {
     richtextToHTML(content) {
-      const richtextString = documentToHtmlString(content).replace(/\n/g, `</br>`);
+      const richtextString = documentToHtmlString(content).replace(/\n/g, `</br>`).replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
       return richtextString
     },
     tabToggle: function(num) {
