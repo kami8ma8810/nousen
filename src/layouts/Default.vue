@@ -1,8 +1,10 @@
 <template>
   <div class="layout">
-    <TheMainHeader :class="{'mini-header': position > 100}" />
-    <slot />
-    <TheMainFooter />
+    <LoadingManager>
+      <TheMainHeader :class="{'mini-header': position > 100}" />
+      <slot />
+      <TheMainFooter />
+    </LoadingManager>
   </div>
 </template>
 
@@ -18,11 +20,13 @@ query {
 </static-query>
 
 <script>
+import LoadingManager from '@/components/LoadingManager.vue';
 import TheMainHeader from '@/components/TheMainHeader.vue';
 import TheMainFooter from '@/components/TheMainFooter.vue';
 export default {
   name: 'App',
   components: {
+    LoadingManager,
 		TheMainHeader,
 		TheMainFooter
 	},

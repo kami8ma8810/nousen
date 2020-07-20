@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="home">
-      <section class="section01">
+      <section class="section01 hero-inner">
         <div class="qualification-list-wrapper">
           <transition-group v-if="afterImgLoad" appear name="appear-animation" tag="div" class="qualification-list-wrap">
             <div class="item item01 denken" key="item01">

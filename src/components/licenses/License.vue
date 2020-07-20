@@ -379,6 +379,9 @@ export default {
 .license-denken {
   .header {
     background-image: url('../../assets/img/licenses/background/denken.jpg');
+    @media print, screen and (max-width: 1000px) {
+      background-image: url('../../assets/img/licenses/background/denken_sp.jpg');
+    }
   }
   .rate {
     content: url('../../assets/img/licenses/rate_denken.svg');
@@ -461,6 +464,9 @@ export default {
 .license-koujishi1 {
   .header {
     background-image: url('../../assets/img/licenses/background/koujishi1.jpg');
+    @media print, screen and (max-width: 1000px) {
+      background-image: url('../../assets/img/licenses/background/koujishi1_sp.jpg');
+    }
   }
   .rate {
     content: url('../../assets/img/licenses/rate_koujishi1.svg');
@@ -470,6 +476,9 @@ export default {
 .license-koujishi2 {
   .header {
     background-image: url('../../assets/img/licenses/background/koujishi2.jpg');
+    @media print, screen and (max-width: 1000px) {
+      background-image: url('../../assets/img/licenses/background/koujishi2_sp.jpg');
+    }
   }
   .rate {
     content: url('../../assets/img/licenses/rate_koujishi2.svg');
@@ -515,6 +524,9 @@ export default {
 .license-denkikoujisekou {
   .header {
     background-image: url('../../assets/img/licenses/background/denkikoujisekou.jpg');
+    @media print, screen and (max-width: 1000px) {
+      background-image: url('../../assets/img/licenses/background/denkikoujisekou_sp.jpg');
+    }
   }
   .license-title-img {
     &:before {
@@ -526,6 +538,9 @@ export default {
 .license-kenchiku {
   .header {
     background-image: url('../../assets/img/licenses/background/kenchiku.jpg');
+    @media print, screen and (max-width: 1000px) {
+      background-image: url('../../assets/img/licenses/background/kenchiku_sp.jpg');
+    }
   }
   .license-title-img {
     &:before {
@@ -537,6 +552,9 @@ export default {
 .license-kankouji {
   .header {
     background-image: url('../../assets/img/licenses/background/kankouji.jpg');
+    @media print, screen and (max-width: 1000px) {
+      background-image: url('../../assets/img/licenses/background/kankouji_sp.jpg');
+    }
   }
   .license-title-img {
     content: url('../../assets/img/icon/qualification/kankouji.svg');
@@ -546,6 +564,9 @@ export default {
 .license-doboku {
   .header {
     background-image: url('../../assets/img/licenses/background/doboku.jpg');
+    @media print, screen and (max-width: 1000px) {
+      background-image: url('../../assets/img/licenses/background/doboku_sp.jpg');
+    }
   }
   .license-title-img {
     &:before {
@@ -557,6 +578,9 @@ export default {
 .license-kyuusui{
   .header {
     background-image: url('../../assets/img/licenses/background/kyuusui.jpg');
+    @media print, screen and (max-width: 1000px) {
+      background-image: url('../../assets/img/licenses/background/kyuusui_sp.jpg');
+    }
   }
   .rate {
     content: url('../../assets/img/licenses/rate_kyuusui.svg');
