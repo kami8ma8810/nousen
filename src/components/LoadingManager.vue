@@ -28,26 +28,34 @@ export default {
     loadCompleteHandler: function() {
 			this.loading = false;
 		},
-		loadStartHandler: function() {
 
-			//ページのヘッダ
+		getHeroImagePath: function() {
+			
+			//ページのヘッダを取得
 			const heroImage = document.querySelector('.hero-inner');
+			
+			if(heroImage === null || ( heroImage === undefined)) {
+				return;
+			}
 
-			//hero（ページのヘッダの画像）のタグやcssのbackground-image取得
-			const heroImageBackground = heroImage.style.backgroundImage ? heroImage.style.backgroundImage : getComputedStyle( heroImage, '' ).getPropertyValue( "background-image" ) ? getComputedStyle( heroImage, '' ).getPropertyValue( "background-image" ) : undefined;
+			//hero（ページのヘッダの画像）のタグやcssのbackground-imageのurl取得
+			const heroImageBackPath = getComputedStyle( heroImage, '' ).getPropertyValue( "background-image" ).replace(/^url\(\"|\"\)/g, '');
 
-			//background-imageのurl取得
-			const heroImagePath = heroImageBackground.replace(/^url\(\"|\"\)/g, '')
+			//DOMを新しく作り取得したimgを挿入して返す
+			const heroElement = document.createElement("img");
+			heroElement.src = heroImageBackPath;
+			return heroElement;
+		},
+		loadStartHandler: function() {
 
 			//templateのDOMをコピーして保持
 			const domCopyPutWapper = document.createElement('div');
 			domCopyPutWapper.innerHTML = this.$el;
 
+			const heroElement = this.getHeroImagePath();
+
 			//heroの画像URLがあれば
-			if(heroImagePath !== undefined) {
-				//imgDOMを作ってurlに追加
-				const heroElement = document.createElement("img");
-				heroElement.src = heroImagePath;
+			if(heroElement !== undefined) {
 				//templateのコピーに追加
 				domCopyPutWapper.appendChild(heroElement);
 			}
