@@ -99,7 +99,7 @@
       benefits
       cpds
     }
-    doboku1Venue:allContentfulDobokuSekou1Venue {
+    doboku1Venue:allContentfulDobokuSekou1Venue(order: ASC) {
       edges {
         node {
           city

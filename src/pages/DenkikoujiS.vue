@@ -99,7 +99,7 @@
       benefits
       cpds
     }
-    denkikoujiSekou1Venue:allContentfulDenkikoujiSekou1Venue {
+    denkikoujiSekou1Venue:allContentfulDenkikoujiSekou1Venue(order: ASC) {
       edges {
         node {
           city
