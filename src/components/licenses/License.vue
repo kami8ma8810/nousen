@@ -342,6 +342,7 @@ export default {
   }
 }
 .close_button {
+  cursor: pointer;
   text-align: center;
   font-weight: bold;
   color: #fff;
