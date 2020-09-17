@@ -11,8 +11,8 @@
       <div v-if="icon" class="icon">
         <img :src="icon" alt="">
       </div>
-      <h1 class="title" v-html="title">
-      </h1>
+      <h2 class="title" v-html="title">
+      </h2>
     </div>
   </section>
 </template>
