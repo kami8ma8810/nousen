@@ -222,6 +222,7 @@ export default {
   margin-top: -70px;
   font-weight: bold;
   .tab {
+    cursor: pointer;
     font-size: 20px;
     color: #666666;
     max-width: 280px;

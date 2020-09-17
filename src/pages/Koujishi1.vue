@@ -161,6 +161,7 @@ export default {
   text-align: center;
   margin-top: -70px;
   .tab {
+    cursor: pointer;
     font-size: 20px;
     color: #666666;
     max-width: 280px;
