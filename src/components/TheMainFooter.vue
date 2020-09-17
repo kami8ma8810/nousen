@@ -51,10 +51,10 @@
         </div>
         <div class="banner">
           <a href="https://www.tokyo-cci.or.jp/" target="_blank">
-            <img src="../assets/img/common/banner1.jpg" alt="バナー 東京商工会議所" width="200px">
+            <g-image src="../assets/img/common/banner1.jpg" alt="バナー 東京商工会議所" width="200px" />
           </a>
           <a href="https://www.birumen-navi.com/" target="_blank">
-            <img src="../assets/img/common/banner2.jpg" alt="バナー ビルメン転職ナビ 電験転職ナビ 施工管理転職ナビ" width="140px">
+            <g-image src="../assets/img/common/banner2.jpg" alt="バナー ビルメン転職ナビ 電験転職ナビ 施工管理転職ナビ" width="140px" />
           </a>
         </div>
       </div>

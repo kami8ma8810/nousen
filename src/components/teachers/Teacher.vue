@@ -9,8 +9,8 @@
       </div>
       <div class="profile">
         <div class="photo">
-          <!-- <img src="../../assets/img/teachers/inooka.jpg" alt=""> -->
-          <img :src="photo" :alt="name">
+          <!-- <img src="../../assets/img/teachers/先生.jpg" alt=""> -->
+          <g-image :src="photo" :alt="name" />
         </div>
         <div class="text">
           <div class="catch">

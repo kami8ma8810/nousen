@@ -33,7 +33,7 @@ query Teachers {
         catch
         photo {
           file {
-            url
+            url(width: 180, height: 180, quality: 100)
           }
         }
         qualification
