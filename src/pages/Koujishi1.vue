@@ -94,7 +94,14 @@ import Application from '@/components/licensePage/Application.vue';
 import IconBase from '@/components/IconBase.vue'
 import IconDoubleArrowRight from '@/components/icons/IconDoubleArrowRight.vue'
 import IconArrowRight from '@/components/icons/IconArrowRight.vue'
+import { INLINES } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '../../node_modules/@contentful/rich-text-html-renderer';
+const options = {
+  //contentfulのエディタで設定したassetへのリンクを変換
+  renderNode: {
+    [INLINES.ASSET_HYPERLINK]: (node) => `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`
+  }
+}
 export default {
   name: "koujishi1",
   metaInfo() {
@@ -127,7 +134,7 @@ export default {
   },
   methods: {
     richtextToHTML(content) {
-      const richtextString = documentToHtmlString(content).replace(/\n/g, `</br>`).replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
+      const richtextString = documentToHtmlString(content,options).replace(/\n/g, `</br>`).replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
       return richtextString
     }
   }

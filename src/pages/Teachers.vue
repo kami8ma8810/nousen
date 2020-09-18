@@ -72,7 +72,7 @@ export default {
         {
           key: `og:url`,
           property: `og:url`,
-          content: `${this.$static.metadata.siteUrl}/teachers/`,
+          content: `${this.$static.metadata.siteUrl}/teachers`,
         },
       ]
     }
