@@ -79,6 +79,7 @@
     }
     metadata {
       siteName
+      siteUrl
     }
   }
 </static-query>
@@ -104,6 +105,11 @@ export default {
           key: `og:title`,
           property: `og:title`,
           content: `第一種電気工事士 | ${this.$static.metadata.siteName}`,
+        },
+        {
+          key: `og:url`,
+          property: `og:url`,
+          content: `${this.$static.metadata.siteUrl}/koujishi1`,
         },
       ]
     }

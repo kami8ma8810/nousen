@@ -43,11 +43,6 @@ export default {
         { key: `og:locale`, property: `og:locale`, content: `ja_JP` },
         { key: `og:type`, property: `og:type`, content: `website` },
         {
-          key: `og:url`,
-          property: `og:url`,
-          content: this.$static.metadata.siteUrl,
-        },
-        {
           key: `og:site_name`,
           property: `og:site_name`,
           content: this.$static.metadata.siteName,

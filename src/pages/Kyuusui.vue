@@ -78,6 +78,7 @@
     }
     metadata {
       siteName
+      siteUrl
     }
   }
 </static-query>
@@ -103,6 +104,11 @@ export default {
           key: `og:title`,
           property: `og:title`,
           content: `給水装置工事主任技術者 | ${this.$static.metadata.siteName}`,
+        },
+        {
+          key: `og:url`,
+          property: `og:url`,
+          content: `${this.$static.metadata.siteUrl}/kyuusui`,
         },
       ]
     }

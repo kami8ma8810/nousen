@@ -49,6 +49,7 @@ query Teachers {
 query {
   metadata {
     siteName
+    siteUrl
   }
 }
 </static-query>
@@ -67,6 +68,11 @@ export default {
           key: `og:title`,
           property: `og:title`,
           content: `講師を知る | ${this.$static.metadata.siteName}`,
+        },
+        {
+          key: `og:url`,
+          property: `og:url`,
+          content: `${this.$static.metadata.siteUrl}/teachers/`,
         },
       ]
     }

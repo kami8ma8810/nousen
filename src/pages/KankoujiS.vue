@@ -131,6 +131,7 @@
     }
     metadata {
       siteName
+      siteUrl
     }
   }
 </static-query>
@@ -156,6 +157,11 @@ export default {
           key: `og:title`,
           property: `og:title`,
           content: `1・2級 管工事施工管理技士 | ${this.$static.metadata.siteName}`,
+        },
+        {
+          key: `og:url`,
+          property: `og:url`,
+          content: `${this.$static.metadata.siteUrl}/kankouji-s`,
         },
       ]
     }

@@ -18,6 +18,7 @@
 query {
   metadata {
     siteName
+    siteUrl
   }
 }
 </static-query>
@@ -34,6 +35,11 @@ export default {
           key: `og:title`,
           property: `og:title`,
           content: `第一種・第二種電気工事士講習会お申し込み | ${this.$static.metadata.siteName}`,
+        },
+        {
+          key: `og:url`,
+          property: `og:url`,
+          content: `${this.$static.metadata.siteUrl}/koujishi-application`,
         },
       ]
     }
