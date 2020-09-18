@@ -68,6 +68,9 @@ export default {
     padding-left: 0;
     padding-right: 0;
   }
+  /deep/ a {
+    text-decoration: underline;
+  }
 }
 .no-contents {
   text-align: center;
