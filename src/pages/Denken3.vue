@@ -107,6 +107,7 @@
     }
     metadata {
       siteName
+      siteUrl
     }
   }
 </static-query>
@@ -121,7 +122,14 @@ import Application from '@/components/licensePage/Application.vue';
 import IconBase from '@/components/IconBase.vue'
 import IconDoubleArrowRight from '@/components/icons/IconDoubleArrowRight.vue'
 import IconArrowRight from '@/components/icons/IconArrowRight.vue'
+import { INLINES } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '../../node_modules/@contentful/rich-text-html-renderer';
+const options = {
+  //contentfulのエディタで設定したassetへのリンクを変換
+  renderNode: {
+    [INLINES.ASSET_HYPERLINK]: (node) => `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`
+  }
+}
 export default {
   name: "denken3",
   metaInfo() {
@@ -132,6 +140,11 @@ export default {
           key: `og:title`,
           property: `og:title`,
           content: `第三種電気主任技術者 | ${this.$static.metadata.siteName}`,
+        },
+        {
+          key: `og:url`,
+          property: `og:url`,
+          content: `${this.$static.metadata.siteUrl}/denken3`,
         },
       ]
     }
@@ -154,7 +167,7 @@ export default {
   },
   methods: {
     richtextToHTML(content) {
-      const richtextString = documentToHtmlString(content).replace(/\n/g, `</br>`).replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
+      const richtextString = documentToHtmlString(content,options).replace(/\n/g, `</br>`).replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
       return richtextString
     },
     tabToggle: function(num) {
@@ -198,6 +211,7 @@ export default {
   margin-top: -70px;
   font-weight: bold;
   .tab {
+    cursor: pointer;
     font-size: 20px;
     color: #666666;
     max-width: 280px;

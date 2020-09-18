@@ -8,11 +8,10 @@
       </p>
     </h4>
     <div class="reason-catch-set scroll-animation-item">
-      <!-- <img :src="myImage" alt=""> -->
       <picture>
-        <source media="(min-width: 415px)" :srcset="myImage" alt="「勉強の時間がない」という問題を解決しよう。">
-        <source media="(max-width: 414px)" :srcset="myImageSp" alt="「勉強の時間がない」という問題を解決しよう。">
-        <img :src="myImage" alt="「勉強の時間がない」という問題を解決しよう。">
+        <source media="(min-width: 415px)" :srcset="myImage" alt="" width="100%">
+        <source media="(max-width: 414px)" :srcset="myImageSp" alt="" width="100%">
+        <g-image :src="myImage" alt="" />
       </picture>
       <div class="reason-catch">
         <p v-html="myCatch">

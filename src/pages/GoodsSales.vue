@@ -18,6 +18,7 @@
 query {
   metadata {
     siteName
+    siteUrl
   }
 }
 </static-query>
@@ -34,6 +35,11 @@ export default {
           key: `og:title`,
           property: `og:title`,
           content: `テキスト・工具販売 | ${this.$static.metadata.siteName}`,
+        },
+        {
+          key: `og:url`,
+          property: `og:url`,
+          content: `${this.$static.metadata.siteUrl}/goods-sales`,
         },
       ]
     }

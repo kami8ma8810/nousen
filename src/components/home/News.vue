@@ -28,12 +28,20 @@ query News {
 </static-query>
 
 <script>
+import { INLINES } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '../../../node_modules/@contentful/rich-text-html-renderer';
+const options = {
+  //contentfulのエディタで設定したassetへのリンクを変換
+  renderNode: {
+    [INLINES.ASSET_HYPERLINK]: (node) => `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`
+  }
+}
+
 export default {
   name: 'news',
   methods: {
    richtextToHTML(content) {
-    const richtextString = documentToHtmlString(content).replace(/\n/g, `</br>`).replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
+    const richtextString = documentToHtmlString(content,options).replace(/\n/g, `</br>`).replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
     return richtextString
    }
  }
@@ -67,5 +75,8 @@ export default {
 }
 .news-content /deep/ p:first-child {
   margin-top: 0;
+}
+.news-content /deep/ a {
+  text-decoration: underline;
 }
 </style>
