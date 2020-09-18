@@ -8,11 +8,8 @@
       </p>
     </h4>
     <div class="reason-catch-set scroll-animation-item">
-      <picture>
-        <source media="(min-width: 415px)" :srcset="myImage" alt="" width="100%">
-        <source media="(max-width: 414px)" :srcset="myImageSp" alt="" width="100%">
-        <g-image :src="myImage" alt="" />
-      </picture>
+      <g-image :src="require(`!!assets-loader!@images/${myImageSp}`)" alt="" class="under_display" />
+      <g-image :src="require(`!!assets-loader!@images/${myImage}`)" alt="" class="over_display" />
       <div class="reason-catch">
         <p v-html="myCatch">
           <!-- 必要なことだけ、<br>
@@ -95,6 +92,16 @@ export default {
   transition: filter 1s;
   &.is-show {
     filter: grayscale(0%);
+  }
+  .over_display {
+    @media print, screen and (max-width: 414px) {
+      display: none;      
+    }
+  }
+  .under_display {
+    @media print, screen and (min-width: 415px) {
+      display: none;      
+    }
   }
 }
 .reason-catch {

@@ -89,8 +89,8 @@
           <Reason
           reasonNumber="1"
           myTitle="わかりやすい講習"
-          :myImage="require('../assets/img/front/section01_background.jpg')"
-          :myImageSp="require('../assets/img/front/section01_background_sp.jpg')"
+          :myImage="'front/section01_background.jpg'"
+          :myImageSp="'front/section01_background_sp.jpg'"
           myCatch="必要なことだけ、<br>
               「学び方」を学べます。"
           :explanation='["講師の多くが、建設・電気・設備等さまざまな現場で<i class=scroll-animation-item>長いキャリアをもつ元技術者</i>です。<br>豊富な現場経験のもと、みなさんが<i class=scroll-animation-item>共感できるエピソード</i>を盛り込んだ熱い講習が特徴。<br>難しい話も興味をもって理解できる！",
@@ -102,8 +102,8 @@
           <Reason
           reasonNumber="2"
           myTitle="他にないテキスト"
-          :myImage="require('../assets/img/front/section02_background.jpg')"
-          :myImageSp="require('../assets/img/front/section02_background_sp.jpg')"
+          :myImage="'front/section02_background.jpg'"
+          :myImageSp="'front/section02_background_sp.jpg'"
           myCatch="教科書の作者が<br>
               解説するから的確です。"
           :explanation='["ほとんどの講習で、<i class=scroll-animation-item>担当講師が執筆したテキスト</i>（教科書）を使用。<br>作者本人が説明するから、<i class=scroll-animation-item>受験対策に必要な箇所を的確に解説</i>できます。",
@@ -117,8 +117,8 @@
           <Reason
           reasonNumber="3"
           myTitle="信頼の実績と歴史"
-          :myImage="require('../assets/img/front/section03_background.jpg')"
-          :myImageSp="require('../assets/img/front/section03_background_sp.jpg')"
+          :myImage="'front/section03_background.jpg'"
+          :myImageSp="'front/section03_background_sp.jpg'"
           myCatch="2万名から支持されています。"
           :explanation='["私たち能センの正式名称は、「<i class=scroll-animation-item>一般社団法人 能力開発研修センター</i>」です。",
           "<i>設立は1983年</i>。資格取得を目指す方々に長年支持され続けています。<br><span>（受講生：約2万2000名以上、参加企業：約1万2000社以上）</span>",
@@ -127,8 +127,8 @@
           <Reason
           reasonNumber="4"
           myTitle="常識破りのサービス"
-          :myImage="require('../assets/img/front/section04_background.jpg')"
-          :myImageSp="require('../assets/img/front/section04_background_sp.jpg')"
+          :myImage="'front/section04_background.jpg'"
+          :myImageSp="'front/section04_background_sp.jpg'"
           myCatch="「あればいいな」を<br>ご提供しています。"
           :explanation='["受講費は、<br><i class=scroll-animation-item>リーズナブルでシンプル。</i><br><span>教材・添削費用などすべて含んでわかりやすく設定</span>",
           "他校では<i class=scroll-animation-item>受講費と教材費</i>が<br>別のケースもありますが、<br>能センはそんな常識を破ります。",

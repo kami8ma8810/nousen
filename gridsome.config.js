@@ -28,5 +28,9 @@ module.exports = {
         id: 'UA-169928700-1'
       }
     }
-  ]
+  ],
+  //<g-image>で動的なimgを使うためエイリアスを設定
+  chainWebpack: config => {
+    config.resolve.alias.set('@images', '@/assets/img')
+  },
 }
