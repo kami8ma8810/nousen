@@ -56,7 +56,7 @@
           <router-link :to="LicensePageLink" class="contents-link">講習内容はコチラ
             <IconBase class="icon"><IconFingerRight /></IconBase>
           </router-link>
-          <a :href="applicationLink" class="application-link">講習会へのお申し込み
+          <a :href="applicationLink" class="application-link" target="_blank">講習会へのお申し込み
             <IconBase class="icon"><IconFingerRight /></IconBase>
           </a>
         </div>

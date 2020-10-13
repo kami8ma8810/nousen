@@ -1,6 +1,6 @@
 <template>
   <div class="application">
-    <a :href="formLink" class="application-link">
+    <a :href="formLink" class="application-link" target="_blank">
       講習会へのお申し込み
       <IconBase class="icon" width="25" height="25"><IconFingerRight /></IconBase>
     </a>
