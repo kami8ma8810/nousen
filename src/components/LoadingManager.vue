@@ -69,29 +69,30 @@ export default {
 					this.loadCompleteHandler();
 				}, FORCE_LOADIN_TIME);
 				return;
-			}
-			
-			//画像を読み込んだらローディング終了
-			const jumbotronImgsArray = Array.from(jumbotronImgs);
-			const imagePromiseArray = jumbotronImgsArray.map((imgUrl) => {
-				return new Promise((resolve) => {
-					const img = document.createElement("img");
-					img.src = imgUrl.src;
-					if(img.complete) {
-						resolve();
-					}else {
-						img.addEventListener('load', () => {
-							resolve();
-						}, {
-							once: true
-						});
-					}
-				});
-			});
+			}else {
 
-			Promise.all(imagePromiseArray).then(() => {
-				this.loadCompleteHandler();
-			});
+				//画像を読み込んだらローディング終了
+				const jumbotronImgsArray = Array.from(jumbotronImgs);
+				const imagePromiseArray = jumbotronImgsArray.map((imgUrl) => {
+					return new Promise((resolve) => {
+						const img = document.createElement("img");
+						img.src = imgUrl.src;
+						if(img.complete) {
+							resolve();
+						}else {
+							img.addEventListener('load', () => {
+								resolve();
+							}, {
+								once: true
+							});
+						}
+					});
+				});
+
+				Promise.all(imagePromiseArray).then(() => {
+					this.loadCompleteHandler();
+				});
+			}
 		}
   },
 	mounted() {
