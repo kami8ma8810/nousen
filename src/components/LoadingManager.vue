@@ -15,6 +15,7 @@
 
 let timerId = 0;
 const FORCE_LOADIN_TIME = 500;
+var Promise = require('es6-promise').Promise;
 
 export default {
   name: 'Loading',

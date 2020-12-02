@@ -1,10 +1,10 @@
 <template>
   <div class="layout">
-    <!-- <LoadingManager> -->
+    <LoadingManager>
       <TheMainHeader :class="{'mini-header': position > 100}" />
       <slot />
       <TheMainFooter />
-    <!-- </LoadingManager> -->
+    </LoadingManager>
   </div>
 </template>
 
