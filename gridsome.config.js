@@ -1,3 +1,4 @@
+const webpack = require('webpack');    
 module.exports = {
   siteName: `一般社団法人 能力開発研修センター 能セン`,
   titleTemplate: `%s | 能セン`,
@@ -33,4 +34,11 @@ module.exports = {
   chainWebpack: config => {
     config.resolve.alias.set('@images', '@/assets/img')
   },
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        Promise: 'es6-promise',
+      }),
+    ],
+  }
 }
