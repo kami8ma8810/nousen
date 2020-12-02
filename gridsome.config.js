@@ -34,11 +34,11 @@ module.exports = {
   chainWebpack: config => {
     config.resolve.alias.set('@images', '@/assets/img')
   },
-  configureWebpack: {
-    plugins: [
-      new webpack.ProvidePlugin({
-        Promise: 'es6-promise',
-      }),
-    ],
-  }
+  // configureWebpack: {
+  //   plugins: [
+  //     new webpack.ProvidePlugin({
+  //       Promise: 'es6-promise',
+  //     }),
+  //   ],
+  // }
 }
