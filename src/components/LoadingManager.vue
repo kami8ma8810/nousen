@@ -15,7 +15,6 @@
 
 let timerId = 0;
 const FORCE_LOADIN_TIME = 500;
-// var Promise = require('es6-promise').Promise;
 
 export default {
   name: 'Loading',
@@ -103,27 +102,15 @@ export default {
   },
 	mounted() {
 		this.loadStartHandler();
-		// if(this.routePath !== this.$route.path || this.routePath === "") {
-		// 	this.loadStartHandler();
-		// }
-		// this.routePath = this.$route.path;
 	},
 	updated: function() {
 	},
 	destroyed: function() {
 		clearTimeout(timerId);
-		// this.routePath = "";
-		// this.loading = true;
 	},
 }
 </script>
 <style scoped lang="scss">
-// .v-enter-active, .v-leave-active {
-//   transition: opacity .5s;
-// }
-// .v-enter, .v-leave-to {
-//   opacity: 0;
-// }
 .loading {
 	position: fixed;
 	z-index: 102;

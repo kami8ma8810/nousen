@@ -33,12 +33,5 @@ module.exports = {
   //<g-image>で動的なimgを使うためエイリアスを設定
   chainWebpack: config => {
     config.resolve.alias.set('@images', '@/assets/img')
-  },
-  // configureWebpack: {
-  //   plugins: [
-  //     new webpack.ProvidePlugin({
-  //       Promise: 'es6-promise',
-  //     }),
-  //   ],
-  // }
+  }
 }
