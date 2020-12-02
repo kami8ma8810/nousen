@@ -80,10 +80,15 @@ export default {
 						if(img.complete) {
 							resolve();
 						}else {
-							img.addEventListener('load', () => {
+							// img.addEventListener('load', () => {
+							// 	resolve();
+							// }, {
+							// 	once: true
+							// });
+							//IEに対応させるため以下に修正
+							img.addEventListener('load', function loadEvent(event) {
 								resolve();
-							}, {
-								once: true
+								event.currentTarget.removeEventListener(event.type, loadEvent);
 							});
 						}
 					});
