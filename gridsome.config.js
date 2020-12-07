@@ -1,3 +1,4 @@
+const webpack = require('webpack');    
 module.exports = {
   siteName: `一般社団法人 能力開発研修センター 能セン`,
   titleTemplate: `%s | 能セン`,
@@ -40,5 +41,5 @@ module.exports = {
   //<g-image>で動的なimgを使うためエイリアスを設定
   chainWebpack: config => {
     config.resolve.alias.set('@images', '@/assets/img')
-  },
+  }
 }

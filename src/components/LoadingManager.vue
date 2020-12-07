@@ -69,54 +69,48 @@ export default {
 					this.loadCompleteHandler();
 				}, FORCE_LOADIN_TIME);
 				return;
-			}
-			
-			//画像を読み込んだらローディング終了
-			const jumbotronImgsArray = Array.from(jumbotronImgs);
-			const imagePromiseArray = jumbotronImgsArray.map((imgUrl) => {
-				return new Promise((resolve) => {
-					const img = document.createElement("img");
-					img.src = imgUrl.src;
-					if(img.complete) {
-						resolve();
-					}else {
-						img.addEventListener('load', () => {
-							resolve();
-						}, {
-							once: true
-						});
-					}
-				});
-			});
+			}else {
 
-			Promise.all(imagePromiseArray).then(() => {
-				this.loadCompleteHandler();
-			});
+				//画像を読み込んだらローディング終了
+				const jumbotronImgsArray = Array.from(jumbotronImgs);
+				const imagePromiseArray = jumbotronImgsArray.map((imgUrl) => {
+					return new Promise((resolve) => {
+						const img = document.createElement("img");
+						img.src = imgUrl.src;
+						if(img.complete) {
+							resolve();
+						}else {
+							// img.addEventListener('load', () => {
+							// 	resolve();
+							// }, {
+							// 	once: true
+							// });
+							//IEに対応させるため以下に修正
+							img.addEventListener('load', function loadEvent(event) {
+								resolve();
+								event.currentTarget.removeEventListener(event.type, loadEvent);
+							});
+						}
+					});
+				});
+
+				Promise.all(imagePromiseArray).then(() => {
+					this.loadCompleteHandler();
+				});
+			}
 		}
   },
 	mounted() {
 		this.loadStartHandler();
-		// if(this.routePath !== this.$route.path || this.routePath === "") {
-		// 	this.loadStartHandler();
-		// }
-		// this.routePath = this.$route.path;
 	},
 	updated: function() {
 	},
 	destroyed: function() {
 		clearTimeout(timerId);
-		// this.routePath = "";
-		// this.loading = true;
 	},
 }
 </script>
 <style scoped lang="scss">
-// .v-enter-active, .v-leave-active {
-//   transition: opacity .5s;
-// }
-// .v-enter, .v-leave-to {
-//   opacity: 0;
-// }
 .loading {
 	position: fixed;
 	z-index: 102;

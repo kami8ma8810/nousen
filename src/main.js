@@ -1,3 +1,4 @@
+import 'babel-polyfill'  
 import DefaultLayout from '~/layouts/Default.vue'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import smoothScroll from 'vue-smoothscroll'
