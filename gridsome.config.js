@@ -1,4 +1,4 @@
-const webpack = require('webpack');    
+const webpack = require('webpack');
 module.exports = {
   siteName: `一般社団法人 能力開発研修センター 能セン`,
   titleTemplate: `%s | 能セン`,
@@ -27,7 +27,7 @@ module.exports = {
       use: 'gridsome-plugin-gtag',
       options: {
         config: {
-          id: process.env.GOOGLE_ANALYTICS_ID,
+          id: 'AW-478664526',
         },
       },
     },
