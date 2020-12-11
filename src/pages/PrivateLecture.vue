@@ -9,7 +9,7 @@
       <div class="contents">
         <section class="message">
           <div class="introduction">
-            <p>能力開発センターでは、出張講習も承っております。</p>
+            <p>能セン(能力開発研修センター)では、出張講習も承っております。</p>
             <p class="example">
               「必要な資格取得者が大幅に不足している」<br>
               「社内など身近な環境で研修を行いたい」<br>
@@ -23,25 +23,25 @@
           </div>
         </section>
         <div class="point-wrapper">
-          <Point 
+          <Point
           :headlineImg="require('../assets/img/private_lecture/point1.svg')"
           :mainImg="require('../assets/img/private_lecture/backimg01.svg')"
           myCatch="全国どこへでもお伺い致します"
           text="北は北海道、南は沖縄まで全国各地で実績がございます。<br>講習会に参加してみたいけど毎回会場が遠く通い辛い…なんて不満もこれで解消できます。"
           />
-          <Point 
+          <Point
           :headlineImg="require('../assets/img/private_lecture/point2.svg')"
           :mainImg="require('../assets/img/private_lecture/backimg02.svg')"
           myCatch="講習に集中できる環境"
           text="気心知れた同僚とリラックスできる環境で、資格取得に向けての勉強が捗ります。<br>講師へも気兼ねなく疑問が解消されるまで質問できるチャンス！"
           />
-          <Point 
+          <Point
           :headlineImg="require('../assets/img/private_lecture/point3.svg')"
           :mainImg="require('../assets/img/private_lecture/backimg03.svg')"
           myCatch="ご希望に沿った<br>プログラムをご提案"
           text="日程やお時間、参加人数、講習を行いたい資格、実施場所、費用等のご要望をお知らせ下さい。<br>貴社に合った講習プランへとカスタマイズし、カリキュラムを作成・ご提案致します。<br>電気、建築、設備関連を中心に実施しておりますが、その他の分野についてもご相談ください。"
           />
-          <Point 
+          <Point
           :headlineImg="require('../assets/img/private_lecture/point4.svg')"
           :mainImg="require('../assets/img/private_lecture/backimg04.svg')"
           myCatch="個別で申し込むよりも低コスト"

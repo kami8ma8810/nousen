@@ -8,7 +8,7 @@
           </g-link>
         </div>
       </div>
-      
+
       <div class="information">
         <div class="application">
           <div class="tel overdisplay item">
@@ -22,7 +22,7 @@
             </a>
           </div>
           <div class="contact item">
-            <g-link to="/contact">
+            <g-link to="/contact" target="_blank" rel="noopener noreferrer">
               <img src="../assets/img/common/contact.svg" alt="お問い合わせ">
             </g-link>
           </div>
@@ -107,17 +107,17 @@
             </g-link>
           </div>
           <div class="pagelink-title">
-            <g-link to="/goods-sales">
+            <g-link to="/goods-sales" target="_blank" rel="noopener noreferrer">
               <p>テキスト・工具販売</p>
             </g-link>
           </div>
         </section>
-      
+
         <section class="navi-inner nav-inner02 underdisplay">
           <a @click="openModal">
             <img src="../assets/img/common/toggle_menu/application_button.svg" alt="講習会お申し込み">
           </a>
-          <g-link to="/contact">
+          <g-link to="/contact" target="_blank" rel="noopener noreferrer">
             <img src="../assets/img/common/toggle_menu/contact_button.svg" alt="お問い合わせ">
           </g-link>
         </section>
@@ -150,7 +150,7 @@
             </a>
           </div>
           <p class="sns-link twitter-link">
-            <a href="https://twitter.com/nouryoku1983" target="_blank">
+            <a href="https://twitter.com/nouryoku1983" target="_blank" rel="noopener noreferrer">
               <img src="../assets/img/common/twitter.svg" alt="twitter">
             </a>
           </p>
@@ -171,14 +171,14 @@
            <p class="title">
              第三種<br class="overdisplay">電気主任技術者
            </p>
-            <g-link to="/denken3-application" class="application-form-link" target="_blank">
+            <g-link to="/denken3-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
               お申し込みフォーム
             </g-link><br>
-            <a href="/3_denken_tuugaku_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/3_denken_tuugaku_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 通学(PDF)
             </a>
             <br>
-            <a href="/3_denken_tuushin_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/3_denken_tuushin_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 通信(PDF)
             </a>
           </li>
@@ -186,21 +186,21 @@
             <p class="title">
               第一種<br class="overdisplay">電気工事士
             </p>
-            <g-link to="/koujishi-application" class="application-form-link" target="_blank">
+            <g-link to="/koujishi-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
               お申し込みフォーム
             </g-link><br>
-            <a href="/1_denki_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/1_denki_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙(PDF)
             </a>
-          </li>        
+          </li>
           <li class="denkikouji">
             <p class="title">
               第二種<br class="overdisplay">電気工事士
             </p>
-            <g-link to="/koujishi-application" class="application-form-link" target="_blank">
+            <g-link to="/koujishi-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
               お申し込みフォーム
             </g-link><br>
-            <a href="/2_denki_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/2_denki_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙(PDF)
             </a>
           </li>
@@ -208,13 +208,13 @@
             <p class="title">
               1・2級<br class="overdisplay">電気工事施工管理技士
             </p>
-            <g-link to="/denkikouji-s-application" class="application-form-link" target="_blank">
+            <g-link to="/denkikouji-s-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
               お申し込みフォーム
             </g-link><br>
-            <a href="/denkikouji_1_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/denkikouji_1_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 1級(PDF)
             </a><br>
-            <a href="/denkikouji_2_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/denkikouji_2_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 2級(PDF)
             </a>
           </li>
@@ -222,13 +222,13 @@
             <p class="title">
               1・2級<br class="overdisplay">建築施工管理技士
             </p>
-            <g-link to="/kenchiku-s-application" class="application-form-link" target="_blank">
+            <g-link to="/kenchiku-s-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
               お申し込みフォーム
             </g-link><br>
-            <a href="/kenchiku_1_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/kenchiku_1_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 1級(PDF)
             </a><br>
-            <a href="/kenchiku_2_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/kenchiku_2_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 2級(PDF)
             </a>
           </li>
@@ -236,13 +236,13 @@
             <p class="title">
               1・2級<br class="overdisplay">管工事施工管理技士
             </p>
-            <g-link to="/kankouji-s-application" class="application-form-link" target="_blank">
+            <g-link to="/kankouji-s-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
               お申し込みフォーム
             </g-link><br>
-            <a href="/kankouji_1_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/kankouji_1_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 1級(PDF)
             </a><br>
-            <a href="/kankouji_2_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/kankouji_2_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 2級(PDF)
             </a>
           </li>
@@ -250,13 +250,13 @@
             <p class="title">
               1・2級<br class="overdisplay">土木施工管理技士
             </p>
-            <g-link to="/doboku-s-application" class="application-form-link" target="_blank">
+            <g-link to="/doboku-s-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
               お申し込みフォーム
             </g-link><br>
-            <a href="/doboku_1_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/doboku_1_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 1級(PDF)
             </a><br>
-            <a href="/doboku_2_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/doboku_2_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 2級(PDF)
             </a>
           </li>
@@ -264,10 +264,10 @@
             <p class="title">
                 給水装置工事<br class="overdisplay">主任技術者
             </p>
-            <g-link to="/kyuusui-application" class="application-form-link" target="_blank">
+            <g-link to="/kyuusui-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
               お申し込みフォーム
             </g-link><br>
-            <a href="/kyuusui_FAX_31year.pdf" target="_blank" class="application-fax-link">
+            <a href="/kyuusui_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
               FAX用紙 (PDF)
             </a>
           </li>
@@ -505,7 +505,7 @@ export default {
   @media print,screen and(min-width: 1001px) {
     justify-content: space-between;
     display: flex;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
   }
 }
 .pagelink-title-session {
@@ -586,7 +586,7 @@ export default {
     position: fixed;
     top: 130px;
     height: 230px;
-    overflow: hidden; 
+    overflow: hidden;
     box-shadow: 0px 5px 5px 0px #0000005c;
   }
   @media print,screen and(max-width: 1000px) {
@@ -637,7 +637,7 @@ export default {
           display: inline-block;
           margin-left: 20px;
           vertical-align: sub;
-          
+
         }
       }
       &.denken:before {
@@ -813,12 +813,12 @@ export default {
 }
 .overdisplay {
   @media print,screen and(max-width: 1000px) {
-    display: none; 
+    display: none;
   }
 }
 .underdisplay {
   @media print,screen and(min-width: 1001px) {
-    display: none; 
+    display: none;
   }
 }
 
