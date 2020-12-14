@@ -246,6 +246,7 @@
       width: 385px;
     }
   }
+
   @media print, screen and(max-width: 1000px) {
     text-align: center;
     & img {
