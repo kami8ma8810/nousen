@@ -729,7 +729,7 @@ export default {
   @media print, screen and (min-width: 1000px) {
     position: fixed;
     right: 2rem;
-    bottom: 3rem;
+    bottom: 2rem;
   }
 }
 .display_none {

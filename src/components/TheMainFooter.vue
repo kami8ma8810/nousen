@@ -220,7 +220,7 @@
   font-size: 11px;
   @media print, screen and(min-width: 1001px) {
     position: absolute;
-    bottom: -6.5rem;
+    bottom: -6.2rem;
     left: 45%;
     font-size: 14px;
   }
