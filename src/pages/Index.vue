@@ -255,20 +255,24 @@ export default {
       this.afterImgLoad = true;
     };
     image.src = require("../assets/img/front/section01/main_background.jpg");
+  },
+  created() {
+    window.addEventListener("scroll", this.onScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.onScroll);
+  },
+  methods: {
     //スクロールしたらスクロールimg非表示
-    window.onscroll = function() {
-      scrollToggleClass("js-scroll_top", "display_none");
-    };
-
-    function scrollToggleClass(scrollTarget, classname) {
+    onScroll() {
       const moveScroll = window.pageYOffset;
-      const target = document.getElementById(scrollTarget);
+      const target = document.getElementById("js-scroll_top");
       if (0 < moveScroll) {
-        target.classList.add(classname);
+        target.classList.add("display_none");
       } else {
-        target.classList.remove(classname);
+        target.classList.remove("display_none");
       }
-    }
+    },
   },
 };
 </script>

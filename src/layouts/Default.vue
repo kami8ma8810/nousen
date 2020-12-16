@@ -285,7 +285,7 @@ a[href^="tel"] {
 .main-header + div:not(.home) {
   margin-top: 130px;
   position: relative;
-  @media print, screen and (max-width: 900px) {
+  @media print, screen and (max-width: 1000px) {
     margin-top: 75px;
   }
 }
