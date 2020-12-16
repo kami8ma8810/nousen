@@ -530,7 +530,7 @@ export default {
   width: 100%;
   // max-width: 150px;
   position: relative;
-  transition: max-width 0.4s ease-in-out;
+  transition: max-width 0.3s ease-in-out;
   @media print, screen and(min-width: 1200px) {
     max-width: 200px;
   }
