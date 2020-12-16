@@ -477,11 +477,14 @@ export default {
   &.session-open,
   &.mini-header {
     .logo {
-      @media print, screen and(min-width: 1200px) {
-        max-width: 90px;
-        max-width: 150px;
+      @media print, screen and(min-width: 1101px) {
+        max-width: 120px;
         position: relative;
-        margin-top: -0.7em;
+        margin-top: 0.5em;
+      }
+      @media print, screen and(max-width: 1100px) {
+        max-width: 75px;
+        position: relative;
       }
       &::after {
         position: absolute;
@@ -490,16 +493,11 @@ export default {
         font-size: 11px;
         width: 200px;
         color: #3b241a;
-        left: -4em;
-        top: 110%;
-
-        @media print, screen and(min-width: 1000px) {
-          left: 6em;
-          top: 25%;
-        }
-        @media print, screen and(min-width: 1200px) {
+        left: -4.8em;
+        top: 95%;
+        @media print, screen and(min-width: 1101px) {
           transform: scale(1);
-          left: -1.5em;
+          left: -2em;
           top: 110%;
         }
       }
@@ -511,7 +509,7 @@ export default {
   justify-content: space-between;
   font-weight: 500;
   align-items: flex-start;
-  width: 90%;
+  width: 95%;
   position: relative;
   z-index: 0;
   pointer-events: none; //透明な時後ろの要素を押せるように
@@ -520,20 +518,20 @@ export default {
   }
   @media print, screen and(min-width: 1001px) {
     height: 100px;
-    margin: 30px 5% 10px 5%;
+    margin: 10px auto;
   }
   @media print, screen and(max-width: 1000px) {
     height: 50px;
-    margin: 30px 5%;
+    margin: 10px auto;
+    width: 90%;
   }
 }
 .logo {
   width: 100%;
   // max-width: 150px;
   position: relative;
-  transition: max-width 0.2s ease-in-out;
+  transition: max-width 0.4s ease-in-out;
   @media print, screen and(min-width: 1200px) {
-    max-width: 90px;
     max-width: 200px;
   }
   @media print, screen and(max-width: 1200px) {
@@ -547,19 +545,22 @@ export default {
   position: relative;
   @media print, screen and(min-width: 1001px) {
     width: 100%;
+    margin-top: 1em;
   }
   @media print, screen and(max-width: 1000px) {
     overflow-y: scroll;
+    margin-left: 15%;
+    align-self: center;
   }
 }
 .application {
   position: relative;
   font-size: 20px;
   width: 100%;
-  margin-bottom: 20px;
   @media print, screen and(min-width: 1001px) {
     margin-left: calc(100% - 700px);
     max-width: 700px;
+    margin-bottom: 20px;
   }
   @media print, screen and(min-width: 551px) {
     justify-content: space-between;
@@ -579,17 +580,20 @@ export default {
 }
 .togglebutton {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
-  top: 0;
+  width: 37px;
+  height: 37px;
+  top: 20%;
   position: relative;
   background-color: var(--orange);
   border-radius: 100%;
   text-align: center;
   &:before {
     content: "menu";
+    font-size: 10px;
+    font-weight: bold;
+    transform: scale(0.9);
     position: absolute;
-    top: -1.5em;
+    top: -1.7em;
     color: var(--orange);
     left: 0;
     right: 0;
@@ -631,7 +635,7 @@ export default {
   color: #3b241a;
   font-weight: bold;
   @media print, screen and(min-width: 1001px) {
-    right: 5%;
+    right: 3%;
     max-width: 900px;
     width: 100%;
     margin-top: 70px;
