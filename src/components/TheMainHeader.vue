@@ -1,10 +1,19 @@
 <template>
-  <div :class="['main-header',{'nav-open': isMenuOpen},{'session-open': isSessionOpen }]">
+  <div
+    :class="[
+      'main-header',
+      { 'nav-open': isMenuOpen },
+      { 'session-open': isSessionOpen },
+    ]"
+  >
     <div class="main-header-inner">
       <div class="logo">
         <div class="logo-inner">
           <g-link to="/">
-            <img src="../assets/img/common/main_logo.svg" alt="能セン 学び方を学ぶ">
+            <img
+              src="../assets/img/common/main_logo.svg"
+              alt="能セン 学び方を学ぶ"
+            />
           </g-link>
         </div>
       </div>
@@ -13,17 +22,23 @@
         <div class="application">
           <div class="tel overdisplay item">
             <a href="tel:0356316011">
-              <img src="../assets/img/common/tel.svg" alt="03-5631-6011 （平日9:00~18:00）">
+              <img
+                src="../assets/img/common/tel.svg"
+                alt="03-5631-6011 （平日9:00~18:00）"
+              />
             </a>
           </div>
           <div class="form item">
             <a @click="openModal">
-              <img src="../assets/img/common/session.svg" alt="講習会お申し込み">
+              <img
+                src="../assets/img/common/session.svg"
+                alt="講習会お申し込み"
+              />
             </a>
           </div>
           <div class="contact item">
             <g-link to="/contact" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/img/common/contact.svg" alt="お問い合わせ">
+              <img src="../assets/img/common/contact.svg" alt="お問い合わせ" />
             </g-link>
           </div>
         </div>
@@ -39,48 +54,51 @@
     <nav class="pagelink-wrapper">
       <div class="pagelink-inner">
         <section class="navi-inner nav-inner01">
-          <div class="pagelink-title pagelink-title-session" @click="isSessionOpen = !isSessionOpen">
-              <p>講習会情報</p>
+          <div
+            class="pagelink-title pagelink-title-session"
+            @click="isSessionOpen = !isSessionOpen"
+          >
+            <p>講習会情報</p>
             <div class="rolldown">
               <ul>
                 <g-link to="/denken3">
                   <li class="denken">
-                    第三種<br class="overdisplay">電気主任技術者
+                    第三種<br class="overdisplay" />電気主任技術者
                   </li>
                 </g-link>
                 <g-link to="/koujishi1">
                   <li class="denkikouji">
-                    第一種<br class="overdisplay">電気工事士
+                    第一種<br class="overdisplay" />電気工事士
                   </li>
                 </g-link>
                 <g-link to="/koujishi2">
                   <li class="denkikouji">
-                    第二種<br class="overdisplay">電気工事士
+                    第二種<br class="overdisplay" />電気工事士
                   </li>
                 </g-link>
                 <g-link to="/denkikouji-s">
                   <li class="denkikoujisekou">
-                    1・2級<br class="overdisplay">電気工事施工管理技士
+                    1・2級<br class="overdisplay" />電気工事施工管理技士
                   </li>
                 </g-link>
                 <g-link to="/kenchiku-s">
                   <li class="kenchiku">
-                    1・2級<br class="overdisplay">建築施工管理技士
+                    1・2級<br class="overdisplay" />建築施工管理技士
                   </li>
                 </g-link>
                 <g-link to="/kankouji-s">
                   <li class="kankouji">
-                    1・2級<br class="overdisplay">管工事施工管理技士
+                    1・2級<br class="overdisplay" />管工事施工管理技士
                   </li>
                 </g-link>
                 <g-link to="/doboku-s">
                   <li class="doboku">
-                    1・2級<br class="overdisplay">土木施工管理技士
+                    1・2級<br class="overdisplay" />土木施工管理技士
                   </li>
                 </g-link>
                 <g-link to="/kyuusui">
                   <li class="kyuusui">
-                      給水装置工事<br class="overdisplay">主任技術者
+                    給水装置工事<br class="overdisplay" />主任技術者
                   </li>
                 </g-link>
               </ul>
@@ -115,10 +133,16 @@
 
         <section class="navi-inner nav-inner02 underdisplay">
           <a @click="openModal">
-            <img src="../assets/img/common/toggle_menu/application_button.svg" alt="講習会お申し込み">
+            <img
+              src="../assets/img/common/toggle_menu/application_button.svg"
+              alt="講習会お申し込み"
+            />
           </a>
           <g-link to="/contact" target="_blank" rel="noopener noreferrer">
-            <img src="../assets/img/common/toggle_menu/contact_button.svg" alt="お問い合わせ">
+            <img
+              src="../assets/img/common/toggle_menu/contact_button.svg"
+              alt="お問い合わせ"
+            />
           </g-link>
         </section>
         <section class="navi-inner nav-inner03 underdisplay">
@@ -146,17 +170,27 @@
         <section class="navi-inner nav-inner04 underdisplay">
           <div class="tel">
             <a href="tel:0356326011">
-              <img src="../assets/img/common/toggle_menu/tel_sp.svg" alt="03-5632-6011（平日9:00~18:00）">
+              <img
+                src="../assets/img/common/toggle_menu/tel_sp.svg"
+                alt="03-5632-6011（平日9:00~18:00）"
+              />
             </a>
           </div>
           <p class="sns-link twitter-link">
-            <a href="https://twitter.com/nouryoku1983" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/img/common/twitter.svg" alt="twitter">
+            <a
+              href="https://twitter.com/nouryoku1983"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="../assets/img/common/twitter.svg" alt="twitter" />
             </a>
           </p>
         </section>
         <button class="close underdisplay" @click="isMenuOpen = false">
-          <img src="../assets/img/common/toggle_menu/close_button.svg" alt="close">
+          <img
+            src="../assets/img/common/toggle_menu/close_button.svg"
+            alt="close"
+          />
         </button>
       </div>
     </nav>
@@ -164,110 +198,209 @@
       <!-- default スロットコンテンツ -->
       <div class="modal-application">
         <div class="form item">
-          <img src="../assets/img/common/session.svg" alt="講習会お申し込み">
+          <img src="../assets/img/common/session.svg" alt="講習会お申し込み" />
         </div>
         <ul>
           <li class="denken">
-           <p class="title">
-             第三種<br class="overdisplay">電気主任技術者
-           </p>
-            <g-link to="/denken3-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
-              お申し込みフォーム
-            </g-link><br>
-            <a href="/3_denken_tuugaku_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
+            <p class="title">第三種<br class="overdisplay" />電気主任技術者</p>
+            <g-link
+              to="/denken3-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/3_denken_tuugaku_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
               FAX用紙 通学(PDF)
             </a>
-            <br>
-            <a href="/3_denken_tuushin_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
+            <br />
+            <a
+              href="/3_denken_tuushin_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
               FAX用紙 通信(PDF)
             </a>
           </li>
           <li class="denkikouji">
-            <p class="title">
-              第一種<br class="overdisplay">電気工事士
-            </p>
-            <g-link to="/koujishi-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
-              お申し込みフォーム
-            </g-link><br>
-            <a href="/1_denki_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
+            <p class="title">第一種<br class="overdisplay" />電気工事士</p>
+            <g-link
+              to="/koujishi-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/1_denki_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
               FAX用紙(PDF)
             </a>
           </li>
           <li class="denkikouji">
-            <p class="title">
-              第二種<br class="overdisplay">電気工事士
-            </p>
-            <g-link to="/koujishi-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
-              お申し込みフォーム
-            </g-link><br>
-            <a href="/2_denki_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
+            <p class="title">第二種<br class="overdisplay" />電気工事士</p>
+            <g-link
+              to="/koujishi-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/2_denki_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
               FAX用紙(PDF)
             </a>
           </li>
           <li class="denkikoujisekou">
             <p class="title">
-              1・2級<br class="overdisplay">電気工事施工管理技士
+              1・2級<br class="overdisplay" />電気工事施工管理技士
             </p>
-            <g-link to="/denkikouji-s-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
-              お申し込みフォーム
-            </g-link><br>
-            <a href="/denkikouji_1_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
-              FAX用紙 1級(PDF)
-            </a><br>
-            <a href="/denkikouji_2_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
+            <g-link
+              to="/denkikouji-s-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/denkikouji_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/denkikouji_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
               FAX用紙 2級(PDF)
             </a>
           </li>
           <li class="kenchiku">
             <p class="title">
-              1・2級<br class="overdisplay">建築施工管理技士
+              1・2級<br class="overdisplay" />建築施工管理技士
             </p>
-            <g-link to="/kenchiku-s-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
-              お申し込みフォーム
-            </g-link><br>
-            <a href="/kenchiku_1_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
-              FAX用紙 1級(PDF)
-            </a><br>
-            <a href="/kenchiku_2_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
+            <g-link
+              to="/kenchiku-s-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/kenchiku_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/kenchiku_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
               FAX用紙 2級(PDF)
             </a>
           </li>
           <li class="kankouji">
             <p class="title">
-              1・2級<br class="overdisplay">管工事施工管理技士
+              1・2級<br class="overdisplay" />管工事施工管理技士
             </p>
-            <g-link to="/kankouji-s-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
-              お申し込みフォーム
-            </g-link><br>
-            <a href="/kankouji_1_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
-              FAX用紙 1級(PDF)
-            </a><br>
-            <a href="/kankouji_2_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
+            <g-link
+              to="/kankouji-s-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/kankouji_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/kankouji_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
               FAX用紙 2級(PDF)
             </a>
           </li>
           <li class="doboku">
             <p class="title">
-              1・2級<br class="overdisplay">土木施工管理技士
+              1・2級<br class="overdisplay" />土木施工管理技士
             </p>
-            <g-link to="/doboku-s-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
-              お申し込みフォーム
-            </g-link><br>
-            <a href="/doboku_1_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
-              FAX用紙 1級(PDF)
-            </a><br>
-            <a href="/doboku_2_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
+            <g-link
+              to="/doboku-s-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/doboku_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/doboku_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
               FAX用紙 2級(PDF)
             </a>
           </li>
           <li class="kyuusui">
             <p class="title">
-                給水装置工事<br class="overdisplay">主任技術者
+              給水装置工事<br class="overdisplay" />主任技術者
             </p>
-            <g-link to="/kyuusui-application" class="application-form-link" target="_blank" rel="noopener noreferrer">
-              お申し込みフォーム
-            </g-link><br>
-            <a href="/kyuusui_FAX_31year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
+            <g-link
+              to="/kyuusui-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/kyuusui_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
               FAX用紙 (PDF)
             </a>
           </li>
@@ -279,28 +412,28 @@
 </template>
 
 <script>
-import MyModal from '@/components/MyModal.vue'
+import MyModal from "@/components/MyModal.vue";
 export default {
   name: "",
   components: {
-    MyModal
+    MyModal,
   },
   data() {
     return {
       isMenuOpen: false,
       isSessionOpen: false,
       modal: false,
-    }
+    };
   },
   methods: {
     openModal() {
-      this.modal = true
+      this.modal = true;
     },
     closeModal() {
-      this.modal = false
-    }
-	},
-}
+      this.modal = false;
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .main-header {
@@ -310,7 +443,7 @@ export default {
   background-color: #fff;
   transition: background-color 0.3s cubic-bezier(0.35, 0.13, 0.35, 0.88);
   top: 0;
-  @media print,screen and(min-width: 768px) {
+  @media print, screen and(min-width: 768px) {
     box-shadow: 0px 5px 5px 0px #0000005c;
   }
   &:not(.nav-open):not(.session-open):not(.mini-header) {
@@ -319,7 +452,7 @@ export default {
   }
   &:not(.nav-open) {
     .pagelink-wrapper {
-      @media print,screen and(max-width: 1000px) {
+      @media print, screen and(max-width: 1000px) {
         height: 0;
       }
     }
@@ -333,19 +466,40 @@ export default {
       // }
     }
     .pagelink-title-session:after {
-      @media print,screen and(min-width: 1001px) {
+      @media print, screen and(min-width: 1001px) {
         transform: rotate(0deg);
       }
-      @media print,screen and(max-width: 1000px) {
-        content: url('../assets/img/icon/plus.svg');
+      @media print, screen and(max-width: 1000px) {
+        content: url("../assets/img/icon/plus.svg");
       }
     }
   }
-  &.session-open, &.mini-header {
+  &.session-open,
+  &.mini-header {
     .logo {
-      @media print,screen and(min-width: 1200px) {
-        max-width: 90px;
-        max-width: 150px;
+      @media print, screen and(min-width: 1101px) {
+        max-width: 120px;
+        position: relative;
+        margin-top: 0.5em;
+      }
+      @media print, screen and(max-width: 1100px) {
+        max-width: 75px;
+        position: relative;
+      }
+      &::after {
+        position: absolute;
+        content: "一般社団法人 能力開発研修センター";
+        transform: scale(0.6);
+        font-size: 11px;
+        width: 200px;
+        color: #3b241a;
+        left: -4.8em;
+        top: 95%;
+        @media print, screen and(min-width: 1101px) {
+          transform: scale(1);
+          left: -2em;
+          top: 110%;
+        }
       }
     }
   }
@@ -355,32 +509,32 @@ export default {
   justify-content: space-between;
   font-weight: 500;
   align-items: flex-start;
-  width: 90%;
+  width: 95%;
   position: relative;
   z-index: 0;
   pointer-events: none; //透明な時後ろの要素を押せるように
   & * {
     pointer-events: all; //中の要素はクリックできるように
   }
-  @media print,screen and(min-width: 1001px) {
+  @media print, screen and(min-width: 1001px) {
     height: 100px;
-    margin: 30px 5% 10px 5%;
+    margin: 10px auto;
   }
-  @media print,screen and(max-width: 1000px) {
+  @media print, screen and(max-width: 1000px) {
     height: 50px;
-    margin: 30px 5%;
+    margin: 10px auto;
+    width: 90%;
   }
 }
 .logo {
   width: 100%;
   // max-width: 150px;
   position: relative;
-  transition: max-width 0.2s ease-in-out;
-  @media print,screen and(min-width: 1200px) {
-    max-width: 90px;
+  transition: max-width 0.3s ease-in-out;
+  @media print, screen and(min-width: 1200px) {
     max-width: 200px;
   }
-  @media print,screen and(max-width: 1200px) {
+  @media print, screen and(max-width: 1200px) {
     max-width: 90px;
   }
   .logo-inner {
@@ -389,33 +543,36 @@ export default {
 }
 .information {
   position: relative;
-  @media print,screen and(min-width: 1001px) {
+  @media print, screen and(min-width: 1001px) {
     width: 100%;
+    margin-top: 1em;
   }
-  @media print,screen and(max-width: 1000px) {
+  @media print, screen and(max-width: 1000px) {
     overflow-y: scroll;
+    margin-left: 15%;
+    align-self: center;
   }
 }
 .application {
   position: relative;
   font-size: 20px;
   width: 100%;
-  margin-bottom: 20px;
-  @media print,screen and(min-width: 1001px) {
+  @media print, screen and(min-width: 1001px) {
     margin-left: calc(100% - 700px);
     max-width: 700px;
+    margin-bottom: 20px;
   }
-  @media print,screen and(min-width: 551px) {
+  @media print, screen and(min-width: 551px) {
     justify-content: space-between;
     display: flex;
   }
   .item {
     line-height: 1.2em;
-    @media print,screen and(min-width: 501px) {
+    @media print, screen and(min-width: 501px) {
       margin: 0 10px;
     }
     img {
-      @media print,screen and(max-width: 500px) {
+      @media print, screen and(max-width: 500px) {
         height: 16px;
       }
     }
@@ -423,17 +580,20 @@ export default {
 }
 .togglebutton {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
-  top: 0;
+  width: 37px;
+  height: 37px;
+  top: 20%;
   position: relative;
   background-color: var(--orange);
   border-radius: 100%;
   text-align: center;
   &:before {
     content: "menu";
+    font-size: 10px;
+    font-weight: bold;
+    transform: scale(0.9);
     position: absolute;
-    top: -1.5em;
+    top: -1.7em;
     color: var(--orange);
     left: 0;
     right: 0;
@@ -445,7 +605,7 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
   i {
     position: absolute;
@@ -453,17 +613,17 @@ export default {
     width: 100%;
     height: 100%;
     display: block;
-    transform: scale(1,0.05);
+    transform: scale(1, 0.05);
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
   i:nth-child(1) {
-    transform: scale(1,0.05) translateY(0%);
+    transform: scale(1, 0.05) translateY(0%);
   }
   i:nth-child(2) {
-    transform: scale(1,0.05) translateY(600%);
+    transform: scale(1, 0.05) translateY(600%);
   }
   i:nth-child(3) {
-    transform: scale(1,0.05) translateY(-600%);
+    transform: scale(1, 0.05) translateY(-600%);
   }
 }
 .pagelink-wrapper {
@@ -474,16 +634,16 @@ export default {
   transition: height 0.3s cubic-bezier(0.35, 0.13, 0.35, 0.88);
   color: #3b241a;
   font-weight: bold;
-  @media print,screen and(min-width: 1001px) {
-    right: 5%;
+  @media print, screen and(min-width: 1001px) {
+    right: 3%;
     max-width: 900px;
     width: 100%;
     margin-top: 70px;
   }
-  @media print,screen and(max-width: 1200px) {
+  @media print, screen and(max-width: 1200px) {
     width: 90%;
   }
-  @media print,screen and(max-width: 1000px) {
+  @media print, screen and(max-width: 1000px) {
     height: calc(100vh - 100px);
     width: 100%;
     background-color: #fff;
@@ -493,8 +653,8 @@ export default {
 }
 .pagelink-inner {
   margin: 0 auto;
-  position: relative;;
-  @media print,screen and(max-width: 1000px) {
+  position: relative;
+  @media print, screen and(max-width: 1000px) {
     padding-bottom: 30px;
     max-width: 90%;
   }
@@ -502,7 +662,7 @@ export default {
 .nav-inner01 {
   position: relative;
   font-size: 14px;
-  @media print,screen and(min-width: 1001px) {
+  @media print, screen and(min-width: 1001px) {
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
@@ -516,7 +676,6 @@ export default {
       opacity: 0.7;
     }
   }
-
 }
 .pagelink-title {
   position: relative;
@@ -525,13 +684,13 @@ export default {
     display: inline-block;
     margin: 0;
     line-height: 3em;
-    @media print,screen and(max-width: 1000px) {
+    @media print, screen and(max-width: 1000px) {
       background-color: #fff;
       padding-right: 10px;
     }
   }
   &:before {
-    @media print,screen and(max-width: 1000px) {
+    @media print, screen and(max-width: 1000px) {
       content: "";
       width: 90%;
       height: 2px;
@@ -544,16 +703,16 @@ export default {
     }
   }
   &:after {
-    content: url('../assets/img/icon/double_arrow_right_orange.svg');
+    content: url("../assets/img/icon/double_arrow_right_orange.svg");
     height: 1.2em;
     width: 1.2em;
     display: inline-block;
     vertical-align: sub;
     position: relative;
-    @media print,screen and(min-width: 1001px) {
+    @media print, screen and(min-width: 1001px) {
       margin-left: 10px;
     }
-    @media print,screen and(max-width: 1001px) {
+    @media print, screen and(max-width: 1001px) {
       position: absolute;
       top: 0.8em;
       right: 0;
@@ -561,15 +720,15 @@ export default {
   }
 }
 .pagelink-title:last-child {
-  @media print,screen and(min-width: 1001px) {
+  @media print, screen and(min-width: 1001px) {
     margin-right: 0px;
   }
 }
 .pagelink-title-session:after {
-  @media print,screen and(max-width: 1000px) {
-    content: url('../assets/img/icon/minus.svg');
+  @media print, screen and(max-width: 1000px) {
+    content: url("../assets/img/icon/minus.svg");
   }
-  @media print,screen and(min-width: 1001px) {
+  @media print, screen and(min-width: 1001px) {
     transform: rotate(90deg);
     transition: transform 0.3s cubic-bezier(0.35, 0.13, 0.35, 0.88);
   }
@@ -579,17 +738,17 @@ export default {
   width: 100%;
   left: 0;
   background-color: #fff;
-  transition: height,opacity 0.3s cubic-bezier(0.35, 0.13, 0.35, 0.88);
+  transition: height, opacity 0.3s cubic-bezier(0.35, 0.13, 0.35, 0.88);
   z-index: 0;
   opacity: 1;
-  @media print,screen and(min-width: 1001px) {
+  @media print, screen and(min-width: 1001px) {
     position: fixed;
     top: 130px;
     height: 230px;
     overflow: hidden;
     box-shadow: 0px 5px 5px 0px #0000005c;
   }
-  @media print,screen and(max-width: 1000px) {
+  @media print, screen and(max-width: 1000px) {
     overflow: hidden;
     height: auto;
   }
@@ -598,13 +757,13 @@ export default {
     width: 100%;
     margin: 0 auto;
     padding-bottom: 30px;
-    @media print,screen and(min-width: 1001px) {
+    @media print, screen and(min-width: 1001px) {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    @media print,screen and(max-width: 1000px) {
+    @media print, screen and(max-width: 1000px) {
       margin-left: 1em;
     }
     li {
@@ -612,11 +771,11 @@ export default {
       display: flex;
       align-items: center;
       line-height: 1.5em;
-      @media print,screen and(min-width: 1001px) {
+      @media print, screen and(min-width: 1001px) {
         width: 210px;
         margin-top: 30px;
       }
-      @media print,screen and(max-width: 1000px) {
+      @media print, screen and(max-width: 1000px) {
         padding: 0.5em 0;
       }
       &:before {
@@ -624,42 +783,41 @@ export default {
         width: 50px;
         display: inline-block;
         margin-right: 20px;
-        @media print,screen and(max-width: 1000px) {
+        @media print, screen and(max-width: 1000px) {
           height: 1.2em;
           width: 1.2em;
         }
       }
       &:after {
-        @media print,screen and(max-width: 1000px) {
-          content: url('../assets/img/icon/double_arrow_right_orange.svg');
+        @media print, screen and(max-width: 1000px) {
+          content: url("../assets/img/icon/double_arrow_right_orange.svg");
           height: 1.2em;
           width: 1.2em;
           display: inline-block;
           margin-left: 20px;
           vertical-align: sub;
-
         }
       }
       &.denken:before {
-        content: url('../assets/img/icon/qualification/denken.svg');
+        content: url("../assets/img/icon/qualification/denken.svg");
       }
       &.denkikouji:before {
-        content: url('../assets/img/icon/qualification/denkikouji.svg');
+        content: url("../assets/img/icon/qualification/denkikouji.svg");
       }
       &.denkikoujisekou:before {
-        content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
+        content: url("../assets/img/icon/qualification/denkikoujisekou.svg");
       }
       &.doboku:before {
-        content: url('../assets/img/icon/qualification/doboku.svg');
+        content: url("../assets/img/icon/qualification/doboku.svg");
       }
       &.kankouji:before {
-        content: url('../assets/img/icon/qualification/kankouji.svg');
+        content: url("../assets/img/icon/qualification/kankouji.svg");
       }
       &.kenchiku:before {
-        content: url('../assets/img/icon/qualification/kenchiku.svg');
+        content: url("../assets/img/icon/qualification/kenchiku.svg");
       }
       &.kyuusui:before {
-        content: url('../assets/img/icon/qualification/kyuusui.svg');
+        content: url("../assets/img/icon/qualification/kyuusui.svg");
       }
     }
   }
@@ -712,26 +870,26 @@ export default {
     width: 100%;
     margin: 0 auto;
     padding-bottom: 30px;
-    @media print,screen and(min-width: 1001px) {
+    @media print, screen and(min-width: 1001px) {
       display: flex;
       align-items: flex-start;
       flex-wrap: wrap;
       justify-content: center;
     }
-    @media print,screen and(max-width: 1000px) {
+    @media print, screen and(max-width: 1000px) {
       margin-left: 1em;
     }
     li {
       text-align: left;
       // display: flex;
       align-items: center;
-      @media print,screen and(min-width: 1001px) {
+      @media print, screen and(min-width: 1001px) {
         width: 210px;
         margin-top: 30px;
       }
       .application-form-link {
         &:after {
-          content: url('../assets/img/icon/double_arrow_right_orange.svg');
+          content: url("../assets/img/icon/double_arrow_right_orange.svg");
           height: 1.2em;
           width: 1.2em;
           display: inline-block;
@@ -740,59 +898,66 @@ export default {
         }
       }
       &.denken {
-        .application-form-link,.application-fax-link {
+        .application-form-link,
+        .application-fax-link {
           color: #e60039;
         }
         .title:before {
-          content: url('../assets/img/icon/qualification/denken.svg');
+          content: url("../assets/img/icon/qualification/denken.svg");
         }
       }
       &.denkikouji {
-        .application-form-link,.application-fax-link {
+        .application-form-link,
+        .application-fax-link {
           color: #b60081;
         }
         .title:before {
-          content: url('../assets/img/icon/qualification/denkikouji.svg');
+          content: url("../assets/img/icon/qualification/denkikouji.svg");
         }
       }
       &.denkikoujisekou {
-        .application-form-link,.application-fax-link {
+        .application-form-link,
+        .application-fax-link {
           color: #00a73c;
         }
         .title:before {
-          content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
+          content: url("../assets/img/icon/qualification/denkikoujisekou.svg");
         }
       }
       &.doboku {
-        .application-form-link,.application-fax-link {
+        .application-form-link,
+        .application-fax-link {
           color: #00a73c;
         }
         .title:before {
-          content: url('../assets/img/icon/qualification/doboku.svg');
+          content: url("../assets/img/icon/qualification/doboku.svg");
         }
       }
       &.kankouji {
-        .application-form-link,.application-fax-link {
+        .application-form-link,
+        .application-fax-link {
           color: #00a73c;
         }
         .title:before {
-          content: url('../assets/img/icon/qualification/kankouji.svg');
+          content: url("../assets/img/icon/qualification/kankouji.svg");
         }
       }
       &.kenchiku {
-        .application-form-link,.application-fax-link {
+        .application-form-link,
+        .application-fax-link {
           color: #00a73c;
         }
         .title:before {
-          content: url('../assets/img/icon/qualification/kenchiku.svg');
+          content: url("../assets/img/icon/qualification/kenchiku.svg");
         }
       }
       &.kyuusui {
-        .application-form-link,.application-fax-link {
+        .application-form-link,
+        .application-fax-link {
           color: #00afcc;
         }
         .title:before {
-          content: url('../assets/img/icon/qualification/kyuusui.svg');
+          content: url("../assets/img/icon/qualification/kyuusui.svg");
         }
       }
     }
@@ -803,7 +968,7 @@ export default {
         width: 50px;
         display: inline-block;
         margin-right: 20px;
-        @media print,screen and(max-width: 1000px) {
+        @media print, screen and(max-width: 1000px) {
           height: 1.2em;
           width: 1.2em;
         }
@@ -812,14 +977,13 @@ export default {
   }
 }
 .overdisplay {
-  @media print,screen and(max-width: 1000px) {
+  @media print, screen and(max-width: 1000px) {
     display: none;
   }
 }
 .underdisplay {
-  @media print,screen and(min-width: 1001px) {
+  @media print, screen and(min-width: 1001px) {
     display: none;
   }
 }
-
 </style>

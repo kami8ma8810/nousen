@@ -283,10 +283,10 @@ a[href^="tel"] {
   outline: 0;
 }
 .main-header + div:not(.home) {
-  margin-top: 160px;
+  margin-top: 130px;
   position: relative;
-  @media print, screen and (max-width: 900px) {
-    margin-top: 110px;
+  @media print, screen and (max-width: 1000px) {
+    margin-top: 75px;
   }
 }
 </style>
