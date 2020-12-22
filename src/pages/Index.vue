@@ -255,6 +255,8 @@ export default {
       this.afterImgLoad = true;
     };
     image.src = require("../assets/img/front/section01/main_background.jpg");
+
+    //スクロールしたらスクロールimg非表示
     window.addEventListener("scroll", this.onScroll);
   },
   destroyed() {

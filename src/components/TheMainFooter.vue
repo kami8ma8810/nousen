@@ -216,7 +216,6 @@
 }
 
 .sns-link {
-  z-index: 1;
   font-size: 11px;
   @media print, screen and(min-width: 1001px) {
     position: absolute;
