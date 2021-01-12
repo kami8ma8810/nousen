@@ -13,15 +13,24 @@ module.exports = {
   },
   plugins: [
     {
-      use: '@gridsome/source-contentful',
+      use: "@gridsome/source-contentful",
       options: {
-        space: 'SPACE_ID', // required
-        accessToken: 'ACCESS_TOKEN', // required
-        host: 'cdn.contentful.com',
-        environment: 'master',
-        typeName: 'Contentful'
-      }
-    }
-  ]
-}
+        space: "SPACE_ID", // required
+        accessToken: "ACCESS_TOKEN", // required
+        host: "cdn.contentful.com",
+        environment: "master",
+        typeName: "Contentful",
+      },
+    },
+  ],
+};
+```
+
+### .env ファイルを作成して SPACE_ID と ACCESS_TOKEN を記載
+
+.env ファイル内
+
+```
+SPACE_ID="~SPACE_ID~"
+ACCESS_TOKEN="~ACCESS_TOKEN~"
 ```
