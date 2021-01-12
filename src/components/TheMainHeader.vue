@@ -745,7 +745,7 @@ export default {
   @media print, screen and(min-width: 1001px) {
     position: fixed;
     top: 110px;
-    height: 230px;
+    height: 210px;
     overflow: hidden;
     box-shadow: 0px 5px 5px 0px #0000005c;
   }
