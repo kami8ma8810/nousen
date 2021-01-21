@@ -53,6 +53,7 @@
     </div>
     <nav class="pagelink-wrapper">
       <div class="pagelink-inner">
+        <OnlineInfo displayNone="sp_none" />
         <section class="navi-inner nav-inner01">
           <div
             class="pagelink-title pagelink-title-session"
@@ -64,6 +65,7 @@
                 <g-link to="/denken3">
                   <li class="denken">
                     第三種<br class="overdisplay" />電気主任技術者
+                    <IconOnline iconClass="online_icon_header" />
                   </li>
                 </g-link>
                 <g-link to="/koujishi1">
@@ -79,11 +81,13 @@
                 <g-link to="/denkikouji-s">
                   <li class="denkikoujisekou">
                     1・2級<br class="overdisplay" />電気工事施工管理技士
+                    <IconOnline iconClass="online_icon_header" />
                   </li>
                 </g-link>
                 <g-link to="/kenchiku-s">
                   <li class="kenchiku">
                     1・2級<br class="overdisplay" />建築施工管理技士
+                    <IconOnline iconClass="online_icon_header" />
                   </li>
                 </g-link>
                 <g-link to="/kankouji-s">
@@ -94,6 +98,7 @@
                 <g-link to="/doboku-s">
                   <li class="doboku">
                     1・2級<br class="overdisplay" />土木施工管理技士
+                    <IconOnline iconClass="online_icon_header" />
                   </li>
                 </g-link>
                 <g-link to="/kyuusui">
@@ -408,15 +413,21 @@
       </div>
       <!-- /default -->
     </MyModal>
+
+    <OnlineInfo displayNone="pc_none" />
   </div>
 </template>
 
 <script>
 import MyModal from "@/components/MyModal.vue";
+import OnlineInfo from "@/components/OnlineInfo.vue";
+import IconOnline from "@/components/icons/IconOnline.vue";
 export default {
   name: "",
   components: {
     MyModal,
+    OnlineInfo,
+    IconOnline,
   },
   data() {
     return {
@@ -461,9 +472,6 @@ export default {
     .rolldown {
       height: 0;
       opacity: 0;
-      // @media print,screen and(max-width: 1000px) {
-      //   padding-top: 0px;
-      // }
     }
     .pagelink-title-session:after {
       @media print, screen and(min-width: 1001px) {
@@ -558,8 +566,8 @@ export default {
   font-size: 20px;
   width: 100%;
   @media print, screen and(min-width: 1001px) {
-    margin-left: calc(100% - 700px);
-    max-width: 700px;
+    margin-left: calc(100% - 670px); //202101 オンライン講座案内のため
+    max-width: 670px;
     margin-bottom: 20px;
   }
   @media print, screen and(min-width: 551px) {
@@ -745,7 +753,7 @@ export default {
   @media print, screen and(min-width: 1001px) {
     position: fixed;
     top: 110px;
-    height: 210px;
+    height: 230px; //202101
     overflow: hidden;
     box-shadow: 0px 5px 5px 0px #0000005c;
   }
@@ -757,7 +765,7 @@ export default {
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 30px;
+    padding-bottom: 40px; //202101
     @media print, screen and(min-width: 1001px) {
       display: flex;
       align-items: center;
@@ -768,13 +776,14 @@ export default {
       margin-left: 1em;
     }
     li {
+      position: relative; //202101
       text-align: left;
       display: flex;
       align-items: center;
       line-height: 1.5em;
       @media print, screen and(min-width: 1001px) {
         width: 210px;
-        margin-top: 30px;
+        margin-top: 40px; //202101
       }
       @media print, screen and(max-width: 1000px) {
         padding: 0.5em 0;
@@ -881,6 +890,7 @@ export default {
       margin-left: 1em;
     }
     li {
+      position: relative; //202101 for online
       text-align: left;
       // display: flex;
       align-items: center;

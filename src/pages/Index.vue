@@ -15,6 +15,8 @@
                 <span>電験</span><br />
                 第三種<br />
                 電気主任技術者
+                <!-- 202101 -->
+                <IconOnline iconClass="online_icon_index" />
               </g-link>
             </div>
             <div class="item item02 denkikouji" key="item02">
@@ -36,6 +38,7 @@
                 <span>施工管理技士</span><br />
                 1・2級<br />
                 電気工事施工管理技士
+                <IconOnline iconClass="online_icon_index" />
               </g-link>
             </div>
             <div class="item item05 kenchiku" key="item05">
@@ -43,6 +46,7 @@
                 <span>施工管理技士</span><br />
                 1・2級<br />
                 建築施工管理技士
+                <IconOnline iconClass="online_icon_index" />
               </g-link>
             </div>
             <div class="item item06 kankouji" key="item06">
@@ -57,6 +61,7 @@
                 <span>施工管理技士</span><br />
                 1・2級<br />
                 土木施工管理技士
+                <IconOnline iconClass="online_icon_index" />
               </g-link>
             </div>
             <div class="item item08 kyuusui" key="item08">
@@ -217,6 +222,7 @@ import IconBase from "@/components/IconBase.vue";
 import IconDoubleArrowRight from "@/components/icons/IconDoubleArrowRight.vue";
 import Reason from "@/components/home/Reason.vue";
 import News from "@/components/home/News.vue";
+import IconOnline from "@/components/icons/IconOnline.vue";
 
 export default {
   name: "home",
@@ -225,6 +231,7 @@ export default {
     IconDoubleArrowRight,
     Reason,
     News,
+    IconOnline,
   },
   metaInfo() {
     return {
@@ -303,18 +310,19 @@ export default {
     -ms-grid-columns: 150px 150px 100px 150px 150px;
     grid-template-rows: 200px 200px;
     -ms-grid-rows: 200px 200px;
-    grid-gap: 50px;
+    grid-gap: 60px 50px; /* 202101 */
     justify-content: center; /* 横方向は中央に */
     align-content: center; /* 縦方向は下端に */
     width: 900px;
   }
   @media print, screen and (max-width: 1000px) {
     grid-template-columns: 150px 150px;
-    grid-template-rows: 150px 150px 150px 150px 150px;
+    grid-template-rows: 150px 180px 180px 180px 180px; /* 202101 */
     justify-content: center; /* 横方向は中央に */
   }
 }
 .item {
+  position: relative; //202101
   font-weight: bold;
   font-size: 15px;
   line-height: 1.5em;
