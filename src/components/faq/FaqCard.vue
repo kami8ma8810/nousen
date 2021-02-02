@@ -1,18 +1,17 @@
 <template>
   <div class="faq-card-wrapper">
-    <div class="scroll-animation-item">
-    </div>
+    <div class="scroll-animation-item"></div>
     <div class="faq-card">
       <div class="faq-card-inner">
         <div class="q">
           <div class="q-headline">
-            {{qText}}
+            {{ qText }}
           </div>
         </div>
         <div class="a">
           <div class="a-inner">
             <div class="a-headline">
-              {{aText}}
+              {{ aText }}
             </div>
             <div class="a-content">
               <slot></slot>
@@ -29,8 +28,8 @@ export default {
   props: {
     qText: String,
     aText: String,
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -57,6 +56,8 @@ export default {
     color: #00afcc;
     margin: 30px;
     line-height: 1.5em;
+    padding-left: 2.3em;
+    position: relative;
     @media print, screen and (max-width: 1000px) {
       margin: 30px 10px;
     }
@@ -64,6 +65,8 @@ export default {
       content: url("../../assets/img/faq/question.svg");
       width: 20px;
       height: 20px;
+      left: 0;
+      position: absolute;
       display: inline-block;
       margin-right: 20px;
       vertical-align: sub;
@@ -88,17 +91,23 @@ export default {
     color: #e2690d;
     line-height: 1.5em;
     margin-bottom: 1em;
+    padding-left: 2.3em;
+    position: relative;
     @media print, screen and (max-width: 1000px) {
       display: block;
+      padding-left: 0;
     }
     &:before {
       content: url("../../assets/img/faq/answer.svg");
       width: 20px;
       height: 20px;
       display: inline-block;
-      margin-right: 20px;
+      // margin-right: 20px;
       vertical-align: sub;
+      left: 0;
+      position: absolute;
       @media print, screen and (max-width: 1000px) {
+        position: static;
         display: block;
         margin-bottom: 10px;
       }
