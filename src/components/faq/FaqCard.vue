@@ -60,6 +60,7 @@ export default {
     position: relative;
     @media print, screen and (max-width: 1000px) {
       margin: 30px 10px;
+      padding-left: 0;
     }
     &:before {
       content: url("../../assets/img/faq/question.svg");
@@ -71,6 +72,7 @@ export default {
       margin-right: 20px;
       vertical-align: sub;
       @media print, screen and (max-width: 1000px) {
+        position: static;
         display: block;
         margin-bottom: 10px;
       }
