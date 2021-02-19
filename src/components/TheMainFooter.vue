@@ -13,7 +13,7 @@
             <div class="logo-text">
               <p class="logo-text_logo">一般社団法人 能力開発研修センター</p>
               <a href="https://jeea.or.jp/" target="_blank" class="jeea-link"
-                >公益社団法人電気技術者協会 維持会員</a
+                >(社) 日本電気技術者協会 維持会員</a
               >
             </div>
           </div>
@@ -132,11 +132,13 @@
     }
   }
   .jeea-link {
-    font-size: 13px;
+    font-size: 11px;
     line-height: 1.5em;
     display: block;
     @media print, screen and(max-width: 1000px) {
       font-size: 10px;
+      transform: scale(0.9);
+      transform-origin: left center;
     }
   }
   .wrapper-information {
