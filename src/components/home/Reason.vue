@@ -310,8 +310,9 @@ export default {
 
 .reason-explanationGroup-title{
   text-align: center;
-  margin-bottom: -1em;
-
+  @media print, screen and (min-width: 1001px) {
+    margin-bottom: -1em;
+  }
   img{
     height: 16px;
       @media print, screen and (min-width: 1001px) {
