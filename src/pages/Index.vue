@@ -112,7 +112,7 @@
         <h3 class="section-title">
           <img
             src="../assets/img/front/reason_main_headline.svg"
-            alt="能センが選ばれる4つの理由"
+            alt="能センが選ばれる5つの理由"
           />
         </h3>
         <div class="reason-wrapper">
@@ -133,6 +133,36 @@
           />
           <Reason
             reasonNumber="2"
+            myTitle="えらべる学習スタイル"
+            :myImage="'front/section05_background.jpg'"
+            :myImageSp="'front/section05_background_sp.jpg'"
+            myCatch="間近で学べる通学講座<br>
+              いつでも手元でオンライン講座"
+            :littleTitle="'front/section05_title1.svg'"
+            :explanationGroup="[
+            {
+              title:'front/section05_title1.svg',
+              titleAlt:'通学講座',
+              texts:['<i class=scroll-animation-item>同じ目的をもった受講生たちと一緒に</i>生の授業を受けることで、<br>緊張感をもって学ぶことができます。',
+              'わからないところを<i class=scroll-animation-item>その場で質問できるメリット</i>も。<br>なかなか自主的に勉強を始められない…という方も是非！']
+            },
+            {
+              title:'front/section05_title2.svg',
+              titleAlt:'オンライン講座',
+              texts:['短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ視聴することも<br>可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
+              '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。'],
+              movieSrc:'https://www.youtube.com/embed/zkjZNBUXMfQ',
+              movieText:'※サンプル動画は1級建築施工管理技士のものです'
+            },
+            {
+              title:'front/section05_title3.svg',
+              titleAlt:'通学＋オンラインで、より万全に',
+              texts:['まずは通学講座で直接講義を受けたいけど、動画でも復習したいという方には両方受講という選択肢も。例えば通学講座にオンライン講座を追加の場合、<i class=scroll-animation-item>オンライン講座の受講料は２割となります。（逆も同様）</i>共通のテキストで原則は講義内容も同じなので会場で学習した内容を繰り返し復習できます。']
+            }
+            ]"
+          />
+          <Reason
+            reasonNumber="3"
             myTitle="他にないテキスト"
             :myImage="'front/section02_background.jpg'"
             :myImageSp="'front/section02_background_sp.jpg'"
@@ -148,7 +178,7 @@
             moreText="テキスト販売・工具販売"
           />
           <Reason
-            reasonNumber="3"
+            reasonNumber="4"
             myTitle="信頼の実績と歴史"
             :myImage="'front/section03_background.jpg'"
             :myImageSp="'front/section03_background_sp.jpg'"
@@ -160,7 +190,7 @@
             ]"
           />
           <Reason
-            reasonNumber="4"
+            reasonNumber="5"
             myTitle="常識破りのサービス"
             :myImage="'front/section04_background.jpg'"
             :myImageSp="'front/section04_background_sp.jpg'"

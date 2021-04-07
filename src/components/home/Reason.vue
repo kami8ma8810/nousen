@@ -17,7 +17,25 @@
         </p>
       </div>
     </div>
-    <div class="reason-explain-contents">
+    <!-- explain 小タイトルがあるとき用 -->
+    <div class="reason-explain-contents" v-if="explanationGroup">
+      <div class="reason-explanationGroup" v-for="(explanation,index) in explanationGroup" :key="index">
+        <div class="reason-explanationGroup-title">
+          <img :src="require(`@/assets/img/${explanation.title}`)" alt="">
+        </div>
+        <div v-for="(text,index) in explanation.texts" :key="index" class="reason-explanation">
+          <p v-html="text"></p>
+        </div>
+        <div class="reason-explanationGroup-movie" v-if="explanation.movieSrc">
+          <div class="reason-explanationGroup-movie_inner">
+            <iframe width="560" height="315" :src="explanation.movieSrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="attention">{{ explanation.movieText }}</p>
+        </div>
+      </div>
+    </div>
+    <!--explain 通常 -->
+    <div class="reason-explain-contents" v-else>
       <div v-for="(explain,index) in explanation" :key="index" class="reason-explanation">
           <p v-html="explain"></p>
       </div>
@@ -30,6 +48,7 @@
         </g-link>
       </div>
     </div>
+
   </article>
 </template>
 
@@ -51,6 +70,7 @@ export default {
     explanation: Array,
     moreLink: String,
     moreText: String,
+    explanationGroup: Array
   }
 }
 </script>
@@ -95,12 +115,12 @@ export default {
   }
   .over_display {
     @media print, screen and (max-width: 414px) {
-      display: none;      
+      display: none;
     }
   }
   .under_display {
     @media print, screen and (min-width: 415px) {
-      display: none;      
+      display: none;
     }
   }
 }
@@ -114,7 +134,7 @@ export default {
   width: 100%;
   font-weight: bold;
   font-size: 30px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -182,7 +202,7 @@ export default {
     background: -moz-linear-gradient(to right, #f4b073 50%, transparent 50%);
     background: linear-gradient(to right, #f4b073 50%, transparent 50%);
     background-repeat: no-repeat;
-    background-size: 200% 1em; 
+    background-size: 200% 1em;
     background-position: 100% .5em;
     transition: background-position 0.5s ease-in-out;
     &.is-show {
@@ -243,4 +263,52 @@ export default {
     }
   }
 }
+.reason-explanationGroup-movie{
+  width: 85%;
+  margin: 4em auto 0;
+  @media print, screen and (min-width: 1001px) {
+    max-width: 630px;
+  }
+  .attention{
+    margin: 0;
+    padding-top: 0.3em;
+    font-size: 13px;
+    text-align: right;
+    @media print, screen and (min-width: 1001px) {
+      font-size: 15px;
+    }
+  }
+}
+.reason-explanationGroup-movie_inner{
+  position: relative;
+  width: 100%;
+  height:0px;
+  padding-top: 56.25%;
+}
+.reason-explanationGroup-movie_inner iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reason-explanationGroup:not(:first-child){
+  .reason-explanationGroup-title{
+    padding-top: 4.5em;
+  }
+}
+
+.reason-explanationGroup-title{
+  text-align: center;
+  margin-bottom: -1em;
+
+  img{
+    height: 16px;
+      @media print, screen and (min-width: 1001px) {
+      height: 21px;
+    }
+  }
+}
+
 </style>
