@@ -178,10 +178,15 @@ export default {
   text-align: center;
   position: relative;
   @media print, screen and (max-width: 1000px) {
+    padding: 10px 20px;
     width: 80%;
     font-size: 16px;
-    padding: 10px;
     margin-top: 30px;
+  }
+  @media print, screen and (max-width: 767px) {
+    width: 75%;
+    text-align: left;
+    padding: 10px 15px 10px 20px;
   }
   &:before {
     content: url("../../assets/img/icon/finger_diagonallyright_orange.svg");
@@ -212,6 +217,8 @@ export default {
   ::v-deep span {
     font-size: 13px;
     color: #4d4d4d;
+    display: block;
+    line-height: 1.6;
   }
 }
 .reason-more {
@@ -245,7 +252,7 @@ export default {
     }
   }
 }
-.reason-contents4 {
+.reason-contents5 {
   .reason-explain-contents {
     display: flex;
     flex-wrap: wrap;
@@ -263,6 +270,8 @@ export default {
     }
   }
 }
+
+/* 202104追加 */
 .reason-explanationGroup-movie{
   width: 85%;
   margin: 4em auto 0;

@@ -149,7 +149,7 @@
             {
               title:'front/section05_title2.svg',
               titleAlt:'オンライン講座',
-              texts:['短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ視聴することも<br>可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
+              texts:['短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ<br>視聴することも可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
               '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。'],
               movieSrc:'https://www.youtube.com/embed/zkjZNBUXMfQ',
               movieText:'※サンプル動画は1級建築施工管理技士のものです'
