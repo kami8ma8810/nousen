@@ -33,7 +33,6 @@ export default {
 
 <style lang="scss" scoped>
 .application {
-  width: 90%;
   font-weight: bold;
   margin: 0 auto;
   margin-top: 100px;
