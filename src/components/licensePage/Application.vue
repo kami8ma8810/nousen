@@ -1,7 +1,7 @@
 <template>
   <div class="application">
     <a :href="formLink" class="application-link" target="_blank">
-      講習会へのお申し込み
+      {{ formText }}
       <IconBase class="icon" width="25" height="25"><IconFingerRight /></IconBase>
     </a>
     <p class="fax-link">
@@ -17,6 +17,10 @@ import IconBase from '@/components/IconBase.vue'
 import IconFingerRight from '@/components/icons/IconFingerRight.vue'
 export default {
   props: {
+    formText:{
+      type:String,
+      default:'講習会へのお申し込み'
+    },
     formLink: String,
     faxLink: String,
   },

@@ -17,7 +17,7 @@
         </p>
       </div>
     </div>
-    <!-- explain 小タイトルがあるとき用 -->
+    <!-- explain 小タイトルがあるとき用(2 えらべる学習スタイル) -->
     <div class="reason-explain-contents" v-if="explanationGroup">
       <div class="reason-explanationGroup" v-for="(explanation,index) in explanationGroup" :key="index">
         <div class="reason-explanationGroup-title">

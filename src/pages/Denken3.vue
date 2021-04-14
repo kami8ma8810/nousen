@@ -31,6 +31,10 @@
           通信講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
+        <div :class="['tab',{'active':isActive === 3}]" v-on:click="tabToggle(3)">
+          オンライン<br class="underdisplay" />講座
+          <IconBase class="icon"><IconArrowRight /></IconBase>
+        </div>
       </section>
       <div class="body">
         <div v-show="isActive === 1">
@@ -63,7 +67,22 @@
             :benefits="richtextToHTML($static.tuushin.benefits)"
             :cpds="richtextToHTML($static.tuushin.cpds)"
           />
-           <Application
+          <Application
+            formLink="/denken3-application"
+            faxLink="/3_denken_tuushin_FAX_31year.pdf"
+          />
+        </div>
+        <div v-show="isActive === 3">
+          <h3 class="body-title">合格のための受験指導 オンライン講座</h3>
+          <Info
+            :courseOutline="richtextToHTML($static.online.courseOutline)"
+            :apply="richtextToHTML($static.online.apply)"
+            :mediaYoutube="$static.online.mediaYoutube"
+            :mediaImg="$static.online.mediaImg.file.url"
+            :mediaDescription="$static.online.mediaDescription"
+          />
+          <Application
+            formText="オンライン講座へのお申し込み"
             formLink="/denken3-application"
             faxLink="/3_denken_tuushin_FAX_31year.pdf"
           />
@@ -89,6 +108,15 @@
       capacity
       benefits
       cpds
+    }
+    online:contentfulQualificationOnline(id:"2W790efooopLZNd6owCL2") {
+      courseOutline
+      apply
+      mediaYoutube
+      mediaImg {
+        file { url }
+      }
+      mediaDescription
     }
     tuugakuVenue:allContentfulDenken3Venue(order: ASC) {
       edges {
@@ -204,7 +232,7 @@ export default {
 }
 .tab-wrapper {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 900px;
   width: 100%;
   display: flex;
   text-align: center;
@@ -221,10 +249,25 @@ export default {
     border-radius: 20px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     margin: 0 10px;
+    @media print, screen and (max-width: 1000px) {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      padding: 6px 0;
+      margin: 0 5px;
+    }
+    @media print, screen and (max-width: 380px) {
+      margin: 0;
+    }
     .icon {
       vertical-align: middle;
+      @media print, screen and (max-width: 1000px) {
+        display: block;
+        margin: 0 auto;
+        margin-top: 0.4em;
+      }
     }
     &.active {
       border-bottom: none;
@@ -236,6 +279,41 @@ export default {
     }
   }
 }
+
+.tab::before{
+  content: url('../assets/img/license_page/icon_bag.svg');
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right:0.2em;
+  @media print, screen and (max-width: 1000px) {
+    margin-right:0;
+  }
+}
+
+.tab:nth-child(2) {
+  &::before{
+    content: url('../assets/img/license_page/icon_home.svg');
+  }
+}
+.tab:nth-child(3) {
+  &::before{
+    content: url('../assets/img/license_page/icon_pc.svg');
+  }
+  .icon{
+    @media print, screen and (max-width: 1000px) {
+      display: inline;
+      margin-top: 0;
+    }
+  }
+}
+
+.underdisplay {
+  @media print, screen and(min-width: 1001px) {
+    display: none;
+  }
+}
+
 .body {
   width: 100%;
   margin: 0 auto;
@@ -247,7 +325,7 @@ export default {
     text-align: center;
     font-size: 30px;
     @media print, screen and (max-width: 1000px) {
-      font-size: 20px;
+      font-size: 18px;
     }
     &:after {
       content: "";
