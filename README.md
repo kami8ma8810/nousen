@@ -43,7 +43,8 @@ $ npm run develop
 [PR作成までの手順](https://github.com/mikutaniguchi/portfolio_site/wiki/PR%E4%BD%9C%E6%88%90%E3%81%BE%E3%81%A7%E3%81%AE%E6%89%8B%E9%A0%86)
 
 ### githubのプルリクページでテストアップURL確認
-赤矢印の場所をクリックすると、プルリクでアップした内容のサイトが見れます。テストアップURLはこれを使ってください。
+赤矢印の場所をクリックすると、プルリクでアップした内容のサイトが見れます。テストアップURLはこれを使ってください。<br>
+URLが複雑なのでベーシック認証は必要ないです。
 ![URLの場所]](readme_description.png "readme_description")
 
 
