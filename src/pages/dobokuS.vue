@@ -46,6 +46,13 @@
           2級通学講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
+        <div
+          :class="['tab', { active: isActive === 3 }]"
+          v-on:click="tabToggle(3)"
+        >
+          オンライン<br class="underdisplay" />講座
+          <IconBase class="icon"><IconArrowRight /></IconBase>
+        </div>
       </section>
       <div class="body">
         <div v-show="isActive === 1">
@@ -96,6 +103,21 @@
             faxLink="/doboku_2_FAX_31year.pdf"
           />
         </div>
+        <div v-show="isActive === 3">
+          <h3 class="body-title">合格のための受験指導 オンライン講座</h3>
+          <Info
+            :courseOutline="richtextToHTML($static.dobokuOnline.courseOutline)"
+            :apply="richtextToHTML($static.dobokuOnline.apply)"
+            :mediaYoutube="$static.dobokuOnline.mediaYoutube"
+            :mediaImg="$static.dobokuOnline.mediaImg.file.url"
+            :mediaDescription="$static.dobokuOnline.mediaDescription"
+          />
+          <Application
+            formText="オンライン講座へのお申し込み"
+            formLink="/doboku-s-application"
+            faxLink="/doboku_2_FAX_31year.pdf"
+          />
+        </div>
       </div>
     </div>
   </Layout>
@@ -117,6 +139,15 @@
       capacity
       benefits
       cpds
+    }
+    dobokuOnline:contentfulQualificationOnline(id:"4dseTq8lHWp2eE2FneVpT2") {
+      courseOutline
+      apply
+      mediaYoutube
+      mediaImg {
+        file { url }
+      }
+      mediaDescription
     }
     doboku1Venue:allContentfulDobokuSekou1Venue(order: ASC) {
       edges {
@@ -254,12 +285,15 @@ export default {
 }
 .tab-wrapper {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 900px;
   width: 100%;
   display: flex;
   text-align: center;
   margin-top: -70px;
   font-weight: bold;
+  @media print, screen and (max-width: 370px) {
+    margin-top: -20vw;
+  }
   .tab {
     cursor: pointer;
     font-size: 20px;
@@ -271,10 +305,28 @@ export default {
     border-radius: 20px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     margin: 0 10px;
+    @media print, screen and (max-width: 1000px) {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      padding: 5.9px 0;
+      margin: 0 3px;
+    }
+    @media print, screen and (max-width: 370px) {
+      font-size: 4.4vw;
+      padding: 2.4% 0;
+      height: 4.55em;
+      box-sizing: border-box;
+    }
     .icon {
       vertical-align: middle;
+      @media print, screen and (max-width: 1000px) {
+        display: block;
+        margin: 0 auto;
+        margin-top: 0.4em;
+      }
     }
     &.active {
       border-bottom: none;
@@ -286,6 +338,31 @@ export default {
     }
   }
 }
+.tab:nth-child(3) {
+  &::before{
+    content: url('../assets/img/license_page/icon_pc_green.svg');
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right:0.2em;
+    @media print, screen and (max-width: 1000px) {
+      margin-right:0;
+    }
+  }
+  .icon{
+    @media print, screen and (max-width: 1000px) {
+      display: inline;
+      margin-top: 0;
+    }
+  }
+}
+
+.underdisplay {
+  @media print, screen and(min-width: 1001px) {
+    display: none;
+  }
+}
+
 .body {
   width: 100%;
   margin: 0 auto;
@@ -297,7 +374,7 @@ export default {
     text-align: center;
     font-size: 30px;
     @media print, screen and (max-width: 1000px) {
-      font-size: 20px;
+      font-size: 18px;
     }
     &:after {
       content: "";

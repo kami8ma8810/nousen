@@ -229,6 +229,9 @@ export default {
   text-align: center;
   margin: 0 auto;
   font-size: 17px;
+  @media print, screen and (max-width: 370px) {
+    padding: 14px 15px;
+  }
 }
 .tab-wrapper {
   margin: 0 auto;
@@ -238,6 +241,9 @@ export default {
   text-align: center;
   margin-top: -70px;
   font-weight: bold;
+  @media print, screen and (max-width: 370px) {
+    margin-top: -20vw;
+  }
   .tab {
     cursor: pointer;
     font-size: 20px;
@@ -255,11 +261,14 @@ export default {
       font-size: 16px;
       line-height: 1.5;
       text-align: center;
-      padding: 6px 0;
-      margin: 0 5px;
+      padding: 5.9px 0;
+      margin: 0 3px;
     }
-    @media print, screen and (max-width: 380px) {
-      margin: 0;
+    @media print, screen and (max-width: 370px) {
+      font-size: 4.4vw;
+      padding: 2.4% 0;
+      height: 4.55em;
+      box-sizing: border-box;
     }
     .icon {
       vertical-align: middle;

@@ -111,7 +111,7 @@
             :courseOutline="richtextToHTML($static.denkikoujiSekouOnline.courseOutline)"
             :apply="richtextToHTML($static.denkikoujiSekouOnline.apply)"
             :mediaYoutube="$static.denkikoujiSekouOnline.mediaYoutube"
-            :mediaImg="$static.denkikoujiSekouOnline.mediaImg"
+            :mediaImg="$static.denkikoujiSekouOnline.mediaImg.file.url"
             :mediaDescription="$static.denkikoujiSekouOnline.mediaDescription"
           />
           <Application
@@ -146,6 +146,9 @@
       courseOutline
       apply
       mediaYoutube
+      mediaImg {
+        file { url }
+      }
       mediaDescription
     }
     denkikoujiSekou1Venue:allContentfulDenkikoujiSekou1Venue(order: ASC) {
@@ -290,6 +293,9 @@ export default {
   text-align: center;
   margin-top: -70px;
   font-weight: bold;
+  @media print, screen and (max-width: 370px) {
+    margin-top: -20vw;
+  }
   .tab {
     cursor: pointer;
     font-size: 20px;
@@ -307,11 +313,14 @@ export default {
       font-size: 16px;
       line-height: 1.5;
       text-align: center;
-      padding: 6px 0;
-      margin: 0 5px;
+      padding: 5.9px 0;
+      margin: 0 3px;
     }
-    @media print, screen and (max-width: 380px) {
-      margin: 0;
+    @media print, screen and (max-width: 370px) {
+      font-size: 4.4vw;
+      padding: 2.4% 0;
+      height: 4.55em;
+      box-sizing: border-box;
     }
     .icon {
       vertical-align: middle;

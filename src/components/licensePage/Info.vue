@@ -127,7 +127,8 @@ export default {
   .course_outline.info-section /deep/ h5 {
     background: #e60039;
   }
-  .course_outline.info-section /deep/ b {
+  .course_outline.info-section /deep/ i {
+    font-weight: bold;
     color: #e60039;
   }
 }
@@ -149,7 +150,8 @@ export default {
   .course_outline.info-section /deep/ h5 {
     background: #00a73c;
   }
-  .course_outline.info-section /deep/ b {
+  .course_outline.info-section /deep/ i {
+    font-weight: bold;
     color: #00a73c;
   }
 }
@@ -202,7 +204,8 @@ export default {
   }
 }
 
-.apply.info-section /deep/ b {
+.apply.info-section /deep/ i {
+  font-weight: bold;
   color:#e60039;
 }
 
