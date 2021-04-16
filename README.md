@@ -21,8 +21,8 @@ $ git checkout -b ブランチ名
 参考
 [ブランチの切り方](https://github.com/mikutaniguchi/portfolio_site/wiki/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE%E5%88%87%E3%82%8A%E6%96%B9)
 
-### .env ファイルを作成して SPACE_ID と ACCESS_TOKEN を記載。(記載済みのファイルあり)
-Contentfulとつなげるための準備。.envファイルは引継ぎ資料の中にあります。<br>
+### プロジェクトルートに.env ファイルを作成して SPACE_ID と ACCESS_TOKEN を記載。(記載済みのファイルあり)
+Contentfulとつなげるための準備。.envファイルの中身は引継ぎ資料の中にあります。<br>
 .env ファイル内
 ```
 SPACE_ID="~SPACE_ID~"

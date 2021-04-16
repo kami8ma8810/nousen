@@ -117,7 +117,6 @@
           <Application
             formText="オンライン講座へのお申し込み"
             formLink="/denkikouji-s-application"
-            faxLink="/denkikouji_2_FAX_31year.pdf"
           />
         </div>
       </div>

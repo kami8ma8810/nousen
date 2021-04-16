@@ -4,7 +4,7 @@
       {{ formText }}
       <IconBase class="icon" width="25" height="25"><IconFingerRight /></IconBase>
     </a>
-    <p class="fax-link">
+    <p class="fax-link" v-if="faxLink">
       <a :href="faxLink" target="_blank">
         FAX用紙のダウンロードはこちら
       </a>

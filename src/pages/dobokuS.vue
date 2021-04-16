@@ -115,7 +115,6 @@
           <Application
             formText="オンライン講座へのお申し込み"
             formLink="/doboku-s-application"
-            faxLink="/doboku_2_FAX_31year.pdf"
           />
         </div>
       </div>

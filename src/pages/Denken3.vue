@@ -84,7 +84,6 @@
           <Application
             formText="オンライン講座へのお申し込み"
             formLink="/denken3-application"
-            faxLink="/3_denken_tuushin_FAX_31year.pdf"
           />
         </div>
       </div>
