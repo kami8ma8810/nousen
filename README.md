@@ -45,7 +45,7 @@ $ npm run develop
 ### githubのプルリクページでテストアップURL確認
 赤矢印の場所をクリックすると、プルリクでアップした内容のサイトが見れます。テストアップURLはこれを使ってください。<br>
 URLが複雑なのでベーシック認証は必要ないです。
-![URLの場所]](readme_description.png "readme_description")
+![URLの場所](readme_description.png "readmedescription")
 
 
 ## 本番アップ方法
