@@ -109,7 +109,7 @@
             :courseOutline="richtextToHTML($static.kenchikuOnline.courseOutline)"
             :apply="richtextToHTML($static.kenchikuOnline.apply)"
             :mediaYoutube="$static.kenchikuOnline.mediaYoutube"
-            :mediaImg="$static.kenchikuOnline.mediaImg"
+            :mediaImg="$static.kenchikuOnline.mediaImg.file.url"
             :mediaDescription="$static.kenchikuOnline.mediaDescription"
           />
           <Application
