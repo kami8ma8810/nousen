@@ -111,7 +111,7 @@
             :courseOutline="richtextToHTML($static.denkikoujiSekouOnline.courseOutline)"
             :apply="richtextToHTML($static.denkikoujiSekouOnline.apply)"
             :mediaYoutube="$static.denkikoujiSekouOnline.mediaYoutube"
-            :mediaImg="$static.denkikoujiSekouOnline.mediaImg.file.url"
+            :mediaImg="$static.denkikoujiSekouOnline.mediaImg ? $static.denkikoujiSekouOnline.mediaImg.file.url : ''"
             :mediaDescription="$static.denkikoujiSekouOnline.mediaDescription"
           />
           <Application

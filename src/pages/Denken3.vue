@@ -78,7 +78,7 @@
             :courseOutline="richtextToHTML($static.online.courseOutline)"
             :apply="richtextToHTML($static.online.apply)"
             :mediaYoutube="$static.online.mediaYoutube"
-            :mediaImg="$static.online.mediaImg.file.url"
+            :mediaImg="$static.online.mediaImg ? $static.online.mediaImg.file.url : ''"
             :mediaDescription="$static.online.mediaDescription"
           />
           <Application

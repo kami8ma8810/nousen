@@ -109,7 +109,7 @@
             :courseOutline="richtextToHTML($static.dobokuOnline.courseOutline)"
             :apply="richtextToHTML($static.dobokuOnline.apply)"
             :mediaYoutube="$static.dobokuOnline.mediaYoutube"
-            :mediaImg="$static.dobokuOnline.mediaImg.file.url"
+            :mediaImg="$static.dobokuOnline.mediaImg ? $static.dobokuOnline.mediaImg.file.url : ''"
             :mediaDescription="$static.dobokuOnline.mediaDescription"
           />
           <Application
