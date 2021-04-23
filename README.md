@@ -33,7 +33,7 @@ ACCESS_TOKEN="~ACCESS_TOKEN~"
 ```
 $ npm run develop
 ```
-
+&emsp;
 
 ## テストアップ方法
 
@@ -46,25 +46,42 @@ $ npm run develop
 URLが複雑なのでベーシック認証は必要ないです。
 ![URLの場所](readme_description.png "readmedescription")
 <br>
+
+## ※テストアップでも、Contentfulの情報更新を自動で反映させたい場合
+
+### ONのNetlifyアカウントに能センのテストアップ用URL内のブランチ設定変更
+| ONのアカウント |
+|---|
+| ID：info@on-01.com |
+| pass：netlify2438 |
+| https://app.netlify.com/ |
+
+[https://eloquent-ramanujan-6ca626.netlify.app](https://eloquent-ramanujan-6ca626.netlify.app)
+- eloquent-ramanujan-6ca626 > Site Settings > Build&Deploy > Deploy contexts
+- Production branch を新しく作ったブランチに変更
+- webhookが繋がるのは Production branch のみ
 <br>
 
-[参考](https://blog.microcms.io/netlify-deploy-contexts/)
-<br>
+[参考 https://blog.microcms.io/netlify-deploy-contexts/](https://blog.microcms.io/netlify-deploy-contexts/)
 
-### ※テストアップでもContentfulを自動で反映させたい場合
+
+
+補足説明<br>
 本番環境では、NetlifyがContentfulの情報更新を検知して、自動的にbuildしてくれるのですが、<br>
-プルリク時に作られたURLだと、プルリクを上げた時点の内容から変わりません。<br>
-テストアップ後にContentfulの情報更新をする場合は、Netlify内で手動で更新するか、<br>
-ブランチ用にURLを作ってwebhookをつなげる必要があります。（もしかしたらもっと良いやり方があるかもしれません。）
+Production branch以外のブランチURLだと、プルリクを上げた時点の内容から変わりません。<br>
+テストアップ後にContentfulの情報更新を反映させたい場合は、Netlify内で手動で更新するか、<br>
+ブランチ用にURLを作ってwebhookをつなげる必要があります。<br>
 
-
+&emsp;
 
 ## 本番アップ方法
 
 ### github内でプルリクをマージ
-masterのデータがそのまま本番にアップされます。<br>
+masterのデータがそのまま本番にアップされています。<br>
 なので、マージした段階で本番アップ完了です。<br>
 ※web上に反映されるまでに数分かかります。
 
+&emsp;
+
 ## 補足
-一度マージされたブランチはもう使えないので、deleteして、ローカルのブランチも削除して大丈夫です。ローカルではmasterをプルしてください。
+一度マージされたブランチはもう使わないので、deleteして、ローカルのブランチも削除して大丈夫です。ローカルではmasterをプルしてください。
