@@ -27,7 +27,7 @@
         </div>
       </div>
     </section>
-     <section class="cpds info-section" v-if="cpds">
+    <section class="cpds info-section" v-if="cpds">
       <div class="head">
         CPDS
       </div>
@@ -36,6 +36,37 @@
         </div>
       </div>
     </section>
+    <!-- オンライン講座 ↓ -->
+    <section class="online course_outline info-section" v-if="courseOutline">
+      <div class="head">
+        講座概要
+      </div>
+      <div class="body">
+        <div class="body-inner" v-html="courseOutline">
+        </div>
+      </div>
+    </section>
+    <section class="online" v-if="mediaYoutube || mediaImg">
+      <div class="media">
+        <div class="media-movie" v-if="mediaYoutube">
+          <iframe width="560" height="315" :src="`https://www.youtube.com/embed/${mediaYoutube}`" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="media-img" v-if="!mediaYoutube && mediaImg">
+          <img :src="mediaImg" alt="">
+        </div>
+        <p class="media-description">{{ mediaDescription }}</p>
+      </div>
+    </section>
+    <section class="online apply info-section" v-if="apply">
+      <div class="head">
+        お申し込みから受講までの流れ
+      </div>
+      <div class="body">
+        <div class="body-inner" v-html="apply">
+        </div>
+      </div>
+    </section>
+    <!-- オンライン講座 ↑ -->
   </div>
 </template>
 
@@ -46,6 +77,11 @@ export default {
     capacity: String,
     benefits: String,
     cpds: String,
+    courseOutline: String,
+    apply: String,
+    mediaYoutube: String,
+    mediaImg: String,
+    mediaDescription: String
   }
 }
 </script>
@@ -88,6 +124,13 @@ export default {
   .info-section /deep/ a {
     color: #e60039;
   }
+  .course_outline.info-section /deep/ h5 {
+    background: #e60039;
+  }
+  .course_outline.info-section /deep/ i {
+    font-weight: bold;
+    color: #e60039;
+  }
 }
 .koujishi1,.koujishi2 {
   .head {
@@ -104,6 +147,13 @@ export default {
   .info-section /deep/ a {
     color: #00a73c;
   }
+  .course_outline.info-section /deep/ h5 {
+    background: #00a73c;
+  }
+  .course_outline.info-section /deep/ i {
+    font-weight: bold;
+    color: #00a73c;
+  }
 }
 .kyuusui {
   .head {
@@ -112,5 +162,82 @@ export default {
   .info-section /deep/ a {
     color: #00afcc;
   }
+}
+
+/* オンライン講座 */
+.online{
+  &.info-section {
+    /deep/ a {
+      color: #000;
+      font-weight: bold;
+    }
+    /deep/ hr{
+      margin: 1.5em 0;
+    }
+  }
+}
+.course_outline.info-section {
+  /deep/ h4 {
+    font-weight: bold;
+    margin-top: 3em;
+    font-size: 18px;
+    color: #3b241a;
+  }
+  /deep/ h5 {
+    display: inline;
+    padding: 0.4em 0.5em;
+    border-radius: 50px;
+    font-size: 16px;
+    color: #fff;
+  }
+  /deep/ h6 {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0.5em 0;
+    @media print, screen and (min-width: 768px) {
+      padding-left: 1em;
+      display: inline;
+  }
+  }
+  /deep/ p {
+    margin: 0.3em 0 0;
+  }
+}
+
+.apply.info-section /deep/ i {
+  font-weight: bold;
+  color:#e60039;
+}
+
+.media{
+  width: 100%;
+  margin: 0 auto;
+  padding: 6em 0;
+  @media print, screen and (min-width: 1001px) {
+    width: 90%;
+  }
+}
+.media-description{
+    line-height: 1.8;
+    font-size: 13px;
+    @media print, screen and (min-width: 1001px) {
+      font-size: 15px;
+    }
+}
+.media-movie {
+  position: relative;
+  width: 100%;
+  height:0px;
+  padding-top: 56.25%;
+}
+.media-movie iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.media-img img {
+  width: 100%;
 }
 </style>

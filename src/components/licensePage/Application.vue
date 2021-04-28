@@ -1,10 +1,10 @@
 <template>
   <div class="application">
     <a :href="formLink" class="application-link" target="_blank">
-      講習会へのお申し込み
+      {{ formText }}
       <IconBase class="icon" width="25" height="25"><IconFingerRight /></IconBase>
     </a>
-    <p class="fax-link">
+    <p class="fax-link" v-if="faxLink">
       <a :href="faxLink" target="_blank">
         FAX用紙のダウンロードはこちら
       </a>
@@ -17,6 +17,10 @@ import IconBase from '@/components/IconBase.vue'
 import IconFingerRight from '@/components/icons/IconFingerRight.vue'
 export default {
   props: {
+    formText:{
+      type:String,
+      default:'講習会へのお申し込み'
+    },
     formLink: String,
     faxLink: String,
   },
@@ -29,7 +33,6 @@ export default {
 
 <style lang="scss" scoped>
 .application {
-  width: 90%;
   font-weight: bold;
   margin: 0 auto;
   margin-top: 100px;

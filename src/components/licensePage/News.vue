@@ -70,6 +70,7 @@ export default {
   }
   /deep/ a {
     text-decoration: underline;
+    word-break: break-all;
   }
 }
 .no-contents {
