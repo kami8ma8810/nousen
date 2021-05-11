@@ -42,7 +42,7 @@
           />
           <Application
             formLink="/koujishi-application"
-            faxLink="/1_denki_FAX_31year.pdf"
+            faxLink="/2_denki_FAX_31year.pdf"
           />
         </div>
       </div>
