@@ -705,7 +705,7 @@ export default {
     .btn__apply {
       width: 100%;
       text-align: center;
-      margin: 0 auto;
+      margin: 0 auto auto;
       a {
         background-color: #f4891e;
         color: #fff;
