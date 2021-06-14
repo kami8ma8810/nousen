@@ -1083,6 +1083,9 @@ export default {
         margin-top: 30px;
       }
       .application-form-link {
+        &::before {
+          content: none;
+        }
         &:after {
           content: url('../assets/img/icon/double_arrow_right_orange.svg');
           height: 1.2em;
