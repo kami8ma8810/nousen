@@ -166,7 +166,7 @@
             ]"
           />
           <div class="btn__apply">
-            <a @click="openModal" class=""
+            <a class=""
               ><span>講習会お申込み</span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -705,13 +705,12 @@ export default {
     .btn__apply {
       width: 100%;
       text-align: center;
-      margin: 0 auto auto;
+      margin: 100px auto 400px;
       a {
         background-color: #f4891e;
         color: #fff;
         padding: 10px 3em;
         font-weight: 700;
-        margin-top: 100px;
         font-size: 20px;
       }
     }
