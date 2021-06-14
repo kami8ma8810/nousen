@@ -1083,9 +1083,6 @@ export default {
         margin-top: 30px;
       }
       .application-form-link {
-        &::before {
-          content: none;
-        }
         &:after {
           content: url('../assets/img/icon/double_arrow_right_orange.svg');
           height: 1.2em;
@@ -1099,6 +1096,9 @@ export default {
         .application-form-link,
         .application-fax-link {
           color: #e60039;
+          &::before {
+            content: none;
+          }
         }
         .title:before {
           content: url('../assets/img/icon/qualification/denken.svg');
@@ -1108,6 +1108,9 @@ export default {
         .application-form-link,
         .application-fax-link {
           color: #b60081;
+          &::before {
+            content: none;
+          }
         }
         .title:before {
           content: url('../assets/img/icon/qualification/denkikouji.svg');
@@ -1117,6 +1120,9 @@ export default {
         .application-form-link,
         .application-fax-link {
           color: #00a73c;
+          &::before {
+            content: none;
+          }
         }
         .title:before {
           content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
@@ -1126,6 +1132,9 @@ export default {
         .application-form-link,
         .application-fax-link {
           color: #00a73c;
+          &::before {
+            content: none;
+          }
         }
         .title:before {
           content: url('../assets/img/icon/qualification/doboku.svg');
@@ -1135,6 +1144,9 @@ export default {
         .application-form-link,
         .application-fax-link {
           color: #00a73c;
+          &::before {
+            content: none;
+          }
         }
         .title:before {
           content: url('../assets/img/icon/qualification/kankouji.svg');
@@ -1144,6 +1156,9 @@ export default {
         .application-form-link,
         .application-fax-link {
           color: #00a73c;
+          &::before {
+            content: none;
+          }
         }
         .title:before {
           content: url('../assets/img/icon/qualification/kenchiku.svg');
@@ -1153,6 +1168,9 @@ export default {
         .application-form-link,
         .application-fax-link {
           color: #00afcc;
+          &::before {
+            content: none;
+          }
         }
         .title:before {
           content: url('../assets/img/icon/qualification/kyuusui.svg');
