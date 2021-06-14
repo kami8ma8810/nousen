@@ -1044,4 +1044,127 @@ export default {
   transition: all 0.3s;
   display: none;
 }
+.modal-application {
+  font-size: 14px;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+  z-index: 0;
+  font-weight: bold;
+  .item {
+    text-align: center;
+    margin-top: 30px;
+  }
+  ul {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    @media print, screen and(min-width: 1001px) {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media print, screen and(max-width: 1000px) {
+      margin-left: 1em;
+    }
+    li {
+      position: relative; //202101 for online
+      text-align: left;
+      // display: flex;
+      align-items: center;
+      @media print, screen and(min-width: 1001px) {
+        width: 210px;
+        margin-top: 30px;
+      }
+      .application-form-link {
+        &:after {
+          content: url('../assets/img/icon/double_arrow_right_orange.svg');
+          height: 1.2em;
+          width: 1.2em;
+          display: inline-block;
+          margin-left: 20px;
+          vertical-align: sub;
+        }
+      }
+      &.denken {
+        .application-form-link,
+        .application-fax-link {
+          color: #e60039;
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/denken.svg');
+        }
+      }
+      &.denkikouji {
+        .application-form-link,
+        .application-fax-link {
+          color: #b60081;
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/denkikouji.svg');
+        }
+      }
+      &.denkikoujisekou {
+        .application-form-link,
+        .application-fax-link {
+          color: #00a73c;
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
+        }
+      }
+      &.doboku {
+        .application-form-link,
+        .application-fax-link {
+          color: #00a73c;
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/doboku.svg');
+        }
+      }
+      &.kankouji {
+        .application-form-link,
+        .application-fax-link {
+          color: #00a73c;
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/kankouji.svg');
+        }
+      }
+      &.kenchiku {
+        .application-form-link,
+        .application-fax-link {
+          color: #00a73c;
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/kenchiku.svg');
+        }
+      }
+      &.kyuusui {
+        .application-form-link,
+        .application-fax-link {
+          color: #00afcc;
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/kyuusui.svg');
+        }
+      }
+    }
+    .title {
+      display: flex;
+      &:before {
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        margin-right: 20px;
+        @media print, screen and(max-width: 1000px) {
+          height: 1.2em;
+          width: 1.2em;
+        }
+      }
+    }
+  }
+}
 </style>
