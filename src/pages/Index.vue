@@ -930,11 +930,15 @@ export default {
       text-align: center;
       margin: 100px auto 400px;
       a {
+        display: inline-block;
         background-color: #f4891e;
         color: #fff;
         padding: 10px 3em;
-        font-weight: 700;
+        font-weight: bold;
         font-size: 20px;
+      }
+      svg {
+        margin-left: 10px;
       }
     }
   }
