@@ -419,11 +419,11 @@
 </template>
 
 <script>
-import MyModal from "@/components/MyModal.vue";
-import OnlineInfo from "@/components/OnlineInfo.vue";
-import IconOnline from "@/components/icons/IconOnline.vue";
+import MyModal from '@/components/MyModal.vue';
+import OnlineInfo from '@/components/OnlineInfo.vue';
+import IconOnline from '@/components/icons/IconOnline.vue';
 export default {
-  name: "",
+  name: '',
   components: {
     MyModal,
     OnlineInfo,
@@ -478,7 +478,7 @@ export default {
         transform: rotate(0deg);
       }
       @media print, screen and(max-width: 1000px) {
-        content: url("../assets/img/icon/plus.svg");
+        content: url('../assets/img/icon/plus.svg');
       }
     }
   }
@@ -496,7 +496,7 @@ export default {
       }
       &::after {
         position: absolute;
-        content: "一般社団法人 能力開発研修センター";
+        content: '一般社団法人 能力開発研修センター';
         transform: scale(0.6);
         font-size: 11px;
         width: 200px;
@@ -596,7 +596,7 @@ export default {
   border-radius: 100%;
   text-align: center;
   &:before {
-    content: "menu";
+    content: 'menu';
     font-size: 10px;
     font-weight: bold;
     transform: scale(0.9);
@@ -700,7 +700,7 @@ export default {
   }
   &:before {
     @media print, screen and(max-width: 1000px) {
-      content: "";
+      content: '';
       width: 90%;
       height: 2px;
       background-color: #ccc;
@@ -712,7 +712,7 @@ export default {
     }
   }
   &:after {
-    content: url("../assets/img/icon/double_arrow_right_orange.svg");
+    content: url('../assets/img/icon/double_arrow_right_orange.svg');
     height: 1.2em;
     width: 1.2em;
     display: inline-block;
@@ -735,7 +735,7 @@ export default {
 }
 .pagelink-title-session:after {
   @media print, screen and(max-width: 1000px) {
-    content: url("../assets/img/icon/minus.svg");
+    content: url('../assets/img/icon/minus.svg');
   }
   @media print, screen and(min-width: 1001px) {
     transform: rotate(90deg);
@@ -800,7 +800,7 @@ export default {
       }
       &:after {
         @media print, screen and(max-width: 1000px) {
-          content: url("../assets/img/icon/double_arrow_right_orange.svg");
+          content: url('../assets/img/icon/double_arrow_right_orange.svg');
           height: 1.2em;
           width: 1.2em;
           display: inline-block;
@@ -809,25 +809,25 @@ export default {
         }
       }
       &.denken:before {
-        content: url("../assets/img/icon/qualification/denken.svg");
+        content: url('../assets/img/icon/qualification/denken.svg');
       }
       &.denkikouji:before {
-        content: url("../assets/img/icon/qualification/denkikouji.svg");
+        content: url('../assets/img/icon/qualification/denkikouji.svg');
       }
       &.denkikoujisekou:before {
-        content: url("../assets/img/icon/qualification/denkikoujisekou.svg");
+        content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
       }
       &.doboku:before {
-        content: url("../assets/img/icon/qualification/doboku.svg");
+        content: url('../assets/img/icon/qualification/doboku.svg');
       }
       &.kankouji:before {
-        content: url("../assets/img/icon/qualification/kankouji.svg");
+        content: url('../assets/img/icon/qualification/kankouji.svg');
       }
       &.kenchiku:before {
-        content: url("../assets/img/icon/qualification/kenchiku.svg");
+        content: url('../assets/img/icon/qualification/kenchiku.svg');
       }
       &.kyuusui:before {
-        content: url("../assets/img/icon/qualification/kyuusui.svg");
+        content: url('../assets/img/icon/qualification/kyuusui.svg');
       }
     }
   }
@@ -900,7 +900,7 @@ export default {
       }
       .application-form-link {
         &:after {
-          content: url("../assets/img/icon/double_arrow_right_orange.svg");
+          content: url('../assets/img/icon/double_arrow_right_orange.svg');
           height: 1.2em;
           width: 1.2em;
           display: inline-block;
@@ -914,7 +914,7 @@ export default {
           color: #e60039;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/denken.svg");
+          content: url('../assets/img/icon/qualification/denken.svg');
         }
       }
       &.denkikouji {
@@ -923,7 +923,7 @@ export default {
           color: #b60081;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/denkikouji.svg");
+          content: url('../assets/img/icon/qualification/denkikouji.svg');
         }
       }
       &.denkikoujisekou {
@@ -932,7 +932,7 @@ export default {
           color: #00a73c;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/denkikoujisekou.svg");
+          content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
         }
       }
       &.doboku {
@@ -941,7 +941,7 @@ export default {
           color: #00a73c;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/doboku.svg");
+          content: url('../assets/img/icon/qualification/doboku.svg');
         }
       }
       &.kankouji {
@@ -950,7 +950,7 @@ export default {
           color: #00a73c;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/kankouji.svg");
+          content: url('../assets/img/icon/qualification/kankouji.svg');
         }
       }
       &.kenchiku {
@@ -959,7 +959,7 @@ export default {
           color: #00a73c;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/kenchiku.svg");
+          content: url('../assets/img/icon/qualification/kenchiku.svg');
         }
       }
       &.kyuusui {
@@ -968,7 +968,7 @@ export default {
           color: #00afcc;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/kyuusui.svg");
+          content: url('../assets/img/icon/qualification/kyuusui.svg');
         }
       }
     }
