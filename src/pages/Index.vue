@@ -103,9 +103,7 @@
         </div>
       </section>
       <section class="section02">
-        <p class="section-name">
-          News
-        </p>
+        <p class="section-name">News</p>
         <News />
       </section>
       <section class="section03">
@@ -140,27 +138,34 @@
               いつでも手元でオンライン講座"
             :littleTitle="'front/section05_title1.svg'"
             :explanationGroup="[
-            {
-              title:'front/section05_title1.svg',
-              titleAlt:'通学講座',
-              texts:['<i class=scroll-animation-item>同じ目的をもった受講生たちと一緒に</i>生の授業を受けることで、<br>緊張感をもって学ぶことができます。',
-              'わからないところを<i class=scroll-animation-item>その場で質問できるメリット</i>も。<br>なかなか自主的に勉強を始められない…という方も是非！']
-            },
-            {
-              title:'front/section05_title2.svg',
-              titleAlt:'オンライン講座',
-              texts:['短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ<br>視聴することも可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
-              '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。'],
-              movieSrc:'https://www.youtube.com/embed/Z-Hro9L34fw',
-              movieText:'※サンプル動画は1級建築施工管理技士のものです'
-            },
-            {
-              title:'front/section05_title3.svg',
-              titleAlt:'通学＋オンラインで、より万全に',
-              texts:['まずは通学講座で直接講義を受けたいけど、動画でも復習したいという方には両方受講という選択肢も。例えば通学講座にオンライン講座を追加の場合、<i class=scroll-animation-item>オンライン講座の受講料は２割となります。（逆も同様）</i>共通のテキストで原則は講義内容も同じなので会場で学習した内容を繰り返し復習できます。']
-            }
+              {
+                title: 'front/section05_title1.svg',
+                titleAlt: '通学講座',
+                texts: [
+                  '<i class=scroll-animation-item>同じ目的をもった受講生たちと一緒に</i>生の授業を受けることで、<br>緊張感をもって学ぶことができます。',
+                  'わからないところを<i class=scroll-animation-item>その場で質問できるメリット</i>も。<br>なかなか自主的に勉強を始められない…という方も是非！',
+                ],
+              },
+              {
+                title: 'front/section05_title2.svg',
+                titleAlt: 'オンライン講座',
+                texts: [
+                  '短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ<br>視聴することも可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
+                  '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。',
+                ],
+                movieSrc: 'https://www.youtube.com/embed/Z-Hro9L34fw',
+                movieText: '※サンプル動画は1級建築施工管理技士のものです',
+              },
+              {
+                title: 'front/section05_title3.svg',
+                titleAlt: '通学＋オンラインで、より万全に',
+                texts: [
+                  'まずは通学講座で直接講義を受けたいけど、動画でも復習したいという方には両方受講という選択肢も。例えば通学講座にオンライン講座を追加の場合、<i class=scroll-animation-item>オンライン講座の受講料は２割となります。（逆も同様）</i>共通のテキストで原則は講義内容も同じなので会場で学習した内容を繰り返し復習できます。',
+                ],
+              },
             ]"
           />
+          <a @click="openModal">講習会お申込み</a>
           <Reason
             reasonNumber="3"
             myTitle="他にないテキスト"
@@ -248,14 +253,14 @@ query {
 
 <script>
 // @ is an alias to /src
-import IconBase from "@/components/IconBase.vue";
-import IconDoubleArrowRight from "@/components/icons/IconDoubleArrowRight.vue";
-import Reason from "@/components/home/Reason.vue";
-import News from "@/components/home/News.vue";
-import IconOnline from "@/components/icons/IconOnline.vue";
+import IconBase from '@/components/IconBase.vue';
+import IconDoubleArrowRight from '@/components/icons/IconDoubleArrowRight.vue';
+import Reason from '@/components/home/Reason.vue';
+import News from '@/components/home/News.vue';
+import IconOnline from '@/components/icons/IconOnline.vue';
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
     IconBase,
     IconDoubleArrowRight,
@@ -265,7 +270,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: "TOP",
+      title: 'TOP',
       meta: [
         {
           key: `og:title`,
@@ -291,23 +296,23 @@ export default {
     image.onload = () => {
       this.afterImgLoad = true;
     };
-    image.src = require("../assets/img/front/section01/main_background.jpg");
+    image.src = require('../assets/img/front/section01/main_background.jpg');
 
     //スクロールしたらスクロールimg非表示
-    window.addEventListener("scroll", this.onScroll);
+    window.addEventListener('scroll', this.onScroll);
   },
   destroyed() {
-    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener('scroll', this.onScroll);
   },
   methods: {
     //スクロールしたらスクロールimg非表示
     onScroll() {
       const moveScroll = window.pageYOffset;
-      const target = document.getElementById("js-scroll_top");
+      const target = document.getElementById('js-scroll_top');
       if (0 < moveScroll) {
-        target.classList.add("display_none");
+        target.classList.add('display_none');
       } else {
-        target.classList.remove("display_none");
+        target.classList.remove('display_none');
       }
     },
   },
@@ -322,7 +327,7 @@ export default {
   }
 }
 .section01 {
-  background-image: url("../assets/img/front/section01/main_background.jpg");
+  background-image: url('../assets/img/front/section01/main_background.jpg');
   background-size: cover;
   @media print, screen and (min-width: 1001px) {
     padding-top: 160px;
@@ -549,25 +554,25 @@ export default {
   }
 }
 .denken a:before {
-  content: url("../assets/img/icon/qualification/denken.svg");
+  content: url('../assets/img/icon/qualification/denken.svg');
 }
 .denkikouji a:before {
-  content: url("../assets/img/icon/qualification/denkikouji.svg");
+  content: url('../assets/img/icon/qualification/denkikouji.svg');
 }
 .denkikoujisekou a:before {
-  content: url("../assets/img/icon/qualification/denkikoujisekou.svg");
+  content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
 }
 .doboku a:before {
-  content: url("../assets/img/icon/qualification/doboku.svg");
+  content: url('../assets/img/icon/qualification/doboku.svg');
 }
 .kankouji a:before {
-  content: url("../assets/img/icon/qualification/kankouji.svg");
+  content: url('../assets/img/icon/qualification/kankouji.svg');
 }
 .kenchiku a:before {
-  content: url("../assets/img/icon/qualification/kenchiku.svg");
+  content: url('../assets/img/icon/qualification/kenchiku.svg');
 }
 .kyuusui a:before {
-  content: url("../assets/img/icon/qualification/kyuusui.svg");
+  content: url('../assets/img/icon/qualification/kyuusui.svg');
 }
 .more_qualification {
   font-weight: bold;
@@ -597,7 +602,7 @@ export default {
     margin-top: -50px;
     margin-bottom: 0;
     &:after {
-      content: "";
+      content: '';
       height: 200px;
       width: 5px;
       background-color: #000;
@@ -613,7 +618,7 @@ export default {
 .section03 {
   position: relative;
   &:before {
-    content: "";
+    content: '';
     height: 500px;
     width: 5px;
     background-color: #000;
@@ -628,7 +633,7 @@ export default {
     }
   }
   &:after {
-    content: "";
+    content: '';
     height: 30px;
     width: 5px;
     background-color: #000;
@@ -660,7 +665,7 @@ export default {
       padding: 20px 0;
     }
     &:before {
-      content: url("../assets/img/icon/finger_top_brown.svg");
+      content: url('../assets/img/icon/finger_top_brown.svg');
       width: 30px;
       height: 50px;
       display: block;
@@ -688,7 +693,7 @@ export default {
       font-size: 18px;
     }
     &:before {
-      content: "";
+      content: '';
       height: 200px;
       width: 5px;
       background-color: #000;
