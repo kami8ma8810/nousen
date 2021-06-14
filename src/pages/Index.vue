@@ -165,7 +165,33 @@
               },
             ]"
           />
-          <a @click="openModal">講習会お申込み</a>
+          <div class="btn__apply">
+            <a @click="openModal" class=""
+              ><span>講習会お申込み</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 18 18"
+                aria-labelledby="box"
+                role="presentation"
+                class="icon"
+                data-v-2d92a3c2=""
+                data-v-0aac86ab=""
+              >
+                <title id="box" lang="en" data-v-2d92a3c2="">box icon</title>
+                <g fill="currentColor" data-v-2d92a3c2="">
+                  <g data-v-0aac86ab="" data-v-2d92a3c2="">
+                    <path
+                      d="M.17,8A5.06,5.06,0,0,1,5.23,2.94a5.11,5.11,0,0,1,4,1.89h4.22a2.43,2.43,0,0,1,0,4.85H10A5.07,5.07,0,0,1,.17,8ZM8.94,6.44H8.85a.79.79,0,0,1-.73-.36,3.47,3.47,0,1,0,.52,2.6A.8.8,0,0,1,9.42,8h4a.8.8,0,1,0,0-1.6H8.94Z"
+                    ></path>
+                    <path
+                      d="M7.74,5.65V7.19a2.54,2.54,0,0,1-5.08,0V5.65a2.54,2.54,0,0,1,5.08-.23A.89.89,0,0,1,7.74,5.65ZM4.27,7.19a.94.94,0,0,0,1.87.14V5.65a.94.94,0,0,0-1.87-.14V7.19Z"
+                    ></path>
+                  </g>
+                </g></svg
+            ></a>
+          </div>
           <Reason
             reasonNumber="3"
             myTitle="他にないテキスト"
@@ -676,6 +702,19 @@ export default {
   }
   .reason-wrapper {
     margin-top: 100px;
+    .btn__apply {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      a {
+        background-color: #f4891e;
+        color: #fff;
+        padding: 10px 3em;
+        font-weight: 700;
+        margin-top: 100px;
+        font-size: 20px;
+      }
+    }
   }
   .last-message {
     max-width: 90%;
