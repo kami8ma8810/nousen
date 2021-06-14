@@ -20,24 +20,16 @@
           <div class="wrapper-information">
             <div class="information">
               <p class="information_list">
-                <g-link to="/company">
-                  会社概要
-                </g-link>
+                <g-link to="/company"> 会社概要 </g-link>
               </p>
               <p class="information_list">
-                <g-link to="/benefits">
-                  給付制度
-                </g-link>
+                <g-link to="/benefits"> 給付制度 </g-link>
               </p>
               <p class="information_list">
-                <g-link to="/guide">
-                  特定商取引法に基づく表記
-                </g-link>
+                <g-link to="/guide"> 特定商取引法に基づく表記 </g-link>
               </p>
               <p class="information_list">
-                <g-link to="/privacy">
-                  プライバシーポリシー
-                </g-link>
+                <g-link to="/privacy"> プライバシーポリシー </g-link>
               </p>
             </div>
             <div class="sns-link twitter-link">
@@ -57,7 +49,7 @@
           <a href="tel:0356316011" class="tel">
             <img
               src="../assets/img/common/tel.svg"
-              alt="03-5631-6011 （平日9:00~18:00）"
+              alt="03-5631-6011 （祝日を除く平日土日9:00~18:00）"
             />
           </a>
         </div>
@@ -178,7 +170,7 @@
   }
 }
 .information_list::after {
-  content: url("../assets/img/icon/double_arrow_right_orange.svg");
+  content: url('../assets/img/icon/double_arrow_right_orange.svg');
   height: 1.2em;
   width: 1.2em;
   display: inline-block;
