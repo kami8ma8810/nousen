@@ -166,7 +166,7 @@
             ]"
           />
           <div class="btn__apply">
-            <a class=""
+            <a @click="openModal"
               ><span>講習会お申込み</span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -284,6 +284,7 @@ import IconDoubleArrowRight from '@/components/icons/IconDoubleArrowRight.vue';
 import Reason from '@/components/home/Reason.vue';
 import News from '@/components/home/News.vue';
 import IconOnline from '@/components/icons/IconOnline.vue';
+import MyModal from '@/components/MyModal.vue';
 
 export default {
   name: 'home',
@@ -293,6 +294,7 @@ export default {
     Reason,
     News,
     IconOnline,
+    MyModal,
   },
   metaInfo() {
     return {
@@ -314,6 +316,7 @@ export default {
   data() {
     return {
       afterImgLoad: false,
+      modal: false,
     };
   },
   mounted() {
@@ -340,6 +343,12 @@ export default {
       } else {
         target.classList.remove('display_none');
       }
+    },
+    openModal() {
+      this.modal = true;
+    },
+    closeModal() {
+      this.modal = false;
     },
   },
 };
