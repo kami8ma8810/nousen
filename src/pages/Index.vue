@@ -272,7 +272,7 @@
               rel="noopener noreferrer"
               class="application-fax-link"
             >
-              FAX用紙 通学(PDF)
+              FAX用紙 通学・オンライン(PDF)
             </a>
             <br />
             <a
@@ -1093,63 +1093,63 @@ export default {
         .application-fax-link {
           color: #e60039;
         }
-        .title:before {
-          content: url('../assets/img/icon/qualification/denken.svg');
-        }
+        // .title:before {
+        //   content: url('../assets/img/icon/qualification/denken.svg');
+        // }
       }
       &.denkikouji {
         .application-form-link,
         .application-fax-link {
           color: #b60081;
         }
-        .title:before {
-          content: url('../assets/img/icon/qualification/denkikouji.svg');
-        }
+        // .title:before {
+        //   content: url('../assets/img/icon/qualification/denkikouji.svg');
+        // }
       }
       &.denkikoujisekou {
         .application-form-link,
         .application-fax-link {
           color: #00a73c;
         }
-        .title:before {
-          content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
-        }
+        // .title:before {
+        //   content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
+        // }
       }
       &.doboku {
         .application-form-link,
         .application-fax-link {
           color: #00a73c;
         }
-        .title:before {
-          content: url('../assets/img/icon/qualification/doboku.svg');
-        }
+        // .title:before {
+        //   content: url('../assets/img/icon/qualification/doboku.svg');
+        // }
       }
       &.kankouji {
         .application-form-link,
         .application-fax-link {
           color: #00a73c;
         }
-        .title:before {
-          content: url('../assets/img/icon/qualification/kankouji.svg');
-        }
+        // .title:before {
+        //   content: url('../assets/img/icon/qualification/kankouji.svg');
+        // }
       }
       &.kenchiku {
         .application-form-link,
         .application-fax-link {
           color: #00a73c;
         }
-        .title:before {
-          content: url('../assets/img/icon/qualification/kenchiku.svg');
-        }
+        // .title:before {
+        //   content: url('../assets/img/icon/qualification/kenchiku.svg');
+        // }
       }
       &.kyuusui {
         .application-form-link,
         .application-fax-link {
           color: #00afcc;
         }
-        .title:before {
-          content: url('../assets/img/icon/qualification/kyuusui.svg');
-        }
+        // .title:before {
+        //   content: url('../assets/img/icon/qualification/kyuusui.svg');
+        // }
       }
     }
     .title {

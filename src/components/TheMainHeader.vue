@@ -222,7 +222,7 @@
               rel="noopener noreferrer"
               class="application-fax-link"
             >
-              FAX用紙 通学(PDF)
+              FAX用紙 通学・オンライン(PDF)
             </a>
             <br />
             <a
