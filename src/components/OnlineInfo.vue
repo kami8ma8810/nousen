@@ -32,7 +32,8 @@ export default {
   }
   @media print, screen and(min-width: 1080px) {
     left: 0;
-    width: 215px;
+    // width: 215px;
+    width: 230px;
   }
   & img {
     width: 100%;
