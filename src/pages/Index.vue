@@ -249,6 +249,220 @@
         </div>
       </section>
     </div>
+    <MyModal @close="closeModal" v-if="modal">
+      <!-- default スロットコンテンツ -->
+      <div class="modal-application">
+        <div class="form item">
+          <img src="../assets/img/common/session.svg" alt="講習会お申し込み" />
+        </div>
+        <ul>
+          <li class="denken">
+            <p class="title">第三種<br class="overdisplay" />電気主任技術者</p>
+            <g-link
+              to="/denken3-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/3_denken_tuugaku_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 通学(PDF)
+            </a>
+            <br />
+            <a
+              href="/3_denken_tuushin_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 通信(PDF)
+            </a>
+          </li>
+          <li class="denkikouji">
+            <p class="title">第一種<br class="overdisplay" />電気工事士</p>
+            <g-link
+              to="/koujishi-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/1_denki_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙(PDF)
+            </a>
+          </li>
+          <li class="denkikouji">
+            <p class="title">第二種<br class="overdisplay" />電気工事士</p>
+            <g-link
+              to="/koujishi-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/2_denki_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙(PDF)
+            </a>
+          </li>
+          <li class="denkikoujisekou">
+            <p class="title">
+              1・2級<br class="overdisplay" />電気工事施工管理技士
+            </p>
+            <g-link
+              to="/denkikouji-s-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/denkikouji_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/denkikouji_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 2級(PDF)
+            </a>
+          </li>
+          <li class="kenchiku">
+            <p class="title">
+              1・2級<br class="overdisplay" />建築施工管理技士
+            </p>
+            <g-link
+              to="/kenchiku-s-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/kenchiku_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/kenchiku_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 2級(PDF)
+            </a>
+          </li>
+          <li class="kankouji">
+            <p class="title">
+              1・2級<br class="overdisplay" />管工事施工管理技士
+            </p>
+            <g-link
+              to="/kankouji-s-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/kankouji_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/kankouji_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 2級(PDF)
+            </a>
+          </li>
+          <li class="doboku">
+            <p class="title">
+              1・2級<br class="overdisplay" />土木施工管理技士
+            </p>
+            <g-link
+              to="/doboku-s-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/doboku_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/doboku_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 2級(PDF)
+            </a>
+          </li>
+          <li class="kyuusui">
+            <p class="title">
+              給水装置工事<br class="overdisplay" />主任技術者
+            </p>
+            <g-link
+              to="/kyuusui-application"
+              class="application-form-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/kyuusui_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 (PDF)
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /default -->
+    </MyModal>
   </Layout>
 </template>
 
