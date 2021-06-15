@@ -3,18 +3,24 @@
     <div class="denken3">
       <header class="header">
         <Hero
-          :backImgOver="require('../assets/img/license_page/denken3/denken3_hero.jpg')"
-          :backImgUnder="require('../assets/img/license_page/denken3/denken3_hero_sp.jpg')"
-          title="第三種電気主任技術者<br>合格のための受験指導"
+          :backImgOver="
+            require('../assets/img/license_page/denken3/denken3_hero.jpg')
+          "
+          :backImgUnder="
+            require('../assets/img/license_page/denken3/denken3_hero_sp.jpg')
+          "
+          title="第三種電気主任技術者（電験三種）<br>合格のための受験指導"
           color="#e60039"
           :icon="require('../assets/img/icon/qualification/denken.svg')"
         />
         <Point
-          :points='["担当講師が執筆したオリジナルテキスト（教科書）を使用記載。項目を絞り、合格点の60点を超える力を的確に身に付けます（目標は80点前後）。","効果的な学習をサポートする副教材も特徴。講義の中での例題としての活用はもちろん、自宅学習にも使える解説付き問題集や4科目分の添削課題も付いています。","初めて受験する方には、おすすめの基礎講座もご用意しています。第三種電気主任技術者の学習をはじめる前に、押さえておくべき電気の法則や数学の公式を総ざらい。しばらく理系の学習から離れていた方は、ぜひご活用ください。"]'
+          :points="[
+            '担当講師が執筆したオリジナルテキスト（教科書）を使用記載。項目を絞り、合格点の60点を超える力を的確に身に付けます（目標は80点前後）。',
+            '効果的な学習をサポートする副教材も特徴。講義の中での例題としての活用はもちろん、自宅学習にも使える解説付き問題集や4科目分の添削課題も付いています。',
+            '初めて受験する方には、おすすめの基礎講座もご用意しています。第三種電気主任技術者（電験三種）の学習をはじめる前に、押さえておくべき電気の法則や数学の公式を総ざらい。しばらく理系の学習から離れていた方は、ぜひご活用ください。',
+          ]"
         />
-        <News
-          :contents="richtextToHTML($static.news.newsField)"
-        />
+        <News :contents="richtextToHTML($static.news.newsField)" />
         <div class="exam-link-wrapper">
           <g-link to="/licenses/#denken" class="exam-link">
             受験資格や試験日の確認はこちら
@@ -23,15 +29,24 @@
         </div>
       </header>
       <section class="tab-wrapper">
-        <div :class="['tab',{'active':isActive === 1}]" v-on:click="tabToggle(1)">
+        <div
+          :class="['tab', { active: isActive === 1 }]"
+          v-on:click="tabToggle(1)"
+        >
           通学講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
-        <div :class="['tab',{'active':isActive === 2}]" v-on:click="tabToggle(2)">
+        <div
+          :class="['tab', { active: isActive === 2 }]"
+          v-on:click="tabToggle(2)"
+        >
           通信講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
-        <div :class="['tab',{'active':isActive === 3}]" v-on:click="tabToggle(3)">
+        <div
+          :class="['tab', { active: isActive === 3 }]"
+          v-on:click="tabToggle(3)"
+        >
           オンライン<br class="underdisplay" />講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
@@ -46,14 +61,16 @@
             :cpds="richtextToHTML($static.tuugaku.cpds)"
           />
           <h3 class="body-title">各会場の開催日程</h3>
-            <Venue v-for="(items,index) in $static.tuugakuVenue.edges" :key="index"
-              :city="items.node.city"
-              :period="items.node.period"
-              :hall="items.node.hall"
-              :details="items.node.details"
-              :address="items.node.address"
-              :map="items.node.map"
-            />
+          <Venue
+            v-for="(items, index) in $static.tuugakuVenue.edges"
+            :key="index"
+            :city="items.node.city"
+            :period="items.node.period"
+            :hall="items.node.hall"
+            :details="items.node.details"
+            :address="items.node.address"
+            :map="items.node.map"
+          />
           <Application
             formLink="/denken3-application"
             faxLink="/3_denken_tuugaku_FAX_31year.pdf"
@@ -78,7 +95,9 @@
             :courseOutline="richtextToHTML($static.online.courseOutline)"
             :apply="richtextToHTML($static.online.apply)"
             :mediaYoutube="$static.online.mediaYoutube"
-            :mediaImg="$static.online.mediaImg ? $static.online.mediaImg.file.url : ''"
+            :mediaImg="
+              $static.online.mediaImg ? $static.online.mediaImg.file.url : ''
+            "
             :mediaDescription="$static.online.mediaDescription"
           />
           <Application
@@ -146,19 +165,20 @@ import News from '@/components/licensePage/News.vue';
 import Info from '@/components/licensePage/Info.vue';
 import Venue from '@/components/licensePage/Venue.vue';
 import Application from '@/components/licensePage/Application.vue';
-import IconBase from '@/components/IconBase.vue'
-import IconDoubleArrowRight from '@/components/icons/IconDoubleArrowRight.vue'
-import IconArrowRight from '@/components/icons/IconArrowRight.vue'
+import IconBase from '@/components/IconBase.vue';
+import IconDoubleArrowRight from '@/components/icons/IconDoubleArrowRight.vue';
+import IconArrowRight from '@/components/icons/IconArrowRight.vue';
 import { INLINES } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '../../node_modules/@contentful/rich-text-html-renderer';
 const options = {
   //contentfulのエディタで設定したassetへのリンクを変換
   renderNode: {
-    [INLINES.ASSET_HYPERLINK]: (node) => `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`
-  }
-}
+    [INLINES.ASSET_HYPERLINK]: (node) =>
+      `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`,
+  },
+};
 export default {
-  name: "denken3",
+  name: 'denken3',
   metaInfo() {
     return {
       title: '第三種電気主任技術者',
@@ -173,8 +193,8 @@ export default {
           property: `og:url`,
           content: `${this.$static.metadata.siteUrl}/denken3`,
         },
-      ]
-    }
+      ],
+    };
   },
   components: {
     Hero,
@@ -185,23 +205,25 @@ export default {
     Application,
     IconBase,
     IconDoubleArrowRight,
-    IconArrowRight
+    IconArrowRight,
   },
   data() {
     return {
-      isActive: 1
-    }
+      isActive: 1,
+    };
   },
   methods: {
     richtextToHTML(content) {
-      const richtextString = documentToHtmlString(content,options).replace(/\n/g, `</br>`).replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
-      return richtextString
+      const richtextString = documentToHtmlString(content, options)
+        .replace(/\n/g, `</br>`)
+        .replace(/<a((?: .+?))?>(.*?)<\/a>/g, '<a $1 target="_blank">$2</a>');
+      return richtextString;
     },
-    tabToggle: function(num) {
-      this.isActive = num
-    }
-  }
-}
+    tabToggle: function (num) {
+      this.isActive = num;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -288,27 +310,27 @@ export default {
   }
 }
 
-.tab::before{
+.tab::before {
   content: url('../assets/img/license_page/icon_bag.svg');
   display: inline-block;
   width: 1em;
   height: 1em;
-  margin-right:0.2em;
+  margin-right: 0.2em;
   @media print, screen and (max-width: 1000px) {
-    margin-right:0;
+    margin-right: 0;
   }
 }
 
 .tab:nth-child(2) {
-  &::before{
+  &::before {
     content: url('../assets/img/license_page/icon_home.svg');
   }
 }
 .tab:nth-child(3) {
-  &::before{
+  &::before {
     content: url('../assets/img/license_page/icon_pc.svg');
   }
-  .icon{
+  .icon {
     @media print, screen and (max-width: 1000px) {
       display: inline;
       margin-top: 0;
@@ -336,7 +358,7 @@ export default {
       font-size: 18px;
     }
     &:after {
-      content: "";
+      content: '';
       width: 70px;
       border-bottom: 5px solid #e60039;
       display: block;
