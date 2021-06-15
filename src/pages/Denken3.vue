@@ -2,17 +2,14 @@
   <Layout>
     <div class="denken3">
       <header class="header">
-        <Hero
-          :backImgOver="
-            require('../assets/img/license_page/denken3/denken3_hero.jpg')
-          "
-          :backImgUnder="
-            require('../assets/img/license_page/denken3/denken3_hero_sp.jpg')
-          "
-          title="第三種電気主任技術者（電験三種）<br>合格のための受験指導"
-          color="#e60039"
-          :icon="require('../assets/img/icon/qualification/denken.svg')"
-        />
+        <Hero :backImgOver="
+        require('../assets/img/license_page/denken3/denken3_hero.jpg') "
+        :backImgUnder="
+        require('../assets/img/license_page/denken3/denken3_hero_sp.jpg') "
+        title="第三種電気主任技術者<br
+          class="is-sp"
+        />（電験三種）<br />合格のための受験指導" color="#e60039"
+        :icon="require('../assets/img/icon/qualification/denken.svg')" />
         <Point
           :points="[
             '担当講師が執筆したオリジナルテキスト（教科書）を使用記載。項目を絞り、合格点の60点を超える力を的確に身に付けます（目標は80点前後）。',
@@ -365,6 +362,14 @@ export default {
       margin: 0 auto;
       margin-top: 10px;
     }
+  }
+}
+.is-sp {
+  display: none;
+}
+@media screen and (max-width: 430px) {
+  .is-sp {
+    display: block;
   }
 }
 </style>
