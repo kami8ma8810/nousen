@@ -229,6 +229,9 @@ export default {
 <style lang="scss" scoped>
 .denken3 {
   padding-bottom: 100px;
+  .title-wrapper h2.title {
+    text-align: center;
+  }
 }
 .header {
   background-color: #f2f2f2;
