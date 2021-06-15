@@ -21,7 +21,7 @@
             '＜一次＞選択問題のある科目はより効率的な学習方法を伝授します。記憶が重要な試験なので、「どこを優先的に覚え、なにを関連付けて理解すべきか」を指導します。',
             '＜二次＞多くの方が苦労される「経験記述問題」をしっかり対策します。',
             '＜二次＞工事件名の記述方法から使うべき言葉、記述してはいけない用語、文章の簡潔なまとめ方など、記述のテクニックを徹底解説。',
-            '＜二次＞個別のご質問にも極力対応します。',
+            '＜二次＞個別のご質問にも対応します。',
             '＜二次＞講習後に提出いただく経験記述の課題は講師自ら個別に添削。高得点となるように直し、助言を入れてお返しします。',
           ]"
         />
@@ -108,10 +108,16 @@
         <div v-show="isActive === 3">
           <h3 class="body-title">合格のための受験指導 オンライン講座</h3>
           <Info
-            :courseOutline="richtextToHTML($static.denkikoujiSekouOnline.courseOutline)"
+            :courseOutline="
+              richtextToHTML($static.denkikoujiSekouOnline.courseOutline)
+            "
             :apply="richtextToHTML($static.denkikoujiSekouOnline.apply)"
             :mediaYoutube="$static.denkikoujiSekouOnline.mediaYoutube"
-            :mediaImg="$static.denkikoujiSekouOnline.mediaImg ? $static.denkikoujiSekouOnline.mediaImg.file.url : ''"
+            :mediaImg="
+              $static.denkikoujiSekouOnline.mediaImg
+                ? $static.denkikoujiSekouOnline.mediaImg.file.url
+                : ''
+            "
             :mediaDescription="$static.denkikoujiSekouOnline.mediaDescription"
           />
           <Application
@@ -188,38 +194,34 @@
 </static-query>
 
 <script>
-import Hero from "@/components/Hero.vue";
-import Point from "@/components/licensePage/Point.vue";
-import News from "@/components/licensePage/News.vue";
-import Info from "@/components/licensePage/Info.vue";
-import Venue from "@/components/licensePage/Venue.vue";
-import Application from "@/components/licensePage/Application.vue";
-import IconBase from "@/components/IconBase.vue";
-import IconDoubleArrowRight from "@/components/icons/IconDoubleArrowRight.vue";
-import IconArrowRight from "@/components/icons/IconArrowRight.vue";
-import { INLINES } from "@contentful/rich-text-types";
-import { documentToHtmlString } from "../../node_modules/@contentful/rich-text-html-renderer";
+import Hero from '@/components/Hero.vue';
+import Point from '@/components/licensePage/Point.vue';
+import News from '@/components/licensePage/News.vue';
+import Info from '@/components/licensePage/Info.vue';
+import Venue from '@/components/licensePage/Venue.vue';
+import Application from '@/components/licensePage/Application.vue';
+import IconBase from '@/components/IconBase.vue';
+import IconDoubleArrowRight from '@/components/icons/IconDoubleArrowRight.vue';
+import IconArrowRight from '@/components/icons/IconArrowRight.vue';
+import { INLINES } from '@contentful/rich-text-types';
+import { documentToHtmlString } from '../../node_modules/@contentful/rich-text-html-renderer';
 const options = {
   //contentfulのエディタで設定したassetへのリンクを変換
   renderNode: {
     [INLINES.ASSET_HYPERLINK]: (node) =>
-      `<a href="${node.data.target.fields.file.url}">${
-        node.content[0].value
-      }</a>`,
+      `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`,
   },
 };
 export default {
-  name: "koujishi2",
+  name: 'koujishi2',
   metaInfo() {
     return {
-      title: "1級・2級 電気工事施工管理技士",
+      title: '1級・2級 電気工事施工管理技士',
       meta: [
         {
           key: `og:title`,
           property: `og:title`,
-          content: `1級・2級 電気工事施工管理技士 | ${
-            this.$static.metadata.siteName
-          }`,
+          content: `1級・2級 電気工事施工管理技士 | ${this.$static.metadata.siteName}`,
         },
         {
           key: `og:url`,
@@ -252,7 +254,7 @@ export default {
         .replace(/<a((?: .+?))?>(.*?)<\/a>/g, '<a $1 target="_blank">$2</a>');
       return richtextString;
     },
-    tabToggle: function(num) {
+    tabToggle: function (num) {
       this.isActive = num;
     },
   },
@@ -340,17 +342,17 @@ export default {
   }
 }
 .tab:nth-child(3) {
-  &::before{
+  &::before {
     content: url('../assets/img/license_page/icon_pc_green.svg');
     display: inline-block;
     width: 1em;
     height: 1em;
-    margin-right:0.2em;
+    margin-right: 0.2em;
     @media print, screen and (max-width: 1000px) {
-      margin-right:0;
+      margin-right: 0;
     }
   }
-  .icon{
+  .icon {
     @media print, screen and (max-width: 1000px) {
       display: inline;
       margin-top: 0;
@@ -378,7 +380,7 @@ export default {
       font-size: 18px;
     }
     &:after {
-      content: "";
+      content: '';
       width: 70px;
       border-bottom: 5px solid #00a73c;
       display: block;
