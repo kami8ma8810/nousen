@@ -53,13 +53,6 @@
       </section>
       <div class="body">
         <div v-show="isActive === 1">
-          <h3 class="body-title">合格のための受験指導 通学講座</h3>
-          <Info
-            :tuitionFee="richtextToHTML($static.tuugaku.tuitionFee)"
-            :capacity="$static.tuugaku.capacity"
-            :benefits="richtextToHTML($static.tuugaku.benefits)"
-            :cpds="richtextToHTML($static.tuugaku.cpds)"
-          />
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
             v-for="(items, index) in $static.tuugakuVenue.edges"
@@ -70,6 +63,13 @@
             :details="items.node.details"
             :address="items.node.address"
             :map="items.node.map"
+          />
+          <h3 class="body-title">合格のための受験指導 通学講座</h3>
+          <Info
+            :tuitionFee="richtextToHTML($static.tuugaku.tuitionFee)"
+            :capacity="$static.tuugaku.capacity"
+            :benefits="richtextToHTML($static.tuugaku.benefits)"
+            :cpds="richtextToHTML($static.tuugaku.cpds)"
           />
           <Application
             formLink="/denken3-application"

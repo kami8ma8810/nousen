@@ -56,13 +56,6 @@
       </section>
       <div class="body">
         <div v-show="isActive === 1">
-          <h3 class="body-title">合格のための受験指導 1級通学講座</h3>
-          <Info
-            :tuitionFee="richtextToHTML($static.doboku1.tuitionFee)"
-            :capacity="$static.doboku1.capacity"
-            :benefits="richtextToHTML($static.doboku1.benefits)"
-            :cpds="richtextToHTML($static.doboku1.cpds)"
-          />
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
             v-for="(items, index) in $static.doboku1Venue.edges"
@@ -73,6 +66,13 @@
             :details="items.node.details"
             :address="items.node.address"
             :map="items.node.map"
+          />
+          <h3 class="body-title">合格のための受験指導 1級通学講座</h3>
+          <Info
+            :tuitionFee="richtextToHTML($static.doboku1.tuitionFee)"
+            :capacity="$static.doboku1.capacity"
+            :benefits="richtextToHTML($static.doboku1.benefits)"
+            :cpds="richtextToHTML($static.doboku1.cpds)"
           />
           <Application
             formLink="/doboku-s-application"
