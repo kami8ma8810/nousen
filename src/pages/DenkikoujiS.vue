@@ -82,13 +82,6 @@
           />
         </div>
         <div v-show="isActive === 2">
-          <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
-          <Info
-            :tuitionFee="richtextToHTML($static.denkikoujiSekou2.tuitionFee)"
-            :capacity="$static.denkikoujiSekou2.capacity"
-            :benefits="richtextToHTML($static.denkikoujiSekou2.benefits)"
-            :cpds="richtextToHTML($static.denkikoujiSekou2.cpds)"
-          />
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
             v-for="(items, index) in $static.denkikoujiSekou2Venue.edges"
@@ -99,6 +92,13 @@
             :details="items.node.details"
             :address="items.node.address"
             :map="items.node.map"
+          />
+          <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
+          <Info
+            :tuitionFee="richtextToHTML($static.denkikoujiSekou2.tuitionFee)"
+            :capacity="$static.denkikoujiSekou2.capacity"
+            :benefits="richtextToHTML($static.denkikoujiSekou2.benefits)"
+            :cpds="richtextToHTML($static.denkikoujiSekou2.cpds)"
           />
           <Application
             formLink="/denkikouji-s-application"

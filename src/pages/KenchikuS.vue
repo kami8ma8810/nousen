@@ -80,13 +80,6 @@
           />
         </div>
         <div v-show="isActive === 2">
-          <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
-          <Info
-            :tuitionFee="richtextToHTML($static.kenchiku2.tuitionFee)"
-            :capacity="$static.kenchiku2.capacity"
-            :benefits="richtextToHTML($static.kenchiku2.benefits)"
-            :cpds="richtextToHTML($static.kenchiku2.cpds)"
-          />
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
             v-for="(items, index) in $static.kenchiku2Venue.edges"
@@ -97,6 +90,13 @@
             :details="items.node.details"
             :address="items.node.address"
             :map="items.node.map"
+          />
+          <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
+          <Info
+            :tuitionFee="richtextToHTML($static.kenchiku2.tuitionFee)"
+            :capacity="$static.kenchiku2.capacity"
+            :benefits="richtextToHTML($static.kenchiku2.benefits)"
+            :cpds="richtextToHTML($static.kenchiku2.cpds)"
           />
           <Application
             formLink="/kenchiku-s-application"
