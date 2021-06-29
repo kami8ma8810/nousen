@@ -556,7 +556,7 @@ export default {
     margin-top: 1em;
   }
   @media print, screen and(max-width: 1000px) {
-    overflow-y: scroll;
+    // overflow-y: scroll;
     margin-left: 15%;
     align-self: center;
   }
