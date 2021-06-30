@@ -1194,10 +1194,11 @@ export default {
   }
 }
 .reason-explanation p span.letterspacing-negative {
-  font-size: 18px;
+  font-size: 18px !important;
   letter-spacing: -0.05em;
+  color: #000;
   @media print, screen and (min-width: 1001px) {
-    font-size: 16px;
+    font-size: 16px !important;
   }
   @media print, screen and (max-width: 520px) {
     letterspacing: 0;
