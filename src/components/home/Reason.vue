@@ -350,7 +350,11 @@ export default {
   }
 }
 .reason-explanation span.letterspacing-negative {
+  font-size: 18px;
   letter-spacing: -0.05em;
+  @media print, screen and (min-width: 1001px) {
+    font-size: 16px;
+  }
   @media print, screen and (max-width: 520px) {
     letterspacing: 0;
   }
