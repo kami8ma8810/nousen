@@ -130,6 +130,9 @@ export default {
     }
     &:last-of-type {
       margin-right: 0;
+      @media print, screen and (max-width: 520px) {
+        line-height: 1.5;
+      }
     }
   }
 }
