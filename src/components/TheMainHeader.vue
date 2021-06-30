@@ -208,12 +208,7 @@
         <ul>
           <li class="denken">
             <p class="title">第三種<br class="overdisplay" />電気主任技術者</p>
-            <g-link
-              to="/denken3-application"
-              class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <g-link to="/denken3-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
