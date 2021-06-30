@@ -57,47 +57,47 @@
         <ul class="list">
           <li>第三種電気主任技術者(各科目)<br /></li>
         </ul>
-        <p>※セット、模擬試験は対象外。</p>
+        <p class="list-p">※セット、模擬試験は対象外。</p>
         <ul class="list">
           <li>第一種電気工事士　筆記コース</li>
           <li>第一種電気工事士　技能コース</li>
           <li>第二種電気工事士　筆記コース</li>
           <li>第二種電気工事士　技能コース</li>
         </ul>
-        <p>※セットは対象外。</p>
-        <ul class="list">
+        <p class="list-p">※セットは対象外。</p>
+        <ul class="list list-set">
           <li>１級電気工事施工管理技士　一次二次セット</li>
           <li>１級電気工事施工管理技士　一次コース</li>
           <li>１級電気工事施工管理技士　二次コース</li>
         </ul>
-        <ul class="list">
+        <ul class="list list-set">
           <li>２級電気工事施工管理技士　一次二次セット</li>
           <li>２級電気工事施工管理技士　二次セット</li>
         </ul>
-        <ul class="list">
+        <ul class="list list-set">
           <li>１級建築施工管理技士　一次二次セット</li>
           <li>１級建築施工管理技士　一次コース</li>
           <li>１級建築施工管理技士　二次コース</li>
         </ul>
-        <ul class="list">
+        <ul class="list list-set">
           <li>２級建築施工管理技士　一次二次セット</li>
           <li>２級建築施工管理技士　二次コース</li>
         </ul>
-        <ul class="list">
+        <ul class="list list-set">
           <li>１級土木施工管理技士　一次二次セット</li>
           <li>１級土木施工管理技士　一次コース</li>
           <li>１級土木施工管理技士　二次コース</li>
         </ul>
-        <ul class="list">
+        <ul class="list list-set">
           <li>２級土木施工管理技士　一次二次セット</li>
           <li>２級土木施工管理技士　二次コース</li>
         </ul>
-        <ul class="list">
+        <ul class="list list-set">
           <li>１級管工事施工管理技士　一次二次セット</li>
           <li>１級管工事施工管理技士　一次コース</li>
           <li>１級管工事施工管理技士　二次コース</li>
         </ul>
-        <ul class="list">
+        <ul class="list list-set">
           <li>２級管工事施工管理技士　一次二次セット</li>
           <li>２級管工事施工管理技士　二次コース</li>
         </ul>
@@ -233,5 +233,12 @@ export default {
 .section {
   border-bottom: 1px dotted #000;
   padding: 50px 0;
+}
+.list-set {
+  margin-bottom: 2em;
+}
+.list-p {
+  margin-top: 0;
+  margin-bottom: 2em;
 }
 </style>
