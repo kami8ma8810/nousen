@@ -117,12 +117,19 @@ export default {
     color: #666666;
     margin-right: 10px;
     @media print, screen and (max-width: 1000px) {
+      padding: 0 0.5em;
       font-size: 14px;
+    }
+    @media print, screen and (max-width: 520px) {
+      font-size: 12px;
     }
     &.active {
       background-color: #f9f9f9;
       border-top: 5px solid #f4891e;
       box-sizing: border-box;
+    }
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 }
