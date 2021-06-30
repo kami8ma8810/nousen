@@ -1193,7 +1193,4 @@ export default {
     }
   }
 }
-.reason-explanatio > p {
-  letter-spacing: -0.05em;
-}
 </style>
