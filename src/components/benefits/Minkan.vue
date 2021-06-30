@@ -83,6 +83,27 @@
           <li>２級建築施工管理技士　一次二次セット</li>
           <li>２級建築施工管理技士　二次コース</li>
         </ul>
+        <ul class="list">
+          <li>１級土木施工管理技士　一次二次セット</li>
+          <li>１級土木施工管理技士　一次コース</li>
+          <li>１級土木施工管理技士　二次コース</li>
+        </ul>
+        <ul class="list">
+          <li>２級土木施工管理技士　一次二次セット</li>
+          <li>２級土木施工管理技士　二次コース</li>
+        </ul>
+        <ul class="list">
+          <li>１級管工事施工管理技士　一次二次セット</li>
+          <li>１級管工事施工管理技士　一次コース</li>
+          <li>１級管工事施工管理技士　二次コース</li>
+        </ul>
+        <ul class="list">
+          <li>２級管工事施工管理技士　一次二次セット</li>
+          <li>２級管工事施工管理技士　二次コース</li>
+        </ul>
+        <ul class="list">
+          <li>給水装置工事主任技術者</li>
+        </ul>
       </section>
       <section class="section">
         <div class="section-title">
@@ -90,25 +111,38 @@
         </div>
         <div class="flow">
           <p>
-            企業が訓練計画を作成し、実施する1ヶ月前までに管轄都道府県の労働局にご提出ください。
+            各職業能力開発センターに交付申請の予約・相談をします。<br />※申請期間は決まっております。企業等の所在地を管轄する職業能力開発センターにご相談ください。
+          </p>
+          <p>交付申請書類を提出し、講習にご参加頂く等の訓練を実施します。</p>
+          <p>
+            訓練終了後、おおむね１〜２か月以内の報告期に実績報告書を提出します。
           </p>
           <p>
-            提出した訓練計画に則って、講習にご参加頂く等の訓練を実施していきます。
+            実績報告書の審査が通りましたら、助成額の確定通知とともに請求書が送られてくるので、所定の期限までに提出。助成金が事業主の指定した口座に入金されます。
           </p>
-          <p>訓練終了後、２ヶ月以内に支給申請書を労働局に提出します。</p>
-          <p>審査を通過すると助成金が事業主の指定した口座に入金されます。</p>
         </div>
       </section>
       <section class="section">
         <div class="section-title">
-          <h4 class="section-title-inner">お問い合わせ先</h4>
+          <h4 class="section-title-inner">お問い合わせ先及び申請先</h4>
         </div>
+        <p>
+          企業・団体の所在地を管轄する職業能力開発センターにお問い合わせください。
+        </p>
         <a
-          href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyufukin/d01-1.html"
+          href="https://www.hataraku.metro.tokyo.lg.jp/jinzai/ikusei/81_R3_kunren_josei_toiawase.pdf"
           target="_blank"
           class="link"
-          >厚生労働省の人材開発支援助成金に関するホームページへ</a
+          >https://www.hataraku.metro.tokyo.lg.jp/jinzai/ikusei/81_R3_kunren_josei_toiawase.pdf</a
         >
+      </section>
+      <section class="section">
+        <div class="section-title">
+          <h4 class="section-title-inner">要注意</h4>
+        </div>
+        <p>
+          審査通過による適用なので、必ずしも支給されるとは限りませんのでご注意下さい。
+        </p>
       </section>
     </div>
   </div>

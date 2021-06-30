@@ -8,16 +8,29 @@
       />
       <div class="benefits-contents">
         <div class="tab-wrapper">
-          <div :class="['tab',{'active':isActive === 1}]" v-on:click="tabToggle(1)">
+          <div
+            :class="['tab', { active: isActive === 1 }]"
+            v-on:click="tabToggle(1)"
+          >
             一般教育訓練給付金
           </div>
-          <div :class="['tab',{'active':isActive === 2}]" v-on:click="tabToggle(2)">
+          <div
+            :class="['tab', { active: isActive === 2 }]"
+            v-on:click="tabToggle(2)"
+          >
             人材開発支援助成金
+          </div>
+          <div
+            :class="['tab', { active: isActive === 3 }]"
+            v-on:click="tabToggle(3)"
+          >
+            民間派遣型スキルアップ助成金
           </div>
         </div>
         <div class="contents-wrapper">
-            <Ippan v-show="isActive === 1" />
-            <Jinzai v-show="isActive === 2" />
+          <Ippan v-show="isActive === 1" />
+          <Jinzai v-show="isActive === 2" />
+          <Minkan v-show="isActive === 3" />
         </div>
       </div>
     </div>
@@ -37,6 +50,7 @@ query {
 import Hero from '@/components/Hero.vue';
 import Ippan from '@/components/benefits/Ippan.vue';
 import Jinzai from '@/components/benefits/Jinzai.vue';
+import Minkan from '../components/benefits/Minkan.vue';
 export default {
   name: 'benefits',
   metaInfo() {
@@ -53,25 +67,26 @@ export default {
           property: `og:url`,
           content: `${this.$static.metadata.siteUrl}/benefits`,
         },
-      ]
-    }
+      ],
+    };
   },
   data() {
     return {
-      isActive: 1
-    }
+      isActive: 1,
+    };
   },
   components: {
     Hero,
     Ippan,
     Jinzai
+    Minkan,
   },
   methods: {
-    tabToggle: function(num) {
-      this.isActive = num
-    }
-  }
-}
+    tabToggle: function (num) {
+      this.isActive = num;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -84,7 +99,7 @@ export default {
   margin: 0 auto;
   margin-top: 100px;
   @media print, screen and (max-width: 1000px) {
-   width: 90%;
+    width: 90%;
   }
 }
 .tab-wrapper {
@@ -115,7 +130,7 @@ export default {
   background-color: #f9f9f9;
   padding: 70px 50px 100px 50px;
   @media print, screen and (max-width: 1000px) {
-   padding: 70px 5% 100px 5%;
+    padding: 70px 5% 100px 5%;
   }
 }
 </style>
