@@ -122,7 +122,7 @@
             myCatch="必要なことだけ、<br>
               「学び方」を学べます。"
             :explanation="[
-              '講師の多くが、建設・電気・設備等さまざまな現場で<i class=scroll-animation-item>長いキャリアをもつ元技術者</i>です。<br>豊富な現場経験のもと、みなさんが<i class=scroll-animation-item>共感できるエピソード</i>を盛り込んだ熱い講習が特徴。<br>難しい話も興味をもって理解できる！',
+              '講師の多くが、建設・電気・設備等さまざまな現場で<i class=scroll-animation-item>長いキャリアをもつ現役及び元技術者</i>です。<br>豊富な現場経験のもと、みなさんが<i class=scroll-animation-item>共感できるエピソード</i>を盛り込んだ熱い講習が特徴。<br>難しい話も興味をもって理解できる！',
               '近年の出題傾向、関連業種の現況、法制度の変更などもしっかりサポート。<br>「試験までに特に学習すべき項目」「捨てるべき項目」を明確にお伝えします。<br>だから、<i class=scroll-animation-item>効率的な学習方法を</i>学べる！',
               'ご質問があれば、講義中はもちろん、<i class=scroll-animation-item>休憩時間や終了後も</i>快く対応します。',
             ]"
@@ -153,8 +153,9 @@
                   '短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ<br>視聴することも可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
                   '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。',
                 ],
-                movieSrc: 'https://www.youtube.com/embed/Z-Hro9L34fw',
-                movieText: '※サンプル動画は1級建築施工管理技士のものです',
+                // movieSrc: 'https://www.youtube.com/embed/Z-Hro9L34fw',
+                movieSrc: 'https://www.youtube.com/embed/wb12M0rAYuw',
+                movieText: '※動画は建築施工管理技士の講義です',
               },
               {
                 title: 'front/section05_title3.svg',
@@ -216,7 +217,7 @@
             myCatch="2万名から支持されています。"
             :explanation="[
               '私たち能センの正式名称は、「<i class=scroll-animation-item>一般社団法人 能力開発研修センター</i>」です。',
-              '<i>設立は1983年</i>。資格取得を目指す方々に長年支持され続けています。<br><span>（受講生：約2万2000名以上、参加企業：約1万2000社以上）</span>',
+              '<i>設立は1983年</i>。資格取得を目指す方々に長年支持され続けています。<br><span>（受講生：約2万2000名以上、参加企業：約1万2000社以上 ※直近10年での累計）</span>',
               '10年以上にわたって指名をいただく企業も多数。<i class=scroll-animation-item>業界から高い信頼</i>をいただいています。',
             ]"
           />
