@@ -78,7 +78,7 @@ export default {
   components: {
     Hero,
     Ippan,
-    Jinzai
+    Jinzai,
     Minkan,
   },
   methods: {
