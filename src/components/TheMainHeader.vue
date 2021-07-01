@@ -236,8 +236,6 @@
             <g-link
               to="/koujishi-application"
               class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               お申し込みフォーム </g-link
             ><br />
@@ -255,8 +253,6 @@
             <g-link
               to="/koujishi-application"
               class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               お申し込みフォーム </g-link
             ><br />
@@ -276,8 +272,6 @@
             <g-link
               to="/denkikouji-s-application"
               class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               お申し込みフォーム </g-link
             ><br />
@@ -305,8 +299,6 @@
             <g-link
               to="/kenchiku-s-application"
               class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               お申し込みフォーム </g-link
             ><br />
@@ -334,8 +326,6 @@
             <g-link
               to="/kankouji-s-application"
               class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               お申し込みフォーム </g-link
             ><br />
@@ -363,8 +353,6 @@
             <g-link
               to="/doboku-s-application"
               class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               お申し込みフォーム </g-link
             ><br />
@@ -392,8 +380,6 @@
             <g-link
               to="/kyuusui-application"
               class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               お申し込みフォーム </g-link
             ><br />
