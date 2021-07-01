@@ -1,7 +1,7 @@
 <template>
   <div :class="displayNone">
     <div class="sp_online_infomation">
-      <p>オンライン講座はじめました！</p>
+      <p class="sp_online_infomation_text">オンライン講座はじめました！</p>
     </div>
     <div class="online_infomation">
       <img
@@ -44,7 +44,7 @@ export default {
   background: var(--orange);
   color: #fff;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 16px;
   text-align: center;
   @media print, screen and(min-width: 1000px) {
     display: none;

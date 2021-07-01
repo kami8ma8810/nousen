@@ -503,7 +503,7 @@ export default {
         @media print, screen and(min-width: 1101px) {
           transform: scale(1);
           left: -2em;
-          top: 110%;
+          top: 100%;
         }
       }
     }
@@ -563,8 +563,10 @@ export default {
   font-size: 20px;
   width: 100%;
   @media print, screen and(min-width: 1001px) {
-    margin-left: calc(100% - 670px); //202101 オンライン講座案内のため
-    max-width: 670px;
+    // margin-left: calc(100% - 670px); //202101 オンライン講座案内のため
+    margin-left: calc(100% - 655px); //営業時間の表記変更に伴うレイアウト変更
+    // max-width: 670px;
+    max-width: 660px; //営業時間の表記変更に伴うレイアウト変更
     margin-bottom: 20px;
   }
   @media print, screen and(min-width: 551px) {
