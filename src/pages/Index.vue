@@ -1154,6 +1154,11 @@ export default {
           width: 1.2em;
         }
       }
+      .overdisplay {
+        @media print, screen and(max-width: 1000px) {
+          display: none;
+        }
+      }
     }
   }
 }
