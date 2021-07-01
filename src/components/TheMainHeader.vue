@@ -10,10 +10,12 @@
       <div class="logo">
         <div class="logo-inner">
           <g-link to="/">
-            <img
-              src="../assets/img/common/main_logo.svg"
-              alt="能セン 学び方を学ぶ"
-            />
+            <h1>
+              <img
+                src="../assets/img/common/main_logo.svg"
+                alt="能セン 学び方を学ぶ"
+              />
+            </h1>
           </g-link>
         </div>
       </div>
