@@ -953,6 +953,9 @@ export default {
           height: 1.2em;
           width: 1.2em;
         }
+        @media print, screen and(max-width: 321px) {
+          margin-right: 10px;
+        }
       }
     }
   }
