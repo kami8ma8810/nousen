@@ -107,12 +107,12 @@
         <News />
       </section>
       <section class="section03">
-        <h3 class="section-title">
+        <h2 class="section-title">
           <img
             src="../assets/img/front/reason_main_headline.svg"
             alt="能センが選ばれる5つの理由"
           />
-        </h3>
+        </h2>
         <div class="reason-wrapper">
           <Reason
             reasonNumber="1"
