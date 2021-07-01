@@ -181,12 +181,12 @@ export default {
   name: 'denken3',
   metaInfo() {
     return {
-      title: '第三種電気主任技術者',
+      title: '第三種電気主任技術者（電験三種）',
       meta: [
         {
           key: `og:title`,
           property: `og:title`,
-          content: `第三種電気主任技術者 | ${this.$static.metadata.siteName}`,
+          content: `第三種電気主任技術者（電験三種） | ${this.$static.metadata.siteName}`,
         },
         {
           key: `og:url`,
