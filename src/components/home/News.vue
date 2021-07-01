@@ -1,11 +1,12 @@
 <template>
   <div class="news-wrapper">
-    <h3 class="section-title">
-      センターからのお知らせ
-    </h3>
-    <article class="news-article" v-for="(item,index) in $static.allContentfulNewsPost.edges" :key="index">
-      <span class="news-date">{{item.node.date}}<br>
-        </span>
+    <h2 class="section-title">センターからのお知らせ</h2>
+    <article
+      class="news-article"
+      v-for="(item, index) in $static.allContentfulNewsPost.edges"
+      :key="index"
+    >
+      <span class="news-date">{{ item.node.date }}<br /> </span>
       <div class="news-content" v-html="richtextToHTML(item.node.article)" />
     </article>
   </div>
@@ -33,19 +34,22 @@ import { documentToHtmlString } from '../../../node_modules/@contentful/rich-tex
 const options = {
   //contentfulのエディタで設定したassetへのリンクを変換
   renderNode: {
-    [INLINES.ASSET_HYPERLINK]: (node) => `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`
-  }
-}
+    [INLINES.ASSET_HYPERLINK]: (node) =>
+      `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`,
+  },
+};
 
 export default {
   name: 'news',
   methods: {
-   richtextToHTML(content) {
-    const richtextString = documentToHtmlString(content,options).replace(/\n/g, `</br>`).replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
-    return richtextString
-   }
- }
-}
+    richtextToHTML(content) {
+      const richtextString = documentToHtmlString(content, options)
+        .replace(/\n/g, `</br>`)
+        .replace(/<a((?: .+?))?>(.*?)<\/a>/g, '<a $1 target="_blank">$2</a>');
+      return richtextString;
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .news-wrapper {
