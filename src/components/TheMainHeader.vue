@@ -10,7 +10,7 @@
       <div class="logo">
         <div class="logo-inner">
           <g-link to="/">
-            <h1>
+            <h1 class="main-header-title">
               <img
                 src="../assets/img/common/main_logo.svg"
                 alt="能セン 学び方を学ぶ"
@@ -993,5 +993,8 @@ export default {
   @media print, screen and(min-width: 1001px) {
     display: none;
   }
+}
+.main-header-title {
+  margin: 0;
 }
 </style>
