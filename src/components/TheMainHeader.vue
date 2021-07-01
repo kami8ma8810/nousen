@@ -856,6 +856,9 @@ export default {
     @media print, screen and(max-width: 1000px) {
       margin-left: 1em;
     }
+    @media print, screen and(max-width: 321px) {
+      margin-left: 0;
+    }
     li {
       position: relative; //202101 for online
       text-align: left;
