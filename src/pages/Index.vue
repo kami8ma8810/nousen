@@ -1142,6 +1142,7 @@ export default {
       }
     }
     .title {
+      color: #000;
       display: flex;
       &:before {
         height: 50px;
