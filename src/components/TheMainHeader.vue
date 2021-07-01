@@ -233,10 +233,7 @@
           </li>
           <li class="denkikouji">
             <p class="title">第一種<br class="overdisplay" />電気工事士</p>
-            <g-link
-              to="/koujishi-application"
-              class="application-form-link"
-            >
+            <g-link to="/koujishi-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -250,10 +247,7 @@
           </li>
           <li class="denkikouji">
             <p class="title">第二種<br class="overdisplay" />電気工事士</p>
-            <g-link
-              to="/koujishi-application"
-              class="application-form-link"
-            >
+            <g-link to="/koujishi-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -296,10 +290,7 @@
             <p class="title">
               1・2級<br class="overdisplay" />建築施工管理技士
             </p>
-            <g-link
-              to="/kenchiku-s-application"
-              class="application-form-link"
-            >
+            <g-link to="/kenchiku-s-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -323,10 +314,7 @@
             <p class="title">
               1・2級<br class="overdisplay" />管工事施工管理技士
             </p>
-            <g-link
-              to="/kankouji-s-application"
-              class="application-form-link"
-            >
+            <g-link to="/kankouji-s-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -350,10 +338,7 @@
             <p class="title">
               1・2級<br class="overdisplay" />土木施工管理技士
             </p>
-            <g-link
-              to="/doboku-s-application"
-              class="application-form-link"
-            >
+            <g-link to="/doboku-s-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -377,10 +362,7 @@
             <p class="title">
               給水装置工事<br class="overdisplay" />主任技術者
             </p>
-            <g-link
-              to="/kyuusui-application"
-              class="application-form-link"
-            >
+            <g-link to="/kyuusui-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -485,11 +467,11 @@ export default {
         width: 200px;
         color: #3b241a;
         left: -4.8em;
-        top: 95%;
+        top: 80%; //ロゴのh1化によるズレ調整
         @media print, screen and(min-width: 1101px) {
           transform: scale(1);
           left: -2em;
-          top: 100%;
+          top: 100%; //ロゴのh1化によるズレ調整
         }
       }
     }
