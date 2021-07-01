@@ -1,12 +1,12 @@
 <template>
   <article :class="['reason-contents', `reason-contents${reasonNumber}`]">
-    <h4 class="reason-title">
+    <h3 class="reason-title">
       <p>
         <i>{{ reasonNumber }}</i>
         <span>{{ myTitle }}</span>
         <!-- わかりやすい講習 -->
       </p>
-    </h4>
+    </h3>
     <div class="reason-catch-set scroll-animation-item">
       <g-image
         :src="require(`!!assets-loader!@images/${myImageSp}`)"
