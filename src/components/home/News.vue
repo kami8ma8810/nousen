@@ -64,6 +64,7 @@ export default {
 .section-title {
   text-align: center;
   margin-top: 50px;
+  font-size: 1.17em;
 }
 .news-article {
   margin: 30px;

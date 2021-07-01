@@ -996,5 +996,6 @@ export default {
 }
 .main-header-title {
   margin: 0;
+  display: inline-flex;
 }
 </style>
