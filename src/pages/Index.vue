@@ -166,7 +166,7 @@
               },
             ]"
           />
-          <div class="btn__apply">
+          <div class="btn__apply __">
             <a @click="openModal"
               ><span>お申込みはこちら</span
               ><svg
@@ -904,6 +904,7 @@ export default {
         padding: 10px 3em;
         font-weight: bold;
         font-size: 20px;
+				width:375px;
       }
       svg {
         margin-left: 10px;
