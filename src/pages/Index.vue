@@ -905,6 +905,7 @@ export default {
         font-weight: bold;
         font-size: 20px;
 				width:375px;
+				box-sizing: border-box;
       }
       svg {
         margin-left: 10px;
