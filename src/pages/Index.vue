@@ -893,6 +893,10 @@ export default {
       width: 100%;
       text-align: center;
       margin: 100px auto 400px;
+		  @media print, screen and (max-width: 1000px) {
+				margin: 100px auto 200px;
+    }
+
       a {
         display: inline-block;
         background-color: #f4891e;
