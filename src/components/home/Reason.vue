@@ -264,6 +264,7 @@ export default {
   font-weight: bold;
   margin-top: 100px;
   font-size: 20px;
+	min-width: 375px;
   .icon {
     margin-left: 10px;
   }
