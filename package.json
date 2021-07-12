@@ -12,7 +12,6 @@
     "babel-polyfill": "^6.26.0",
     "gridsome": "^0.7.23",
     "gridsome-plugin-gtag": "^0.1.10",
-    "jquery": "^3.6.0",
     "vue-gtag": "^1.10.0",
     "vue-smoothscroll": "^0.2.0",
     "vue2-google-maps": "^0.10.7"
