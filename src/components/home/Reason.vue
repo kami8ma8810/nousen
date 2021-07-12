@@ -132,7 +132,7 @@ export default {
   },
   methods: {
     youtubeInit() {
-      var vidDefer = document.getElementsByTagName('iframe');
+      var vidDefer = document.querySelector('.youtube');
       for (var i = 0; i < vidDefer.length; i++) {
         if (vidDefer[i].getAttribute('data-src')) {
           vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
