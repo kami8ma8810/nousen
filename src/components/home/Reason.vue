@@ -56,6 +56,20 @@
           </div>
           <p class="attention">{{ explanation.movieText }}</p>
         </div>
+        <div class="reason-explanationGroup-movie" v-if="explanation.movieSrc">
+          <div class="reason-explanationGroup-movie_inner youtube">
+            <iframe
+              width="560"
+              height="315"
+              :data-src="explanation.movieSrc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="attention">{{ explanation.movieText }}</p>
+        </div>
       </div>
     </div>
     <!--explain 通常 -->
@@ -84,6 +98,7 @@
 <script>
 import IconBase from '@/components/IconBase.vue';
 import IconFingerRight from '@/components/icons/IconFingerRight.vue';
+import jQuery from 'jquery';
 export default {
   name: 'reason',
   components: {
@@ -102,6 +117,17 @@ export default {
     explanationGroup: Array,
   },
 };
+	jQuery(function(){
+  jQuery('.youtube').each(function() {
+    var iframe = jQuery(this).children('iframe');
+    var url = iframe.attr('data-src');
+    var id = url.match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
+    iframe.before('<img src="http://img.youtube.com/vi/'+id+'/mqdefault.jpg" />').remove();
+    jQuery(this).on('click', function() {
+      jQuery(this).after('<div class="youtube"><iframe src="https://www.youtube.com/embed/'+id+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>').remove();
+    });
+  });
+});
 </script>
 
 <style lang="scss" scoped>
