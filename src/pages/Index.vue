@@ -534,7 +534,7 @@ export default {
 
     //スクロールしたらスクロールimg非表示
     window.addEventListener('scroll', this.onScroll);
-    window.addEventListener('load', this.youtubeInit);
+    // window.addEventListener('load', this.youtubeInit);
   },
   destroyed() {
     window.removeEventListener('scroll', this.onScroll);
@@ -556,14 +556,14 @@ export default {
     closeModal() {
       this.modal = false;
     },
-    youtubeInit() {
-      var vidDefer = document.getElementsByTagName('iframe');
-      for (var i = 0; i < vidDefer.length; i++) {
-        if (vidDefer[i].getAttribute('data-src')) {
-          vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
-        }
-      }
-    },
+    // youtubeInit() {
+    //   var vidDefer = document.getElementsByTagName('iframe');
+    //   for (var i = 0; i < vidDefer.length; i++) {
+    //     if (vidDefer[i].getAttribute('data-src')) {
+    //       vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+    //     }
+    //   }
+    // },
   },
 };
 </script>
