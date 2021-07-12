@@ -116,18 +116,8 @@ export default {
     moreText: String,
     explanationGroup: Array,
   },
+
 };
-	jQuery(function(){
-  jQuery('.youtube').each(function() {
-    var iframe = jQuery(this).children('iframe');
-    var url = iframe.attr('data-src');
-    var id = url.match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
-    iframe.before('<img src="http://img.youtube.com/vi/'+id+'/mqdefault.jpg" />').remove();
-    jQuery(this).on('click', function() {
-      jQuery(this).after('<div class="youtube"><iframe src="https://www.youtube.com/embed/'+id+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>').remove();
-    });
-  });
-});
 </script>
 
 <style lang="scss" scoped>
