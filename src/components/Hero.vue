@@ -101,6 +101,9 @@ export default {
     }
   }
 }
+.denken3 .hero .title-wrapper h2.title{
+text-align: center;
+}
 .icon {
   width: 80px;
   position: absolute;
