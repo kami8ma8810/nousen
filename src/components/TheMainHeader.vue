@@ -634,6 +634,9 @@ export default {
     padding-top: 10px;
     max-width: 90%;
   }
+  @media print, screen and(max-width: 430px) {
+    padding-bottom: 60px;
+  }
 }
 .nav-inner01 {
   position: relative;
