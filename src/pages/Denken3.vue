@@ -370,6 +370,10 @@ export default {
     }
   }
 }
+
+.denken3 .hero .title-wrapper h2.title{
+text-align: center;
+}
 .is-sp {
   display: none;
 }
