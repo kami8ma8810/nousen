@@ -555,7 +555,6 @@ export default {
     closeModal() {
       this.modal = false;
     },
-
   },
 };
 </script>

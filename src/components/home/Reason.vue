@@ -62,7 +62,6 @@
               width="560"
               height="315"
               data-src="https://www.youtube.com/embed/wb12M0rAYuw"
-              src
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
