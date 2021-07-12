@@ -248,7 +248,7 @@
             class="last-message-logo"
           />
         </div>
-				 <div class="btn__apply">
+				 <div class="btn__apply __bottom">
             <a @click="openModal"
               ><span>お申込みはこちら</span
               ><svg
@@ -948,6 +948,25 @@ window.onload = init;
       }
     }
   }
+	  .btn__apply.__bottom {
+      width: 100%;
+      text-align: center;
+      margin: 100px auto 0;
+
+      a {
+        display: inline-block;
+        background-color: #f4891e;
+        color: #fff;
+        padding: 10px 3em;
+        font-weight: bold;
+        font-size: 20px;
+				width:375px;
+				box-sizing: border-box;
+      }
+      svg {
+        margin-left: 10px;
+      }
+    }
   .last-message {
     max-width: 90%;
     width: 100%;
