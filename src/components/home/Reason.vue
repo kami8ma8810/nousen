@@ -42,7 +42,7 @@
         >
           <p v-html="text"></p>
         </div>
-        <div class="reason-explanationGroup-movie" v-if="explanation.movieSrc">
+        <!-- <div class="reason-explanationGroup-movie" v-if="explanation.movieSrc">
           <div class="reason-explanationGroup-movie_inner">
             <iframe
               width="560"
@@ -55,14 +55,14 @@
             ></iframe>
           </div>
           <p class="attention">{{ explanation.movieText }}</p>
-        </div>
+        </div> -->
         <div class="reason-explanationGroup-movie" v-if="explanation.movieSrc">
           <div class="reason-explanationGroup-movie_inner youtube">
             <iframe
               width="560"
               height="315"
               data-src="https://www.youtube.com/embed/wb12M0rAYuw"
-							src
+              src
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -116,7 +116,17 @@ export default {
     moreText: String,
     explanationGroup: Array,
   },
-
+  methods: {
+    youtubeInit() {
+      var vidDefer = document.getElementsByTagName('iframe');
+      for (var i = 0; i < vidDefer.length; i++) {
+        if (vidDefer[i].getAttribute('data-src')) {
+          vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+        }
+      }
+      window.onload = init;
+    },
+  },
 };
 </script>
 
