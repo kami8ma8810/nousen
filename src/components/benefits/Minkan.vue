@@ -138,7 +138,7 @@
       </section>
       <section class="section">
         <div class="section-title">
-          <h4 class="section-title-inner">要注意</h4>
+          <h4 class="section-title-inner">ご注意</h4>
         </div>
         <p>
           審査通過による適用なので、必ずしも支給されるとは限りませんのでご注意下さい。
