@@ -98,7 +98,7 @@
 <script>
 import IconBase from '@/components/IconBase.vue';
 import IconFingerRight from '@/components/icons/IconFingerRight.vue';
-import $ from 'jquery';
+// import $ from 'jquery';
 export default {
   name: 'reason',
   components: {
@@ -132,7 +132,7 @@ export default {
   },
   methods: {
     youtubeInit() {
-      var vidDefer = document.querySelector('.youtube');
+      var vidDefer = document.getElementsByTagName('iframe');
       for (var i = 0; i < vidDefer.length; i++) {
         if (vidDefer[i].getAttribute('data-src')) {
           vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
