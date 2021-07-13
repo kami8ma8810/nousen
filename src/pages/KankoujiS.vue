@@ -74,6 +74,7 @@
           />
         </div>
         <div v-show="isActive === 2">
+          <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
             v-for="(items, index) in $static.kankouji2Venue.edges"
@@ -85,7 +86,6 @@
             :address="items.node.address"
             :map="items.node.map"
           />
-          <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
           <Info
             :tuitionFee="richtextToHTML($static.kankouji2.tuitionFee)"
             :capacity="$static.kankouji2.capacity"

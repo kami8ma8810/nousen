@@ -1,8 +1,10 @@
 <template>
   <div class="application">
-    <a :href="formLink" class="application-link" target="_blank">
+    <a :href="formLink" class="application-link">
       {{ formText }}
-      <IconBase class="icon" width="25" height="25"><IconFingerRight /></IconBase>
+      <IconBase class="icon" width="25" height="25"
+        ><IconFingerRight
+      /></IconBase>
     </a>
     <p class="fax-link" v-if="faxLink">
       <a :href="faxLink" target="_blank">
@@ -13,22 +15,22 @@
 </template>
 
 <script>
-import IconBase from '@/components/IconBase.vue'
-import IconFingerRight from '@/components/icons/IconFingerRight.vue'
+import IconBase from '@/components/IconBase.vue';
+import IconFingerRight from '@/components/icons/IconFingerRight.vue';
 export default {
   props: {
-    formText:{
-      type:String,
-      default:'講習会へのお申し込み'
+    formText: {
+      type: String,
+      default: '講習会へのお申し込み',
     },
     formLink: String,
     faxLink: String,
   },
   components: {
     IconBase,
-    IconFingerRight
-  }
-}
+    IconFingerRight,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
