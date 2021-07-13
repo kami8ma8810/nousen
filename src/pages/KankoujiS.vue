@@ -50,6 +50,7 @@
       </section>
       <div class="body">
         <div v-show="isActive === 1">
+          <h3 class="body-title">合格のための受験指導 1級通学講座</h3>
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
             v-for="(items, index) in $static.kankouji1Venue.edges"
@@ -61,7 +62,6 @@
             :address="items.node.address"
             :map="items.node.map"
           />
-          <h3 class="body-title">合格のための受験指導 1級通学講座</h3>
           <Info
             :tuitionFee="richtextToHTML($static.kankouji1.tuitionFee)"
             :capacity="$static.kankouji1.capacity"
@@ -172,7 +172,9 @@ const options = {
   //contentfulのエディタで設定したassetへのリンクを変換
   renderNode: {
     [INLINES.ASSET_HYPERLINK]: (node) =>
-      `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`,
+      `<a href="${node.data.target.fields.file.url}">${
+        node.content[0].value
+      }</a>`,
   },
 };
 export default {
@@ -184,7 +186,9 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `1・2級 管工事施工管理技士 | ${this.$static.metadata.siteName}`,
+          content: `1・2級 管工事施工管理技士 | ${
+            this.$static.metadata.siteName
+          }`,
         },
         {
           key: `og:url`,
@@ -217,7 +221,7 @@ export default {
         .replace(/<a((?: .+?))?>(.*?)<\/a>/g, '<a $1 target="_blank">$2</a>');
       return richtextString;
     },
-    tabToggle: function (num) {
+    tabToggle: function(num) {
       this.isActive = num;
     },
   },

@@ -31,6 +31,7 @@
       </header>
       <div class="body">
         <div>
+          <h3 class="body-title">合格のための受験指導 通学講座</h3>
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
             v-for="(items, index) in $static.allContentfulKoujishi1Venue.edges"
@@ -42,7 +43,6 @@
             :address="items.node.address"
             :map="items.node.map"
           />
-          <h3 class="body-title">合格のための受験指導 通学講座</h3>
           <Info
             :tuitionFee="
               richtextToHTML($static.contentfulQualification.tuitionFee)
@@ -110,7 +110,9 @@ const options = {
   //contentfulのエディタで設定したassetへのリンクを変換
   renderNode: {
     [INLINES.ASSET_HYPERLINK]: (node) =>
-      `<a href="${node.data.target.fields.file.url}">${node.content[0].value}</a>`,
+      `<a href="${node.data.target.fields.file.url}">${
+        node.content[0].value
+      }</a>`,
   },
 };
 export default {
