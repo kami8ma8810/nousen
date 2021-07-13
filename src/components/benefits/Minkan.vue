@@ -133,6 +133,7 @@
           href="https://www.hataraku.metro.tokyo.lg.jp/jinzai/ikusei/81_R3_kunren_josei_toiawase.pdf"
           target="_blank"
           class="link"
+          style="word-break:break-all;"
           >https://www.hataraku.metro.tokyo.lg.jp/jinzai/ikusei/81_R3_kunren_josei_toiawase.pdf</a
         >
       </section>
