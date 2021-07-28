@@ -154,6 +154,7 @@
     metadata {
       siteName
       siteUrl
+			siteDescription
     }
   }
 </static-query>

@@ -124,7 +124,7 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `第二種電気工事士 | ${this.$static.metadata.siteName}`,
+          content: `第二種電気工事士 受験対策講習会｜能セン-学び方を学ぶ-`,
         },
         {
           key: `og:url`,

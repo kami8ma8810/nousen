@@ -122,7 +122,8 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `給水装置工事主任技術者 | ${this.$static.metadata.siteName}`,
+          content: `給水装置工事主任技術者 受験対策講習会｜能セン-学び方を学ぶ-`,
+          // content: `給水装置工事主任技術者 | ${this.$static.metadata.siteName}`,
         },
         {
           key: `og:url`,

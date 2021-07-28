@@ -223,9 +223,10 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `1級・2級 電気工事施工管理技士 | ${
-            this.$static.metadata.siteName
-          }`,
+          content: `1・2級電気工事施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-`,
+          // content: `1級・2級 電気工事施工管理技士 | ${
+          //   this.$static.metadata.siteName
+          // }`,
         },
         {
           key: `og:url`,
