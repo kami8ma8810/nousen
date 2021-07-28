@@ -68,6 +68,7 @@ query {
   metadata {
     siteName
     siteUrl
+		siteDescription
   }
 }
 </static-query>
@@ -82,7 +83,9 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `プライバシーポリシー | ${this.$static.metadata.siteName}`,
+          content: `プライバシーポリシー｜能セン-学び方を学ぶ-`,
+          // content: `プライバシーポリシー | ${this.$static.metadata.siteName}`,
+					siteDescription:`電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）のページです。プライバシーポリシーについて記載しています。`
         },
         {
           key: `og:url`,

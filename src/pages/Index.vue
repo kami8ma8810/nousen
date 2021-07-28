@@ -478,6 +478,7 @@ query {
   metadata {
     siteName
     siteUrl
+		siteDescription
   }
 }
 </static-query>
@@ -509,7 +510,9 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `TOP | ${this.$static.metadata.siteName}`,
+          // content: `TOP | ${this.$static.metadata.siteName}`,
+          content: `能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会`,
+					siteDescription:`能センでは「電験三種」「電気工事士」「施工管理技士」「給水」等、合格のための受験指導講習会を開催しています。一部オンライン講座対応。1983年の設立から沢山の方々に長年支持され続けています。経験豊富な専門の講師が資格合格をサポート！`
         },
         {
           key: `og:url`,

@@ -85,6 +85,7 @@ query {
   metadata {
     siteName
     siteUrl
+		siteDescription
   }
 }
 </static-query>
@@ -104,7 +105,9 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `出張講習 | ${this.$static.metadata.siteName}`,
+          content: `出張講習のご案内｜能セン-学び方を学ぶ-`,
+          // content: `出張講習 | ${this.$static.metadata.siteName}`,
+					siteDescription:`電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）の出張講習ページです。出張講習はご予算や期間、研修内容等お伺いした内容をもとに、貴社だけの研修プログラムをご提案します。`
         },
         {
           key: `og:url`,

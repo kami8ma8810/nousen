@@ -19,6 +19,7 @@ query {
   metadata {
     siteName
     siteUrl
+		siteDescription
   }
 }
 </static-query>
@@ -34,7 +35,9 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `テキスト・工具販売 | ${this.$static.metadata.siteName}`,
+          // content: `テキスト・工具販売 | ${this.$static.metadata.siteName}`,
+          content: `テキスト・工具販売フォーム｜能セン-学び方を学ぶ-`,
+					siteDescription:`能センで実施している講習のオリジナルテキストを販売しています。こちらのフォームよりご購入頂けます。電気工事士で使用する工具もご購入頂けます。試験はもちろん実践用として長年使える工具をご紹介しています。`
         },
         {
           key: `og:url`,

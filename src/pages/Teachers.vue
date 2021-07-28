@@ -50,6 +50,7 @@ query {
   metadata {
     siteName
     siteUrl
+		siteDescription
   }
 }
 </static-query>
@@ -67,7 +68,9 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `講師を知る | ${this.$static.metadata.siteName}`,
+          content: `講師を知る｜能セン-学び方を学ぶ-（能力開発研修センター）`,
+          // content: `講師を知る | ${this.$static.metadata.siteName}`,
+					siteDescription:`受験対策講習会を開催しています能セン（能力開発研修センター）のホームページです。能センの講習を担当する自慢の講師陣をご紹介しています。熱意溢れる先生方からのワンポイントアドバイスもございます。`
         },
         {
           key: `og:url`,
