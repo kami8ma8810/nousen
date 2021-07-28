@@ -41,7 +41,7 @@ export default {
       ],
       meta: [
         { key: `og:locale`, property: `og:locale`, content: `ja_JP` },
-        { key: `og:type`, property: `og:type`, content: `website` },
+        { key: `og:type`, property: `og:type`, content: `website`,siteDescription:`能センでは「電験三種」「電気工事士」「施工管理技士」「給水」等、合格のための受験指導講習会を開催しています。一部オンライン講座対応。1983年の設立から沢山の方々に長年支持され続けています。経験豊富な専門の講師が資格合格をサポート！`},
         {
           key: `og:site_name`,
           property: `og:site_name`,
