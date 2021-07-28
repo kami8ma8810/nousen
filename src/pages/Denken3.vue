@@ -229,6 +229,10 @@ export default {
       this.isActive = num;
     },
   },
+	mounted(){
+    const description = "通学・オンライン・通信講座とご自身に合った学習スタイルを選べる受験対策講習会です。給付制度や再受講割引等もご用意しています。担当講師執筆のオリジナルテキストを使用し、ポイントを押さえた講義をお届けします。"
+		document.querySelector("meta[name='description']").setAttribute('content', description)
+  }
 };
 </script>
 
