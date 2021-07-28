@@ -154,7 +154,7 @@
     metadata {
       siteName
       siteUrl
-			siteDescriptionDenKen3
+			siteDescDenKen3
     }
   }
 </static-query>
