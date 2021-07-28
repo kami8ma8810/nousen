@@ -487,7 +487,7 @@ export default {
   name: 'licenses',
   metaInfo() {
     return {
-      title: '学べる資格と講習会',
+      title: '学べる資格と講習会のご案内｜能セン-学び方を学ぶ-',
       meta: [
         {
           key: `og:title`,

@@ -503,7 +503,8 @@ export default {
   },
   metaInfo() {
     return {
-      title: 'TOP',
+      // title: 'TOP',
+      title: '能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会',
       meta: [
         {
           key: `og:title`,
