@@ -188,9 +188,11 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `第三種電気主任技術者（電験三種） | ${
-            this.$static.metadata.siteName
-          }`,
+          // content: `第三種電気主任技術者（電験三種） | ${
+          //   this.$static.metadata.siteName
+          // }`,
+          content: `第三種電気主任技術者（電験三種） 受験対策講習会｜能セン-学び方を学ぶ-`,
+					siteDescription: `通学・オンライン・通信講座とご自身に合った学習スタイルを選べる受験対策講習会です。給付制度や再受講割引等もご用意しています。担当講師執筆のオリジナルテキストを使用し、ポイントを押さえた講義をお届けします。`,
         },
         {
           key: `og:url`,
