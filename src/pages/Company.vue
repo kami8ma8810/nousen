@@ -145,14 +145,16 @@ import Hero from '@/components/Hero.vue';
 export default {
   metaInfo() {
     return {
-      title: '会社概要',
+      title: '会社概要｜能セン-学び方を学ぶ-（能力開発研修センター）',
       meta: [
+							{
+					name: 'description', content: '電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）のページです。企業情報、沿革、事業内容、開催された講習会・研修会をご紹介しています。'
+				},
         {
           key: `og:title`,
           property: `og:title`,
           content: `会社概要｜能セン-学び方を学ぶ-（能力開発研修センター）`,
           // content: `会社概要 | ${this.$static.metadata.siteName}`,
-					siteDescription:`電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）のページです。企業情報、沿革、事業内容、開催された講習会・研修会をご紹介しています。`
         },
         {
           key: `og:url`,

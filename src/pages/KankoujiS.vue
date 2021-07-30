@@ -181,8 +181,11 @@ export default {
   name: 'koujishi2',
   metaInfo() {
     return {
-      title: '1・2級 管工事施工管理技士',
+      title: '1・2級管工事施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
+					{
+					name: 'description', content: '通学スタイルの受験対策講習会です。担当講師執筆のテキストを使用。経験記述問題の対策も学べます。願書サービス、再受講割引等もご用意。ポイントを押さえた講義をお届けします。'
+				},
         {
           key: `og:title`,
           property: `og:title`,

@@ -214,8 +214,13 @@ export default {
   name: 'koujishi2',
   metaInfo() {
     return {
-      title: '1・2級 土木施工管理技士',
+      title: '1・2級土木施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
+        {
+          name: 'description',
+          content:
+            '通学講座・オンライン講座とご自身に合った学習スタイルを選べる受験対策講習会です。経験記述問題の対策も学べます。願書サービス、再受講割引等もご用意。CPDS認定講座。ポイントを押さえた講義をお届けします。',
+        },
         {
           key: `og:title`,
           property: `og:title`,
