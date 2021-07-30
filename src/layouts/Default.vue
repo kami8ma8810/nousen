@@ -12,7 +12,6 @@
 query {
   metadata {
     siteName
-    siteDescription
     siteUrl
     siteOgImage
   }
