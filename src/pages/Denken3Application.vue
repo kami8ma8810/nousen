@@ -28,7 +28,6 @@ query {
   metadata {
     siteName
     siteUrl
-		siteDescription
   }
 }
 </static-query>
@@ -39,14 +38,15 @@ export default {
   name: 'denken3_application',
   metaInfo() {
     return {
-      title: '第三種電気主任技術者講習会お申し込み',
-      meta: [
+      title: '第三種電気主任技術者お申し込みフォーム｜能セン-学び方を学ぶ-',
+      meta: [	{
+					name: 'description', content: '能セン受験対策講習会「第三種電気主任技術者（電験三種）」のお申し込みフォームです。通学講座、オンライン講座、通信講座共にこちらのフォームからお申込み頂けます。経験豊富な講師陣のポイントを絞った的確な講義をぜひ一度ご体験ください。'
+				},
         {
           key: `og:title`,
           property: `og:title`,
           content: `第三種電気主任技術者お申し込みフォーム｜能セン-学び方を学ぶ-`,
-          // content: `第三種電気主任技術者講習会お申し込み | ${this.$static.metadata.siteName}`,
-					siteDescription:`能セン受験対策講習会「第三種電気主任技術者（電験三種）」のお申し込みフォームです。通学講座、オンライン講座、通信講座共にこちらのフォームからお申込み頂けます。経験豊富な講師陣のポイントを絞った的確な講義をぜひ一度ご体験ください。`
+          content: `第三種電気主任技術者講習会お申し込み | ${this.$static.metadata.siteName}`,
         },
         {
           key: `og:url`,
