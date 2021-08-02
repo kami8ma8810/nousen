@@ -12,7 +12,6 @@
 query {
   metadata {
     siteName
-    siteDescription
     siteUrl
     siteOgImage
   }
@@ -41,7 +40,7 @@ export default {
       ],
       meta: [
         { key: `og:locale`, property: `og:locale`, content: `ja_JP` },
-        { key: `og:type`, property: `og:type`, content: `website` },
+        { key: `og:type`, property: `og:type`, content: `website`},
         {
           key: `og:site_name`,
           property: `og:site_name`,

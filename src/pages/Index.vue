@@ -103,18 +103,16 @@
         </div>
       </section>
       <section class="section02">
-        <p class="section-name">
-          News
-        </p>
+        <p class="section-name">News</p>
         <News />
       </section>
       <section class="section03">
-        <h3 class="section-title">
+        <h2 class="section-title">
           <img
             src="../assets/img/front/reason_main_headline.svg"
             alt="能センが選ばれる5つの理由"
           />
-        </h3>
+        </h2>
         <div class="reason-wrapper">
           <Reason
             reasonNumber="1"
@@ -124,7 +122,7 @@
             myCatch="必要なことだけ、<br>
               「学び方」を学べます。"
             :explanation="[
-              '講師の多くが、建設・電気・設備等さまざまな現場で<i class=scroll-animation-item>長いキャリアをもつ元技術者</i>です。<br>豊富な現場経験のもと、みなさんが<i class=scroll-animation-item>共感できるエピソード</i>を盛り込んだ熱い講習が特徴。<br>難しい話も興味をもって理解できる！',
+              '講師の多くが、建設・電気・設備等さまざまな現場で<i class=scroll-animation-item>長いキャリアをもつ現役及び元技術者</i>です。</span><br>豊富な現場経験のもと、みなさんが<i class=scroll-animation-item>共感できるエピソード</i>を盛り込んだ熱い講習が特徴。<br>難しい話も興味をもって理解できる！',
               '近年の出題傾向、関連業種の現況、法制度の変更などもしっかりサポート。<br>「試験までに特に学習すべき項目」「捨てるべき項目」を明確にお伝えします。<br>だから、<i class=scroll-animation-item>効率的な学習方法を</i>学べる！',
               'ご質問があれば、講義中はもちろん、<i class=scroll-animation-item>休憩時間や終了後も</i>快く対応します。',
             ]"
@@ -140,27 +138,61 @@
               いつでも手元でオンライン講座"
             :littleTitle="'front/section05_title1.svg'"
             :explanationGroup="[
-            {
-              title:'front/section05_title1.svg',
-              titleAlt:'通学講座',
-              texts:['<i class=scroll-animation-item>同じ目的をもった受講生たちと一緒に</i>生の授業を受けることで、<br>緊張感をもって学ぶことができます。',
-              'わからないところを<i class=scroll-animation-item>その場で質問できるメリット</i>も。<br>なかなか自主的に勉強を始められない…という方も是非！']
-            },
-            {
-              title:'front/section05_title2.svg',
-              titleAlt:'オンライン講座',
-              texts:['短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ<br>視聴することも可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
-              '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。'],
-              movieSrc:'https://www.youtube.com/embed/Z-Hro9L34fw',
-              movieText:'※サンプル動画は1級建築施工管理技士のものです'
-            },
-            {
-              title:'front/section05_title3.svg',
-              titleAlt:'通学＋オンラインで、より万全に',
-              texts:['まずは通学講座で直接講義を受けたいけど、動画でも復習したいという方には両方受講という選択肢も。例えば通学講座にオンライン講座を追加の場合、<i class=scroll-animation-item>オンライン講座の受講料は２割となります。（逆も同様）</i>共通のテキストで原則は講義内容も同じなので会場で学習した内容を繰り返し復習できます。']
-            }
+              {
+                title: 'front/section05_title1.svg',
+                titleAlt: '通学講座',
+                texts: [
+                  '<i class=scroll-animation-item>同じ目的をもった受講生たちと一緒に</i>生の授業を受けることで、<br>緊張感をもって学ぶことができます。',
+                  'わからないところを<i class=scroll-animation-item>その場で質問できるメリット</i>も。<br>なかなか自主的に勉強を始められない…という方も是非！',
+                ],
+              },
+              {
+                title: 'front/section05_title2.svg',
+                titleAlt: 'オンライン講座',
+                texts: [
+                  '短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ<br>視聴することも可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
+                  '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。',
+                ],
+                // movieSrc: 'https://www.youtube.com/embed/Z-Hro9L34fw',
+                movieSrc: 'https://www.youtube.com/embed/wb12M0rAYuw',
+                movieText: '※動画は建築施工管理技士の講義です',
+              },
+              {
+                title: 'front/section05_title3.svg',
+                titleAlt: '通学＋オンラインで、より万全に',
+                texts: [
+                  'まずは通学講座で直接講義を受けたいけど、動画でも復習したいという方には両方受講という選択肢も。例えば通学講座にオンライン講座を追加の場合、<i class=scroll-animation-item>オンライン講座の受講料は２割となります。（逆も同様）</i>共通のテキストで原則は講義内容も同じなので会場で学習した内容を繰り返し復習できます。',
+                ],
+              },
             ]"
           />
+          <div class="btn__apply">
+            <a @click="openModal"
+              ><span>お申込みはこちら</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 18 18"
+                aria-labelledby="box"
+                role="presentation"
+                class="icon"
+                data-v-2d92a3c2=""
+                data-v-0aac86ab=""
+              >
+                <title id="box" lang="en" data-v-2d92a3c2="">box icon</title>
+                <g fill="currentColor" data-v-2d92a3c2="">
+                  <g data-v-0aac86ab="" data-v-2d92a3c2="">
+                    <path
+                      d="M.17,8A5.06,5.06,0,0,1,5.23,2.94a5.11,5.11,0,0,1,4,1.89h4.22a2.43,2.43,0,0,1,0,4.85H10A5.07,5.07,0,0,1,.17,8ZM8.94,6.44H8.85a.79.79,0,0,1-.73-.36,3.47,3.47,0,1,0,.52,2.6A.8.8,0,0,1,9.42,8h4a.8.8,0,1,0,0-1.6H8.94Z"
+                    ></path>
+                    <path
+                      d="M7.74,5.65V7.19a2.54,2.54,0,0,1-5.08,0V5.65a2.54,2.54,0,0,1,5.08-.23A.89.89,0,0,1,7.74,5.65ZM4.27,7.19a.94.94,0,0,0,1.87.14V5.65a.94.94,0,0,0-1.87-.14V7.19Z"
+                    ></path>
+                  </g>
+                </g></svg
+            ></a>
+          </div>
           <Reason
             reasonNumber="3"
             myTitle="他にないテキスト"
@@ -185,7 +217,7 @@
             myCatch="2万名から支持されています。"
             :explanation="[
               '私たち能センの正式名称は、「<i class=scroll-animation-item>一般社団法人 能力開発研修センター</i>」です。',
-              '<i>設立は1983年</i>。資格取得を目指す方々に長年支持され続けています。<br><span>（受講生：約2万2000名以上、参加企業：約1万2000社以上）</span>',
+              '<i>設立は1983年</i>。資格取得を目指す方々に長年支持され続けています。<br><span>（受講生：約2万2000名以上、参加企業：約1万2000社以上 ※直近10年での累計）</span>',
               '10年以上にわたって指名をいただく企業も多数。<i class=scroll-animation-item>業界から高い信頼</i>をいただいています。',
             ]"
           />
@@ -216,8 +248,212 @@
             class="last-message-logo"
           />
         </div>
+        <div class="btn__apply __bottom">
+          <a @click="openModal"
+            ><span>お申込みはこちら</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 18 18"
+              aria-labelledby="box"
+              role="presentation"
+              class="icon"
+              data-v-2d92a3c2=""
+              data-v-0aac86ab=""
+            >
+              <title id="box" lang="en" data-v-2d92a3c2="">box icon</title>
+              <g fill="currentColor" data-v-2d92a3c2="">
+                <g data-v-0aac86ab="" data-v-2d92a3c2="">
+                  <path
+                    d="M.17,8A5.06,5.06,0,0,1,5.23,2.94a5.11,5.11,0,0,1,4,1.89h4.22a2.43,2.43,0,0,1,0,4.85H10A5.07,5.07,0,0,1,.17,8ZM8.94,6.44H8.85a.79.79,0,0,1-.73-.36,3.47,3.47,0,1,0,.52,2.6A.8.8,0,0,1,9.42,8h4a.8.8,0,1,0,0-1.6H8.94Z"
+                  ></path>
+                  <path
+                    d="M7.74,5.65V7.19a2.54,2.54,0,0,1-5.08,0V5.65a2.54,2.54,0,0,1,5.08-.23A.89.89,0,0,1,7.74,5.65ZM4.27,7.19a.94.94,0,0,0,1.87.14V5.65a.94.94,0,0,0-1.87-.14V7.19Z"
+                  ></path>
+                </g>
+              </g></svg
+          ></a>
+        </div>
       </section>
     </div>
+    <MyModal @close="closeModal" v-if="modal">
+      <!-- default スロットコンテンツ -->
+      <div class="modal-application">
+        <div class="form item">
+          <img src="../assets/img/common/session.svg" alt="講習会お申し込み" />
+        </div>
+        <ul>
+          <li class="denken">
+            <p class="title">第三種<br class="overdisplay" />電気主任技術者</p>
+            <g-link to="/denken3-application" class="application-form-link">
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/3_denken_tuugaku_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 通学・オンライン(PDF)
+            </a>
+            <br />
+            <a
+              href="/3_denken_tuushin_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 通信(PDF)
+            </a>
+          </li>
+          <li class="denkikouji">
+            <p class="title">第一種<br class="overdisplay" />電気工事士</p>
+            <g-link to="/koujishi-application" class="application-form-link">
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/1_denki_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙(PDF)
+            </a>
+          </li>
+          <li class="denkikouji">
+            <p class="title">第二種<br class="overdisplay" />電気工事士</p>
+            <g-link to="/koujishi-application" class="application-form-link">
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/2_denki_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙(PDF)
+            </a>
+          </li>
+          <li class="denkikoujisekou">
+            <p class="title">
+              1・2級<br class="overdisplay" />電気工事施工管理技士
+            </p>
+            <g-link
+              to="/denkikouji-s-application"
+              class="application-form-link"
+            >
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/denkikouji_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/denkikouji_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 2級(PDF)
+            </a>
+          </li>
+          <li class="kenchiku">
+            <p class="title">
+              1・2級<br class="overdisplay" />建築施工管理技士
+            </p>
+            <g-link to="/kenchiku-s-application" class="application-form-link">
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/kenchiku_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/kenchiku_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 2級(PDF)
+            </a>
+          </li>
+          <li class="kankouji">
+            <p class="title">
+              1・2級<br class="overdisplay" />管工事施工管理技士
+            </p>
+            <g-link to="/kankouji-s-application" class="application-form-link">
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/kankouji_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/kankouji_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 2級(PDF)
+            </a>
+          </li>
+          <li class="doboku">
+            <p class="title">
+              1・2級<br class="overdisplay" />土木施工管理技士
+            </p>
+            <g-link to="/doboku-s-application" class="application-form-link">
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/doboku_1_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 1級(PDF) </a
+            ><br />
+            <a
+              href="/doboku_2_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 2級(PDF)
+            </a>
+          </li>
+          <li class="kyuusui">
+            <p class="title">
+              給水装置工事<br class="overdisplay" />主任技術者
+            </p>
+            <g-link to="/kyuusui-application" class="application-form-link">
+              お申し込みフォーム </g-link
+            ><br />
+            <a
+              href="/kyuusui_FAX_31year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙 (PDF)
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /default -->
+    </MyModal>
   </Layout>
 </template>
 
@@ -248,29 +484,38 @@ query {
 
 <script>
 // @ is an alias to /src
-import IconBase from "@/components/IconBase.vue";
-import IconDoubleArrowRight from "@/components/icons/IconDoubleArrowRight.vue";
-import Reason from "@/components/home/Reason.vue";
-import News from "@/components/home/News.vue";
-import IconOnline from "@/components/icons/IconOnline.vue";
+import IconBase from '@/components/IconBase.vue';
+import IconDoubleArrowRight from '@/components/icons/IconDoubleArrowRight.vue';
+import Reason from '@/components/home/Reason.vue';
+import News from '@/components/home/News.vue';
+import IconOnline from '@/components/icons/IconOnline.vue';
+import MyModal from '@/components/MyModal.vue';
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
     IconBase,
     IconDoubleArrowRight,
     Reason,
     News,
     IconOnline,
+    MyModal,
   },
   metaInfo() {
     return {
-      title: "TOP",
+      // title: 'TOP',
+      title: '能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会',
       meta: [
+        {
+          name: 'description',
+          content:
+            '能センでは「電験三種」「電気工事士」「施工管理技士」「給水」等、合格のための受験指導講習会を開催しています。一部オンライン講座対応。1983年の設立から沢山の方々に長年支持され続けています。経験豊富な専門の講師が資格合格をサポート！',
+        },
         {
           key: `og:title`,
           property: `og:title`,
-          content: `TOP | ${this.$static.metadata.siteName}`,
+          // content: `TOP | ${this.$static.metadata.siteName}`,
+          content: `能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会`,
         },
         {
           key: `og:url`,
@@ -283,6 +528,7 @@ export default {
   data() {
     return {
       afterImgLoad: false,
+      modal: false,
     };
   },
   mounted() {
@@ -291,25 +537,40 @@ export default {
     image.onload = () => {
       this.afterImgLoad = true;
     };
-    image.src = require("../assets/img/front/section01/main_background.jpg");
+    image.src = require('../assets/img/front/section01/main_background.jpg');
 
     //スクロールしたらスクロールimg非表示
-    window.addEventListener("scroll", this.onScroll);
+    window.addEventListener('scroll', this.onScroll);
+    // window.addEventListener('load', this.youtubeInit);
   },
   destroyed() {
-    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener('scroll', this.onScroll);
   },
   methods: {
     //スクロールしたらスクロールimg非表示
     onScroll() {
       const moveScroll = window.pageYOffset;
-      const target = document.getElementById("js-scroll_top");
+      const target = document.getElementById('js-scroll_top');
       if (0 < moveScroll) {
-        target.classList.add("display_none");
+        target.classList.add('display_none');
       } else {
-        target.classList.remove("display_none");
+        target.classList.remove('display_none');
       }
     },
+    openModal() {
+      this.modal = true;
+    },
+    closeModal() {
+      this.modal = false;
+    },
+    // youtubeInit() {
+    //   var vidDefer = document.getElementsByTagName('iframe');
+    //   for (var i = 0; i < vidDefer.length; i++) {
+    //     if (vidDefer[i].getAttribute('data-src')) {
+    //       vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+    //     }
+    //   }
+    // },
   },
 };
 </script>
@@ -322,7 +583,7 @@ export default {
   }
 }
 .section01 {
-  background-image: url("../assets/img/front/section01/main_background.jpg");
+  background-image: url('../assets/img/front/section01/main_background.jpg');
   background-size: cover;
   @media print, screen and (min-width: 1001px) {
     padding-top: 160px;
@@ -549,25 +810,25 @@ export default {
   }
 }
 .denken a:before {
-  content: url("../assets/img/icon/qualification/denken.svg");
+  content: url('../assets/img/icon/qualification/denken.svg');
 }
 .denkikouji a:before {
-  content: url("../assets/img/icon/qualification/denkikouji.svg");
+  content: url('../assets/img/icon/qualification/denkikouji.svg');
 }
 .denkikoujisekou a:before {
-  content: url("../assets/img/icon/qualification/denkikoujisekou.svg");
+  content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
 }
 .doboku a:before {
-  content: url("../assets/img/icon/qualification/doboku.svg");
+  content: url('../assets/img/icon/qualification/doboku.svg');
 }
 .kankouji a:before {
-  content: url("../assets/img/icon/qualification/kankouji.svg");
+  content: url('../assets/img/icon/qualification/kankouji.svg');
 }
 .kenchiku a:before {
-  content: url("../assets/img/icon/qualification/kenchiku.svg");
+  content: url('../assets/img/icon/qualification/kenchiku.svg');
 }
 .kyuusui a:before {
-  content: url("../assets/img/icon/qualification/kyuusui.svg");
+  content: url('../assets/img/icon/qualification/kyuusui.svg');
 }
 .more_qualification {
   font-weight: bold;
@@ -597,7 +858,7 @@ export default {
     margin-top: -50px;
     margin-bottom: 0;
     &:after {
-      content: "";
+      content: '';
       height: 200px;
       width: 5px;
       background-color: #000;
@@ -613,7 +874,7 @@ export default {
 .section03 {
   position: relative;
   &:before {
-    content: "";
+    content: '';
     height: 500px;
     width: 5px;
     background-color: #000;
@@ -628,7 +889,7 @@ export default {
     }
   }
   &:after {
-    content: "";
+    content: '';
     height: 30px;
     width: 5px;
     background-color: #000;
@@ -660,7 +921,7 @@ export default {
       padding: 20px 0;
     }
     &:before {
-      content: url("../assets/img/icon/finger_top_brown.svg");
+      content: url('../assets/img/icon/finger_top_brown.svg');
       width: 30px;
       height: 50px;
       display: block;
@@ -671,6 +932,47 @@ export default {
   }
   .reason-wrapper {
     margin-top: 100px;
+    .btn__apply {
+      width: 100%;
+      text-align: center;
+      margin: 100px auto 400px;
+      @media print, screen and (max-width: 1000px) {
+        margin: 100px auto 200px;
+      }
+
+      a {
+        display: inline-block;
+        background-color: #f4891e;
+        color: #fff;
+        padding: 10px 3em;
+        font-weight: bold;
+        font-size: 20px;
+        width: 375px;
+        box-sizing: border-box;
+      }
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+  .btn__apply.__bottom {
+    width: 100%;
+    text-align: center;
+    margin: 100px auto 0;
+
+    a {
+      display: inline-block;
+      background-color: #f4891e;
+      color: #fff;
+      padding: 10px 3em;
+      font-weight: bold;
+      font-size: 20px;
+      width: 375px;
+      box-sizing: border-box;
+    }
+    svg {
+      margin-left: 10px;
+    }
   }
   .last-message {
     max-width: 90%;
@@ -688,7 +990,7 @@ export default {
       font-size: 18px;
     }
     &:before {
-      content: "";
+      content: '';
       height: 200px;
       width: 5px;
       background-color: #000;
@@ -777,5 +1079,161 @@ export default {
 .display_none {
   transition: all 0.3s;
   display: none;
+}
+.modal-application {
+  font-size: 14px;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+  z-index: 0;
+  font-weight: bold;
+  .item {
+    text-align: center;
+    margin-top: 30px;
+  }
+  ul {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    @media print, screen and(min-width: 1001px) {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media print, screen and(max-width: 1000px) {
+      margin-left: 1em;
+    }
+    @media print, screen and(max-width: 321px) {
+      margin-left: 0;
+    }
+    li {
+      position: relative; //202101 for online
+      text-align: left;
+      // display: flex;
+      align-items: center;
+      @media print, screen and(min-width: 1001px) {
+        width: 210px;
+        margin-top: 30px;
+      }
+      .application-form-link {
+        &:after {
+          content: url('../assets/img/icon/double_arrow_right_orange.svg');
+          height: 1.2em;
+          width: 1.2em;
+          display: inline-block;
+          margin-left: 20px;
+          vertical-align: sub;
+        }
+      }
+      &.denken {
+        .application-form-link,
+        .application-fax-link {
+          color: #e60039;
+          &::before {
+            content: none;
+          }
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/denken.svg');
+        }
+      }
+      &.denkikouji {
+        .application-form-link,
+        .application-fax-link {
+          color: #b60081;
+          &::before {
+            content: none;
+          }
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/denkikouji.svg');
+        }
+      }
+      &.denkikoujisekou {
+        .application-form-link,
+        .application-fax-link {
+          color: #00a73c;
+          &::before {
+            content: none;
+          }
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
+        }
+      }
+      &.doboku {
+        .application-form-link,
+        .application-fax-link {
+          color: #00a73c;
+          &::before {
+            content: none;
+          }
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/doboku.svg');
+        }
+      }
+      &.kankouji {
+        .application-form-link,
+        .application-fax-link {
+          color: #00a73c;
+          &::before {
+            content: none;
+          }
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/kankouji.svg');
+        }
+      }
+      &.kenchiku {
+        .application-form-link,
+        .application-fax-link {
+          color: #00a73c;
+          &::before {
+            content: none;
+          }
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/kenchiku.svg');
+        }
+      }
+      &.kyuusui {
+        .application-form-link,
+        .application-fax-link {
+          color: #00afcc;
+          &::before {
+            content: none;
+          }
+        }
+        .title:before {
+          content: url('../assets/img/icon/qualification/kyuusui.svg');
+        }
+      }
+    }
+    .title {
+      color: #000;
+      display: flex;
+      &:before {
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        margin-right: 20px;
+        @media print, screen and(max-width: 1000px) {
+          height: 1.2em;
+          width: 1.2em;
+        }
+        @media print, screen and(max-width: 321px) {
+          margin-right: 10px;
+        }
+      }
+      .overdisplay {
+        @media print, screen and(max-width: 1000px) {
+          display: none;
+        }
+      }
+    }
+  }
 }
 </style>

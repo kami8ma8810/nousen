@@ -1,19 +1,16 @@
 <template>
-  <div :class="['license',`license-${licenseSlug}`,{'is-open':isOpen }]">
+  <div :class="['license', `license-${licenseSlug}`, { 'is-open': isOpen }]">
     <header class="header">
-      <div class="rate">
-      </div>
+      <div class="rate"></div>
       <div class="license-title-set">
-        <div class="license-title-img">
-        </div>
+        <div class="license-title-img"></div>
         <div class="license-title-text">
-          <p class="abbreviation" v-html="abbreviation">
-          </p>
+          <p class="abbreviation" v-html="abbreviation"></p>
           <p class="formal-name">
-            {{formalName}}
+            {{ formalName }}
           </p>
           <p class="intro-text">
-            {{introText}}
+            {{ introText }}
           </p>
         </div>
       </div>
@@ -21,76 +18,72 @@
     <transition name="slide">
       <section class="hidden-container" v-if="isOpen">
         <article class="license-point">
-          <p class="license_catch" v-html="licenseCatch">
-          </p>
+          <p class="license_catch" v-html="licenseCatch"></p>
           <div class="point-item">
-            <dl v-for="(item,index) in pointItems" :key="index">
+            <dl v-for="(item, index) in pointItems" :key="index">
               <dt>
                 <IconBase class="icon"><IconCheck /></IconBase>
-                {{item.dt}}
+                {{ item.dt }}
               </dt>
-              <dd v-html="item.dd">
-              </dd>
+              <dd v-html="item.dd"></dd>
             </dl>
           </div>
         </article>
         <article class="license-outline">
           <h1 class="outline-title"><span>受験概要</span></h1>
           <div class="outline-item">
-            <div v-for="(item,index) in outlineItems" :key="index">
+            <div v-for="(item, index) in outlineItems" :key="index">
               <dl v-if="item.dt || item.dt">
                 <dt v-if="item.dt">
                   <span class="outline-item-inner" v-html="item.dt"></span>
                 </dt>
-                <dd v-if="item.dd" v-html="item.dd">
-                </dd>
+                <dd v-if="item.dd" v-html="item.dd"></dd>
               </dl>
             </div>
           </div>
-          <p class="attention" v-html="addBlank(attention)">
-          </p>
-          <p class="memo" v-html="memo">
-          </p>
+          <p class="attention" v-html="addBlank(attention)"></p>
+          <p class="memo" v-html="memo"></p>
         </article>
         <div class="button-wrapper">
-          <router-link :to="LicensePageLink" class="contents-link">講習内容はコチラ
+          <router-link :to="LicensePageLink" class="contents-link"
+            >講習内容はコチラ
             <IconBase class="icon"><IconFingerRight /></IconBase>
           </router-link>
-          <a :href="applicationLink" class="application-link" target="_blank">講習会へのお申し込み
+          <a :href="applicationLink" class="application-link"
+            >講習会へのお申し込み
             <IconBase class="icon"><IconFingerRight /></IconBase>
           </a>
         </div>
       </section>
     </transition>
-    <div class="close_button" v-on:click='isOpen=!isOpen'>
+    <div class="close_button" v-on:click="isOpen = !isOpen">
       <span>
         <i v-show="isOpen">閉じる</i>
         <i v-show="!isOpen">続きを読む</i>
         <IconBase class="close-icon"><IconClose /></IconBase>
       </span>
     </div>
-
   </div>
 </template>
 
 <script>
-import IconBase from '@/components/IconBase.vue'
-import IconClose from '@/components/icons/IconClose.vue'
-import IconFingerRight from '@/components/icons/IconFingerRight.vue'
-import IconCheck from '@/components/icons/IconCheck.vue'
+import IconBase from '@/components/IconBase.vue';
+import IconClose from '@/components/icons/IconClose.vue';
+import IconFingerRight from '@/components/icons/IconFingerRight.vue';
+import IconCheck from '@/components/icons/IconCheck.vue';
 import { documentToHtmlString } from '../../../node_modules/@contentful/rich-text-html-renderer';
 export default {
   name: 'test',
   data() {
     return {
-      isOpen: false
-    }
+      isOpen: false,
+    };
   },
   components: {
     IconBase,
     IconClose,
     IconFingerRight,
-    IconCheck
+    IconCheck,
   },
   props: {
     licenseSlug: String,
@@ -104,21 +97,24 @@ export default {
     attention: String,
     memo: String,
     LicensePageLink: String,
-    applicationLink: String
+    applicationLink: String,
   },
   methods: {
     addBlank(content) {
-      const addblankAnchorHtml = content.replace(/<a((?: .+?))?>(.*?)<\/a>/g,'<a $1 target="_blank">$2</a>');
+      const addblankAnchorHtml = content.replace(
+        /<a((?: .+?))?>(.*?)<\/a>/g,
+        '<a $1 target="_blank">$2</a>'
+      );
       return addblankAnchorHtml;
     },
   },
   mounted() {
     //ハッシュつきでリンクしてきたらその資格のスライダーを開いておく
-    if(this.$route.hash === `#${this.$props.licenseSlug}`) {
+    if (this.$route.hash === `#${this.$props.licenseSlug}`) {
       this.isOpen = true;
     }
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -176,9 +172,9 @@ export default {
     display: block;
   }
   @media print, screen and (max-width: 1000px) {
-     width: 50px;
-     height: 50px;
-     margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
   }
 }
 .abbreviation {
@@ -211,7 +207,7 @@ export default {
   text-align: center;
   font-size: 18px;
   @media print, screen and (max-width: 1000px) {
-     text-align: left;
+    text-align: left;
   }
 }
 .point-item {
@@ -259,7 +255,7 @@ export default {
     padding: 20px;
     background-color: #000;
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       right: 0;
@@ -424,7 +420,8 @@ export default {
   }
 }
 
-.license-koujishi1,.license-koujishi2 {
+.license-koujishi1,
+.license-koujishi2 {
   .license-title-img {
     &:before {
       content: url('../../assets/img/icon/qualification/denkikouji.svg');
@@ -486,7 +483,10 @@ export default {
   }
 }
 
-.license-denkikoujisekou,.license-kenchiku,.license-kankouji,.license-doboku {
+.license-denkikoujisekou,
+.license-kenchiku,
+.license-kankouji,
+.license-doboku {
   .rate {
     content: url('../../assets/img/licenses/rate_other.svg');
   }
@@ -576,7 +576,7 @@ export default {
   }
 }
 
-.license-kyuusui{
+.license-kyuusui {
   .header {
     background-image: url('../../assets/img/licenses/background/kyuusui.jpg');
     @media print, screen and (max-width: 1000px) {
@@ -625,10 +625,10 @@ export default {
 
 // トランジション
 .slide-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .slide-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
 }
 .slide-enter
 /* .slide-fade-leave-active below version 2.1.8 */ {

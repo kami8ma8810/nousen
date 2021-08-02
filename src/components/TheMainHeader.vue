@@ -10,10 +10,12 @@
       <div class="logo">
         <div class="logo-inner">
           <g-link to="/">
-            <img
-              src="../assets/img/common/main_logo.svg"
-              alt="能セン 学び方を学ぶ"
-            />
+            <h1 class="main-header-title">
+              <img
+                src="../assets/img/common/main_logo.svg"
+                alt="能セン 学び方を学ぶ"
+              />
+            </h1>
           </g-link>
         </div>
       </div>
@@ -24,7 +26,7 @@
             <a href="tel:0356316011">
               <img
                 src="../assets/img/common/tel.svg"
-                alt="03-5631-6011 （平日9:00~18:00）"
+                alt="03-5631-6011 （祝日を除く平日土日9:00~18:00）"
               />
             </a>
           </div>
@@ -177,7 +179,7 @@
             <a href="tel:0356326011">
               <img
                 src="../assets/img/common/toggle_menu/tel_sp.svg"
-                alt="03-5632-6011（平日9:00~18:00）"
+                alt="03-5632-6011（祝日を除く平日土日9:00~18:00）"
               />
             </a>
           </div>
@@ -208,12 +210,7 @@
         <ul>
           <li class="denken">
             <p class="title">第三種<br class="overdisplay" />電気主任技術者</p>
-            <g-link
-              to="/denken3-application"
-              class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <g-link to="/denken3-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -222,7 +219,7 @@
               rel="noopener noreferrer"
               class="application-fax-link"
             >
-              FAX用紙 通学(PDF)
+              FAX用紙 通学・オンライン(PDF)
             </a>
             <br />
             <a
@@ -236,12 +233,7 @@
           </li>
           <li class="denkikouji">
             <p class="title">第一種<br class="overdisplay" />電気工事士</p>
-            <g-link
-              to="/koujishi-application"
-              class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <g-link to="/koujishi-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -255,12 +247,7 @@
           </li>
           <li class="denkikouji">
             <p class="title">第二種<br class="overdisplay" />電気工事士</p>
-            <g-link
-              to="/koujishi-application"
-              class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <g-link to="/koujishi-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -279,8 +266,6 @@
             <g-link
               to="/denkikouji-s-application"
               class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               お申し込みフォーム </g-link
             ><br />
@@ -305,12 +290,7 @@
             <p class="title">
               1・2級<br class="overdisplay" />建築施工管理技士
             </p>
-            <g-link
-              to="/kenchiku-s-application"
-              class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <g-link to="/kenchiku-s-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -334,12 +314,7 @@
             <p class="title">
               1・2級<br class="overdisplay" />管工事施工管理技士
             </p>
-            <g-link
-              to="/kankouji-s-application"
-              class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <g-link to="/kankouji-s-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -363,12 +338,7 @@
             <p class="title">
               1・2級<br class="overdisplay" />土木施工管理技士
             </p>
-            <g-link
-              to="/doboku-s-application"
-              class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <g-link to="/doboku-s-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -392,12 +362,7 @@
             <p class="title">
               給水装置工事<br class="overdisplay" />主任技術者
             </p>
-            <g-link
-              to="/kyuusui-application"
-              class="application-form-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <g-link to="/kyuusui-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
@@ -419,11 +384,11 @@
 </template>
 
 <script>
-import MyModal from "@/components/MyModal.vue";
-import OnlineInfo from "@/components/OnlineInfo.vue";
-import IconOnline from "@/components/icons/IconOnline.vue";
+import MyModal from '@/components/MyModal.vue';
+import OnlineInfo from '@/components/OnlineInfo.vue';
+import IconOnline from '@/components/icons/IconOnline.vue';
 export default {
-  name: "",
+  name: '',
   components: {
     MyModal,
     OnlineInfo,
@@ -478,7 +443,7 @@ export default {
         transform: rotate(0deg);
       }
       @media print, screen and(max-width: 1000px) {
-        content: url("../assets/img/icon/plus.svg");
+        content: url('../assets/img/icon/plus.svg');
       }
     }
   }
@@ -496,17 +461,17 @@ export default {
       }
       &::after {
         position: absolute;
-        content: "一般社団法人 能力開発研修センター";
+        content: '一般社団法人 能力開発研修センター';
         transform: scale(0.6);
         font-size: 11px;
         width: 200px;
         color: #3b241a;
         left: -4.8em;
-        top: 95%;
+        top: 80%; //ロゴのh1化によるズレ調整
         @media print, screen and(min-width: 1101px) {
           transform: scale(1);
           left: -2em;
-          top: 110%;
+          top: 100%; //ロゴのh1化によるズレ調整
         }
       }
     }
@@ -556,7 +521,7 @@ export default {
     margin-top: 1em;
   }
   @media print, screen and(max-width: 1000px) {
-    overflow-y: scroll;
+    // overflow-y: scroll;
     margin-left: 15%;
     align-self: center;
   }
@@ -566,8 +531,10 @@ export default {
   font-size: 20px;
   width: 100%;
   @media print, screen and(min-width: 1001px) {
-    margin-left: calc(100% - 670px); //202101 オンライン講座案内のため
-    max-width: 670px;
+    // margin-left: calc(100% - 670px); //202101 オンライン講座案内のため
+    margin-left: calc(100% - 655px); //営業時間の表記変更に伴うレイアウト変更
+    // max-width: 670px;
+    max-width: 660px; //営業時間の表記変更に伴うレイアウト変更
     margin-bottom: 20px;
   }
   @media print, screen and(min-width: 551px) {
@@ -596,7 +563,7 @@ export default {
   border-radius: 100%;
   text-align: center;
   &:before {
-    content: "menu";
+    content: 'menu';
     font-size: 10px;
     font-weight: bold;
     transform: scale(0.9);
@@ -667,6 +634,9 @@ export default {
     padding-top: 10px;
     max-width: 90%;
   }
+  @media print, screen and(max-width: 430px) {
+    padding-bottom: 60px;
+  }
 }
 .nav-inner01 {
   position: relative;
@@ -700,7 +670,7 @@ export default {
   }
   &:before {
     @media print, screen and(max-width: 1000px) {
-      content: "";
+      content: '';
       width: 90%;
       height: 2px;
       background-color: #ccc;
@@ -712,7 +682,7 @@ export default {
     }
   }
   &:after {
-    content: url("../assets/img/icon/double_arrow_right_orange.svg");
+    content: url('../assets/img/icon/double_arrow_right_orange.svg');
     height: 1.2em;
     width: 1.2em;
     display: inline-block;
@@ -735,7 +705,7 @@ export default {
 }
 .pagelink-title-session:after {
   @media print, screen and(max-width: 1000px) {
-    content: url("../assets/img/icon/minus.svg");
+    content: url('../assets/img/icon/minus.svg');
   }
   @media print, screen and(min-width: 1001px) {
     transform: rotate(90deg);
@@ -800,7 +770,7 @@ export default {
       }
       &:after {
         @media print, screen and(max-width: 1000px) {
-          content: url("../assets/img/icon/double_arrow_right_orange.svg");
+          content: url('../assets/img/icon/double_arrow_right_orange.svg');
           height: 1.2em;
           width: 1.2em;
           display: inline-block;
@@ -809,25 +779,25 @@ export default {
         }
       }
       &.denken:before {
-        content: url("../assets/img/icon/qualification/denken.svg");
+        content: url('../assets/img/icon/qualification/denken.svg');
       }
       &.denkikouji:before {
-        content: url("../assets/img/icon/qualification/denkikouji.svg");
+        content: url('../assets/img/icon/qualification/denkikouji.svg');
       }
       &.denkikoujisekou:before {
-        content: url("../assets/img/icon/qualification/denkikoujisekou.svg");
+        content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
       }
       &.doboku:before {
-        content: url("../assets/img/icon/qualification/doboku.svg");
+        content: url('../assets/img/icon/qualification/doboku.svg');
       }
       &.kankouji:before {
-        content: url("../assets/img/icon/qualification/kankouji.svg");
+        content: url('../assets/img/icon/qualification/kankouji.svg');
       }
       &.kenchiku:before {
-        content: url("../assets/img/icon/qualification/kenchiku.svg");
+        content: url('../assets/img/icon/qualification/kenchiku.svg');
       }
       &.kyuusui:before {
-        content: url("../assets/img/icon/qualification/kyuusui.svg");
+        content: url('../assets/img/icon/qualification/kyuusui.svg');
       }
     }
   }
@@ -889,6 +859,9 @@ export default {
     @media print, screen and(max-width: 1000px) {
       margin-left: 1em;
     }
+    @media print, screen and(max-width: 321px) {
+      margin-left: 0;
+    }
     li {
       position: relative; //202101 for online
       text-align: left;
@@ -900,7 +873,7 @@ export default {
       }
       .application-form-link {
         &:after {
-          content: url("../assets/img/icon/double_arrow_right_orange.svg");
+          content: url('../assets/img/icon/double_arrow_right_orange.svg');
           height: 1.2em;
           width: 1.2em;
           display: inline-block;
@@ -914,7 +887,7 @@ export default {
           color: #e60039;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/denken.svg");
+          content: url('../assets/img/icon/qualification/denken.svg');
         }
       }
       &.denkikouji {
@@ -923,7 +896,7 @@ export default {
           color: #b60081;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/denkikouji.svg");
+          content: url('../assets/img/icon/qualification/denkikouji.svg');
         }
       }
       &.denkikoujisekou {
@@ -932,7 +905,7 @@ export default {
           color: #00a73c;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/denkikoujisekou.svg");
+          content: url('../assets/img/icon/qualification/denkikoujisekou.svg');
         }
       }
       &.doboku {
@@ -941,7 +914,7 @@ export default {
           color: #00a73c;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/doboku.svg");
+          content: url('../assets/img/icon/qualification/doboku.svg');
         }
       }
       &.kankouji {
@@ -950,7 +923,7 @@ export default {
           color: #00a73c;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/kankouji.svg");
+          content: url('../assets/img/icon/qualification/kankouji.svg');
         }
       }
       &.kenchiku {
@@ -959,7 +932,7 @@ export default {
           color: #00a73c;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/kenchiku.svg");
+          content: url('../assets/img/icon/qualification/kenchiku.svg');
         }
       }
       &.kyuusui {
@@ -968,7 +941,7 @@ export default {
           color: #00afcc;
         }
         .title:before {
-          content: url("../assets/img/icon/qualification/kyuusui.svg");
+          content: url('../assets/img/icon/qualification/kyuusui.svg');
         }
       }
     }
@@ -983,6 +956,9 @@ export default {
           height: 1.2em;
           width: 1.2em;
         }
+        @media print, screen and(max-width: 321px) {
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -996,5 +972,9 @@ export default {
   @media print, screen and(min-width: 1001px) {
     display: none;
   }
+}
+.main-header-title {
+  margin: 0;
+  display: inline-flex;
 }
 </style>

@@ -62,12 +62,15 @@ export default {
   mame: 'teachers',
   metaInfo() {
     return {
-      title: '講師を知る',
-      meta: [
+      title: '講師を知る｜能セン-学び方を学ぶ-（能力開発研修センター）',
+      meta: [	{
+					name: 'description', content: '受験対策講習会を開催しています能セン（能力開発研修センター）のホームページです。能センの講習を担当する自慢の講師陣をご紹介しています。熱意溢れる先生方からのワンポイントアドバイスもございます。'
+				},
         {
           key: `og:title`,
           property: `og:title`,
-          content: `講師を知る | ${this.$static.metadata.siteName}`,
+          content: `講師を知る｜能セン-学び方を学ぶ-（能力開発研修センター）`,
+          // content: `講師を知る | ${this.$static.metadata.siteName}`,
         },
         {
           key: `og:url`,

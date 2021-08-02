@@ -107,12 +107,16 @@ import FaqCard from '@/components/faq/FaqCard.vue';
 export default {
   metaInfo() {
     return {
-      title: 'よくあるご質問',
+      title: 'よくあるご質問｜能セン-学び方を学ぶ-',
       meta: [
+					{
+					name: 'description', content: '電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）のホームページです。よくお寄せ頂くご質問にQ&A形式でお答えしています。'
+				},
         {
           key: `og:title`,
           property: `og:title`,
-          content: `よくあるご質問 | ${this.$static.metadata.siteName}`,
+          content: `よくあるご質問｜能セン-学び方を学ぶ-`,
+          // content: `よくあるご質問 | ${this.$static.metadata.siteName}`,
         },
         {
           key: `og:url`,

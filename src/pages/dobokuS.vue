@@ -19,7 +19,7 @@
             '＜一次＞選択問題のある科目はより効率的な学習方法を伝授します。記憶が重要な試験なので、「どこを優先的に覚え、なにを関連付けて理解すべきか」を指導します。',
             '＜二次＞多くの方が苦労される「経験記述問題」をしっかり対策します。',
             '＜二次＞工事件名の記述方法から使うべき言葉、専門用語、文章の簡潔なまとめ方、得点アップ方法など、オリジナルのテキストで記述のテクニックを徹底解説。',
-            '＜二次＞個別のご質問にも極力対応します。',
+            '＜二次＞個別のご質問にも対応します。',
             '＜二次＞講習後に提出いただく経験記述の課題は講師自ら個別に添削。高得点となるように直し、助言を入れてお返しします。',
           ]"
         />
@@ -57,12 +57,6 @@
       <div class="body">
         <div v-show="isActive === 1">
           <h3 class="body-title">合格のための受験指導 1級通学講座</h3>
-          <Info
-            :tuitionFee="richtextToHTML($static.doboku1.tuitionFee)"
-            :capacity="$static.doboku1.capacity"
-            :benefits="richtextToHTML($static.doboku1.benefits)"
-            :cpds="richtextToHTML($static.doboku1.cpds)"
-          />
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
             v-for="(items, index) in $static.doboku1Venue.edges"
@@ -74,6 +68,12 @@
             :address="items.node.address"
             :map="items.node.map"
           />
+          <Info
+            :tuitionFee="richtextToHTML($static.doboku1.tuitionFee)"
+            :capacity="$static.doboku1.capacity"
+            :benefits="richtextToHTML($static.doboku1.benefits)"
+            :cpds="richtextToHTML($static.doboku1.cpds)"
+          />
           <Application
             formLink="/doboku-s-application"
             faxLink="/doboku_1_FAX_31year.pdf"
@@ -81,12 +81,6 @@
         </div>
         <div v-show="isActive === 2">
           <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
-          <Info
-            :tuitionFee="richtextToHTML($static.doboku2.tuitionFee)"
-            :capacity="$static.doboku2.capacity"
-            :benefits="richtextToHTML($static.doboku2.benefits)"
-            :cpds="richtextToHTML($static.doboku2.cpds)"
-          />
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
             v-for="(items, index) in $static.doboku2Venue.edges"
@@ -97,6 +91,12 @@
             :details="items.node.details"
             :address="items.node.address"
             :map="items.node.map"
+          />
+          <Info
+            :tuitionFee="richtextToHTML($static.doboku2.tuitionFee)"
+            :capacity="$static.doboku2.capacity"
+            :benefits="richtextToHTML($static.doboku2.benefits)"
+            :cpds="richtextToHTML($static.doboku2.cpds)"
           />
           <Application
             formLink="/doboku-s-application"
@@ -109,7 +109,11 @@
             :courseOutline="richtextToHTML($static.dobokuOnline.courseOutline)"
             :apply="richtextToHTML($static.dobokuOnline.apply)"
             :mediaYoutube="$static.dobokuOnline.mediaYoutube"
-            :mediaImg="$static.dobokuOnline.mediaImg ? $static.dobokuOnline.mediaImg.file.url : ''"
+            :mediaImg="
+              $static.dobokuOnline.mediaImg
+                ? $static.dobokuOnline.mediaImg.file.url
+                : ''
+            "
             :mediaDescription="$static.dobokuOnline.mediaDescription"
           />
           <Application
@@ -186,17 +190,17 @@
 </static-query>
 
 <script>
-import Hero from "@/components/Hero.vue";
-import Point from "@/components/licensePage/Point.vue";
-import News from "@/components/licensePage/News.vue";
-import Info from "@/components/licensePage/Info.vue";
-import Venue from "@/components/licensePage/Venue.vue";
-import Application from "@/components/licensePage/Application.vue";
-import IconBase from "@/components/IconBase.vue";
-import IconDoubleArrowRight from "@/components/icons/IconDoubleArrowRight.vue";
-import IconArrowRight from "@/components/icons/IconArrowRight.vue";
-import { INLINES } from "@contentful/rich-text-types";
-import { documentToHtmlString } from "../../node_modules/@contentful/rich-text-html-renderer";
+import Hero from '@/components/Hero.vue';
+import Point from '@/components/licensePage/Point.vue';
+import News from '@/components/licensePage/News.vue';
+import Info from '@/components/licensePage/Info.vue';
+import Venue from '@/components/licensePage/Venue.vue';
+import Application from '@/components/licensePage/Application.vue';
+import IconBase from '@/components/IconBase.vue';
+import IconDoubleArrowRight from '@/components/icons/IconDoubleArrowRight.vue';
+import IconArrowRight from '@/components/icons/IconArrowRight.vue';
+import { INLINES } from '@contentful/rich-text-types';
+import { documentToHtmlString } from '../../node_modules/@contentful/rich-text-html-renderer';
 const options = {
   //contentfulのエディタで設定したassetへのリンクを変換
   renderNode: {
@@ -207,17 +211,23 @@ const options = {
   },
 };
 export default {
-  name: "koujishi2",
+  name: 'koujishi2',
   metaInfo() {
     return {
-      title: "1・2級 土木施工管理技士",
+      title: '1・2級土木施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
+        {
+          name: 'description',
+          content:
+            '通学講座・オンライン講座とご自身に合った学習スタイルを選べる受験対策講習会です。経験記述問題の対策も学べます。願書サービス、再受講割引等もご用意。CPDS認定講座。ポイントを押さえた講義をお届けします。',
+        },
         {
           key: `og:title`,
           property: `og:title`,
-          content: `1・2級 土木施工管理技士 | ${
-            this.$static.metadata.siteName
-          }`,
+          content: `1・2級土木施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-`,
+          // content: `1・2級 土木施工管理技士 | ${
+          //   this.$static.metadata.siteName
+          // }`,
         },
         {
           key: `og:url`,
@@ -338,17 +348,17 @@ export default {
   }
 }
 .tab:nth-child(3) {
-  &::before{
+  &::before {
     content: url('../assets/img/license_page/icon_pc_green.svg');
     display: inline-block;
     width: 1em;
     height: 1em;
-    margin-right:0.2em;
+    margin-right: 0.2em;
     @media print, screen and (max-width: 1000px) {
-      margin-right:0;
+      margin-right: 0;
     }
   }
-  .icon{
+  .icon {
     @media print, screen and (max-width: 1000px) {
       display: inline;
       margin-top: 0;
@@ -376,7 +386,7 @@ export default {
       font-size: 18px;
     }
     &:after {
-      content: "";
+      content: '';
       width: 70px;
       border-bottom: 5px solid #00a73c;
       display: block;

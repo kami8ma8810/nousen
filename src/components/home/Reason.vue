@@ -1,15 +1,23 @@
 <template>
-  <article :class="['reason-contents',`reason-contents${reasonNumber}`]">
-    <h4 class="reason-title">
+  <article :class="['reason-contents', `reason-contents${reasonNumber}`]">
+    <h3 class="reason-title">
       <p>
-        <i>{{reasonNumber}}</i>
-        <span>{{myTitle}}</span>
+        <i>{{ reasonNumber }}</i>
+        <span>{{ myTitle }}</span>
         <!-- わかりやすい講習 -->
       </p>
-    </h4>
+    </h3>
     <div class="reason-catch-set scroll-animation-item">
-      <g-image :src="require(`!!assets-loader!@images/${myImageSp}`)" alt="" class="under_display" />
-      <g-image :src="require(`!!assets-loader!@images/${myImage}`)" alt="" class="over_display" />
+      <g-image
+        :src="require(`!!assets-loader!@images/${myImageSp}`)"
+        alt=""
+        class="under_display"
+      />
+      <g-image
+        :src="require(`!!assets-loader!@images/${myImage}`)"
+        alt=""
+        class="over_display"
+      />
       <div class="reason-catch">
         <p v-html="myCatch">
           <!-- 必要なことだけ、<br>
@@ -19,16 +27,46 @@
     </div>
     <!-- explain 小タイトルがあるとき用(2 えらべる学習スタイル) -->
     <div class="reason-explain-contents" v-if="explanationGroup">
-      <div class="reason-explanationGroup" v-for="(explanation,index) in explanationGroup" :key="index">
+      <div
+        class="reason-explanationGroup"
+        v-for="(explanation, index) in explanationGroup"
+        :key="index"
+      >
         <div class="reason-explanationGroup-title">
-          <img :src="require(`@/assets/img/${explanation.title}`)" alt="">
+          <img :src="require(`@/assets/img/${explanation.title}`)" alt="" />
         </div>
-        <div v-for="(text,index) in explanation.texts" :key="index" class="reason-explanation">
+        <div
+          v-for="(text, index) in explanation.texts"
+          :key="index"
+          class="reason-explanation"
+        >
           <p v-html="text"></p>
         </div>
-        <div class="reason-explanationGroup-movie" v-if="explanation.movieSrc">
+        <!-- <div class="reason-explanationGroup-movie" v-if="explanation.movieSrc">
           <div class="reason-explanationGroup-movie_inner">
-            <iframe width="560" height="315" :src="explanation.movieSrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe
+              width="560"
+              height="315"
+              :src="explanation.movieSrc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="attention">{{ explanation.movieText }}</p>
+        </div> -->
+        <div class="reason-explanationGroup-movie" v-if="explanation.movieSrc">
+          <div class="reason-explanationGroup-movie_inner youtube">
+            <iframe
+              width="560"
+              height="315"
+              data-src="https://www.youtube.com/embed/wb12M0rAYuw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
           <p class="attention">{{ explanation.movieText }}</p>
         </div>
@@ -36,30 +74,36 @@
     </div>
     <!--explain 通常 -->
     <div class="reason-explain-contents" v-else>
-      <div v-for="(explain,index) in explanation" :key="index" class="reason-explanation">
-          <p v-html="explain"></p>
+      <div
+        v-for="(explain, index) in explanation"
+        :key="index"
+        class="reason-explanation"
+      >
+        <p v-html="explain"></p>
       </div>
       <div class="reason-more" v-if="moreLink">
         <g-link :to="moreLink" class="reason-more-inner">
           <span v-html="moreText">
             <!-- 詳しい講師紹介はこちら -->
           </span>
-          <IconBase class="icon" width="25" height="25"><IconFingerRight /></IconBase>
+          <IconBase class="icon" width="25" height="25"
+            ><IconFingerRight
+          /></IconBase>
         </g-link>
       </div>
     </div>
-
   </article>
 </template>
 
 <script>
-import IconBase from '@/components/IconBase.vue'
-import IconFingerRight from '@/components/icons/IconFingerRight.vue'
+import IconBase from '@/components/IconBase.vue';
+import IconFingerRight from '@/components/icons/IconFingerRight.vue';
+// import $ from 'jquery';
 export default {
   name: 'reason',
   components: {
     IconBase,
-    IconFingerRight
+    IconFingerRight,
   },
   props: {
     reasonNumber: String,
@@ -70,9 +114,33 @@ export default {
     explanation: Array,
     moreLink: String,
     moreText: String,
-    explanationGroup: Array
-  }
-}
+    explanationGroup: Array,
+  },
+  mounted() {
+    window.addEventListener('load', this.youtubeInit);
+    // 		$(function(){
+    //   $('.youtube').each(function() {
+    //     var iframe = $(this).children('iframe');
+    //     var url = iframe.attr('data-src');
+    //     var id = url.match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
+    //     iframe.before('<img src="http://img.youtube.com/vi/'+id+'/mqdefault.jpg" />').remove();
+    //     $(this).on('click', function() {
+    //       $(this).after('<div class="reason-explanationGroup-movie_inner youtube"><iframe src="https://www.youtube.com/embed/'+id+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>').remove();
+    //     });
+    //   });
+    // });
+  },
+  methods: {
+    youtubeInit() {
+      var vidDefer = document.getElementsByTagName('iframe');
+      for (var i = 0; i < vidDefer.length; i++) {
+        if (vidDefer[i].getAttribute('data-src')) {
+          vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+        }
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -139,14 +207,14 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   @media print, screen and (max-width: 1000px) {
     width: 80%;
     font-size: 18px;
     padding: 0 10px;
   }
   &:after {
-    content: "";
+    content: '';
     height: 500px;
     width: 5px;
     background-color: #000;
@@ -169,7 +237,7 @@ export default {
   margin-top: 100px;
 }
 .reason-explanation {
-  padding: 30px;
+  padding: 30px 10px;
   font-size: 18px;
   border: 4px solid #000;
   margin: 0 auto;
@@ -189,7 +257,7 @@ export default {
     padding: 10px 15px 10px 20px;
   }
   &:before {
-    content: url("../../assets/img/icon/finger_diagonallyright_orange.svg");
+    content: url('../../assets/img/icon/finger_diagonallyright_orange.svg');
     position: absolute;
     left: -10px;
     top: -20px;
@@ -208,7 +276,7 @@ export default {
     background: linear-gradient(to right, #f4b073 50%, transparent 50%);
     background-repeat: no-repeat;
     background-size: 200% 1em;
-    background-position: 100% .5em;
+    background-position: 100% 0.5em;
     transition: background-position 0.5s ease-in-out;
     &.is-show {
       background-position: 0% 0;
@@ -242,7 +310,7 @@ export default {
 .reason-contents1 {
   .reason-catch {
     &:after {
-      content: "";
+      content: '';
       height: 300px;
       top: -300px;
       @media print, screen and (max-width: 1000px) {
@@ -272,13 +340,13 @@ export default {
 }
 
 /* 202104追加 */
-.reason-explanationGroup-movie{
+.reason-explanationGroup-movie {
   width: 85%;
   margin: 4em auto 0;
   @media print, screen and (min-width: 1001px) {
     max-width: 630px;
   }
-  .attention{
+  .attention {
     margin: 0;
     padding-top: 0.3em;
     font-size: 13px;
@@ -288,13 +356,13 @@ export default {
     }
   }
 }
-.reason-explanationGroup-movie_inner{
+.reason-explanationGroup-movie_inner {
   position: relative;
   width: 100%;
-  height:0px;
+  height: 0px;
   padding-top: 56.25%;
 }
-.reason-explanationGroup-movie_inner iframe{
+.reason-explanationGroup-movie_inner iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -302,23 +370,22 @@ export default {
   height: 100%;
 }
 
-.reason-explanationGroup:not(:first-child){
-  .reason-explanationGroup-title{
+.reason-explanationGroup:not(:first-child) {
+  .reason-explanationGroup-title {
     padding-top: 4.5em;
   }
 }
 
-.reason-explanationGroup-title{
+.reason-explanationGroup-title {
   text-align: center;
   @media print, screen and (min-width: 1001px) {
     margin-bottom: -1em;
   }
-  img{
+  img {
     height: 16px;
-      @media print, screen and (min-width: 1001px) {
+    @media print, screen and (min-width: 1001px) {
       height: 21px;
     }
   }
 }
-
 </style>
