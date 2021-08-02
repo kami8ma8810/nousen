@@ -495,7 +495,8 @@ export default {
         {
           key: `og:title`,
           property: `og:title`,
-          content: `学べる資格と講習会のご案内 | ${this.$static.metadata.siteName}`,
+          content: `学べる資格と講習会のご案内｜能セン-学び方を学ぶ-`,
+          // content: `学べる資格と講習会のご案内 | ${this.$static.metadata.siteName}`,
         },
         {
           key: `og:url`,
