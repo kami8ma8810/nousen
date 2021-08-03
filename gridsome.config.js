@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 module.exports = {
   // siteName: `一般社団法人 能力開発研修センター 能セン`,
-  siteName: '&nbsp;',
+  siteName: '能セン-学び方を学ぶ-',
   // titleTemplate: `%s | 能セン-学び方を学ぶ-`,
   titleTemplate: '',
   siteUrl: `https://www.nouryoku.com`,
