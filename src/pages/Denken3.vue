@@ -152,7 +152,6 @@
       }
     }
     metadata {
-      siteName
       siteUrl
     }
   }
