@@ -504,8 +504,9 @@ export default {
   metaInfo() {
     return {
       // title: 'TOP',
-			title:`能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会${this.$static.metadata.siteName}`,
-      // title: '能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会',
+			// title:`能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会${this.$static.metadata.siteName}`,
+      title: '能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会',
+			titleTemplate:`学び方を学ぶ受験対策講習会`,
       meta: [
         {
           name: 'description',
