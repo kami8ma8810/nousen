@@ -477,7 +477,6 @@ query Index {
 query {
   metadata {
     siteUrl
-		siteName
   }
 }
 </static-query>
