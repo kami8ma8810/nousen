@@ -487,7 +487,7 @@ export default {
   name: 'licenses',
   metaInfo() {
     return {
-      title: '学べる資格と講習会のご案内｜能セン-学び方を学ぶ-',
+      titleTemplate: '学べる資格と講習会のご案内｜能セン-学び方を学ぶ-',
       meta: [
 					{
 					name: 'description', content: '能センで開催しています講習会の資格「電験三種」「電気工事士」「施工管理技士」「給水」に関する基本情報です。受験資格、試験日、受験申請期間等、資格取得に必須の基本情報を分かりやすく記載しています。'

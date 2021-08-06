@@ -214,7 +214,7 @@ export default {
   name: 'koujishi2',
   metaInfo() {
     return {
-      title: '1・2級土木施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
+      titleTemplate: '1・2級土木施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
         {
           name: 'description',

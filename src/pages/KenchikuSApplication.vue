@@ -38,7 +38,7 @@ export default {
   name: 'kenchiku_s_application',
   metaInfo() {
     return {
-      title: '1・2級建築施工管理技士お申し込みフォーム｜能セン-学び方を学ぶ-',
+      titleTemplate: '1・2級建築施工管理技士お申し込みフォーム｜能セン-学び方を学ぶ-',
       meta: [
         {
           name: 'description',

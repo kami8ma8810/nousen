@@ -23,9 +23,7 @@
 <static-query>
 query {
   metadata {
-    siteName
     siteUrl
-		siteDescription
   }
 }
 </static-query>
@@ -36,7 +34,7 @@ export default {
   name: 'goods-sales',
   metaInfo() {
     return {
-      title: 'テキスト・工具販売フォーム｜能セン-学び方を学ぶ-',
+      titleTemplate: 'テキスト・工具販売フォーム｜能セン-学び方を学ぶ-',
       meta: [
         {
           name: 'description',

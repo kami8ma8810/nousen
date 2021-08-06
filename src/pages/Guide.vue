@@ -98,7 +98,7 @@ import Hero from '@/components/Hero.vue';
 export default {
   metaInfo() {
     return {
-      title: '特定商取引法に基づく表記｜能セン-学び方を学ぶ-',
+      titleTemplate: '特定商取引法に基づく表記｜能セン-学び方を学ぶ-',
       meta: [
 					{
 					name: 'description', content: '電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）のページです。特定商取引法に基づく表記について記載しています。'
