@@ -78,9 +78,9 @@
               <dt>返品期限</dt>
               <dd>書籍、工具の返品は到着後７日以内にご連絡下さい</dd>
             </dl>
-						<p class="alert">令和３年８月１６日　書籍販売の送料変更</p>
           </div>
         </section>
+        <p class="alert">令和３年８月１６日　書籍販売の送料変更</p>
       </div>
     </div>
   </Layout>
@@ -181,5 +181,9 @@ dd {
   margin: 50px 0;
   border-top: 1px dashed #808080;
   border-bottom: 1px dashed #808080;
+}
+.alert {
+  text-align: center;
+  font-size: 14px;
 }
 </style>
