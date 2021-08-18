@@ -80,7 +80,7 @@
             </dl>
           </div>
         </section>
-        <p class="alert">令和３年８月１６日　書籍販売の送料変更</p>
+        <p class="alert">令和３年８月１８日　書籍販売の送料変更</p>
       </div>
     </div>
   </Layout>
