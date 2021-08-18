@@ -1,11 +1,7 @@
 <template>
   <Layout>
     <div class="guide">
-      <Hero
-        backImgOver=""
-        backImgUnder=""
-        title="特定商取引法に基づく表記"
-      />
+      <Hero backImgOver="" backImgUnder="" title="特定商取引法に基づく表記" />
       <div class="contents">
         <section class="section">
           <div class="content">
@@ -39,21 +35,26 @@
             </dl>
             <dl>
               <dt>販売価格</dt>
-              <dd>講習費用：各科目講習会ページに記載<br>
-                  テキスト代・工具代：各販売ページに記載
+              <dd>
+                講習費用：各科目講習会ページに記載<br />
+                テキスト代・工具代：各販売ページに記載
               </dd>
             </dl>
             <dl>
               <dt>商品代金以外の必要料金</dt>
-              <dd>書籍販売：送料７００円（税別）※合計２万円超は無料<br>
-                  工具販売：送料１０００円（税別）<br>
-                  代金引換：５００円（税別）※上記送料に加算<br>
-                  通信添削：提出数量に応じた通信料（切手代）
+              <dd>
+                <!-- 書籍販売：送料７００円（税別）※合計２万円超は無料<br> -->
+                書籍販売：送料５００円（税別）※合計２万円超は無料<br />
+                工具販売：送料１０００円（税別）<br />
+                代金引換：５００円（税別）※上記送料に加算<br />
+                通信添削：提出数量に応じた通信料（切手代）
               </dd>
             </dl>
             <dl>
               <dt>引き渡し時期</dt>
-              <dd>ご入金確認後受講書類、教材を発送（テキスト改訂時は納品次第）</dd>
+              <dd>
+                ご入金確認後受講書類、教材を発送（テキスト改訂時は納品次第）
+              </dd>
             </dl>
             <dl>
               <dt>お支払方法</dt>
@@ -65,11 +66,12 @@
             </dl>
             <dl>
               <dt>返品・交換・キャンセル等</dt>
-              <dd>講習日より３１日前まで：ご入金額の７０％返金<br>
-                  講習日より１５日前まで：ご入金額の５０％返金<br>
-                  講習日１４日前以降：お取消し不可<br>
-                  書籍、工具等商品の不良品は交換対応致します。<br>
-                  オンライン講座は他社のツールを使用する関係で原則キャンセルはできません。
+              <dd>
+                講習日より３１日前まで：ご入金額の７０％返金<br />
+                講習日より１５日前まで：ご入金額の５０％返金<br />
+                講習日１４日前以降：お取消し不可<br />
+                書籍、工具等商品の不良品は交換対応致します。<br />
+                オンライン講座は他社のツールを使用する関係で原則キャンセルはできません。
               </dd>
             </dl>
             <dl>
@@ -78,6 +80,7 @@
             </dl>
           </div>
         </section>
+        <p class="alert">令和３年８月１８日　書籍販売の送料変更</p>
       </div>
     </div>
   </Layout>
@@ -98,11 +101,13 @@ import Hero from '@/components/Hero.vue';
 export default {
   metaInfo() {
     return {
-      title: '特定商取引法に基づく表記｜能セン-学び方を学ぶ-',
+      titleTemplate: '特定商取引法に基づく表記｜能セン-学び方を学ぶ-',
       meta: [
-					{
-					name: 'description', content: '電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）のページです。特定商取引法に基づく表記について記載しています。'
-				},
+        {
+          name: 'description',
+          content:
+            '電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）のページです。特定商取引法に基づく表記について記載しています。',
+        },
         {
           key: `og:title`,
           property: `og:title`,
@@ -114,13 +119,13 @@ export default {
           property: `og:url`,
           content: `${this.$static.metadata.siteUrl}/guide`,
         },
-      ]
-    }
+      ],
+    };
   },
   components: {
-    Hero
-  }
-}
+    Hero,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -176,5 +181,9 @@ dd {
   margin: 50px 0;
   border-top: 1px dashed #808080;
   border-bottom: 1px dashed #808080;
+}
+.alert {
+  text-align: center;
+  font-size: 14px;
 }
 </style>

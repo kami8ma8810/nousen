@@ -133,9 +133,7 @@
 <static-query>
 query {
   metadata {
-    siteName
     siteUrl
-		siteDescription
   }
 }
 </static-query>
@@ -145,7 +143,7 @@ import Hero from '@/components/Hero.vue';
 export default {
   metaInfo() {
     return {
-      title: '会社概要｜能セン-学び方を学ぶ-（能力開発研修センター）',
+      titleTemplate: '会社概要｜能セン-学び方を学ぶ-（能力開発研修センター）',
       meta: [
 							{
 					name: 'description', content: '電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）のページです。企業情報、沿革、事業内容、開催された講習会・研修会をご紹介しています。'

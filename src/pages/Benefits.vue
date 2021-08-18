@@ -40,9 +40,7 @@
 <static-query>
 query {
   metadata {
-    siteName
     siteUrl
-		siteDescription
   }
 }
 </static-query>
@@ -56,7 +54,7 @@ export default {
   name: 'benefits',
   metaInfo() {
     return {
-      title: '給付制度｜能セン-学び方を学ぶ-（能力開発研修センター）',
+      titleTemplate: '給付制度｜能セン-学び方を学ぶ-（能力開発研修センター）',
       meta: [
 					{
 					name: 'description', content: '電気、建築、設備関連を中心とした受験対策講習会を開催しています能センのページです。講習会受講時に申請できる一般教育訓練給付金、人材開発支援助成金、民間派遣型スキルアップ助成金についてご紹介しています。'

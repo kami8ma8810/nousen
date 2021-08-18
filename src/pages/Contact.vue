@@ -18,9 +18,7 @@
 <static-query>
 query {
   metadata {
-    siteName
     siteUrl
-		siteDescription
   }
 }
 </static-query>
@@ -31,7 +29,7 @@ export default {
   name: "contact",
   metaInfo() {
     return {
-      title: 'お問い合わせフォーム｜能セン-学び方を学ぶ-',
+      titleTemplate: 'お問い合わせフォーム｜能セン-学び方を学ぶ-',
       meta: [
 					{
 					name: 'description', content: '電気、建築、設備関連を中心とした受験対策講習会を開催しています能セン（能力開発研修センター）です。ご質問や資料請求等はこちらのフォームからお気軽にお問い合わせください。'

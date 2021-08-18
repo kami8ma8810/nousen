@@ -29,7 +29,7 @@ export default {
   name: "kankouji_s_application",
   metaInfo() {
     return {
-      title: '1・2級管工事施工管理技士お申し込みフォーム｜能セン-学び方を学ぶ-',
+      titleTemplate: '1・2級管工事施工管理技士お申し込みフォーム｜能セン-学び方を学ぶ-',
       meta: [
 					{
 					name: 'description', content: '能セン受験対策講習会「1・2級管工事施工管理技士」のお申し込みフォームです。経験豊富な講師陣のポイントを絞った的確な講義をぜひ一度ご体験ください。'

@@ -136,7 +136,7 @@ import IconFingerRight from '@/components/icons/IconFingerRight.vue';
 export default {
   metaInfo() {
     return {
-      title: '出張講習のご案内｜能セン-学び方を学ぶ-',
+    titleTemplate: '出張講習のご案内｜能セン-学び方を学ぶ-',
       meta: [
         {
           name: 'description',

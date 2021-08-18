@@ -38,7 +38,7 @@ export default {
   name: 'kyuusui_application',
   metaInfo() {
     return {
-      title: '給水装置工事主任技術者お申し込みフォーム｜能セン-学び方を学ぶ-',
+      titleTemplate: '給水装置工事主任技術者お申し込みフォーム｜能セン-学び方を学ぶ-',
       meta: [
         {
           name: 'description',

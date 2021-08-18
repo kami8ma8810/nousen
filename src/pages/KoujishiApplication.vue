@@ -38,7 +38,7 @@ export default {
   name: 'koujishi_application',
   metaInfo() {
     return {
-      title: '第一種・第二種電気工事士お申し込みフォーム｜能セン-学び方を学ぶ-',
+      titleTemplate: '第一種・第二種電気工事士お申し込みフォーム｜能セン-学び方を学ぶ-',
       meta: [
         {
           name: 'description',

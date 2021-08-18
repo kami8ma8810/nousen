@@ -26,7 +26,6 @@
 <static-query>
 query {
   metadata {
-    siteName
     siteUrl
   }
 }
@@ -38,7 +37,7 @@ export default {
   name: 'denken3_application',
   metaInfo() {
     return {
-      title: '第三種電気主任技術者お申し込みフォーム｜能セン-学び方を学ぶ-',
+      titleTemplate: '第三種電気主任技術者お申し込みフォーム｜能セン-学び方を学ぶ-',
       meta: [
         {
           name: 'description',
