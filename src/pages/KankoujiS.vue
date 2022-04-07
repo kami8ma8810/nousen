@@ -68,10 +68,10 @@
             :benefits="richtextToHTML($static.kankouji1.benefits)"
             :cpds="richtextToHTML($static.kankouji1.cpds)"
           />
-          <Application
+          <!-- <Application
             formLink="/kankouji-s-application"
             faxLink="/kankouji_1_FAX_31year.pdf"
-          />
+          /> -->
         </div>
         <div v-show="isActive === 2">
           <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
@@ -92,10 +92,10 @@
             :benefits="richtextToHTML($static.kankouji2.benefits)"
             :cpds="richtextToHTML($static.kankouji2.cpds)"
           />
-          <Application
+          <!-- <Application
             formLink="/kankouji-s-application"
             faxLink="/kankouji_2_FAX_31year.pdf"
-          />
+          /> -->
         </div>
       </div>
     </div>
@@ -181,11 +181,14 @@ export default {
   name: 'koujishi2',
   metaInfo() {
     return {
-      titleTemplate: '1・2級管工事施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
+      titleTemplate:
+        '1・2級管工事施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
-					{
-					name: 'description', content: '通学スタイルの受験対策講習会です。担当講師執筆のテキストを使用。経験記述問題の対策も学べます。願書サービス、再受講割引等もご用意。ポイントを押さえた講義をお届けします。'
-				},
+        {
+          name: 'description',
+          content:
+            '通学スタイルの受験対策講習会です。担当講師執筆のテキストを使用。経験記述問題の対策も学べます。願書サービス、再受講割引等もご用意。ポイントを押さえた講義をお届けします。',
+        },
         {
           key: `og:title`,
           property: `og:title`,

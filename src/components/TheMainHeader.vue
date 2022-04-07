@@ -231,7 +231,7 @@
               FAX用紙 通信(PDF)
             </a>
           </li>
-          <li class="denkikouji">
+          <!-- <li class="denkikouji">
             <p class="title">第一種<br class="overdisplay" />電気工事士</p>
             <g-link to="/koujishi-application" class="application-form-link">
               お申し込みフォーム </g-link
@@ -244,7 +244,7 @@
             >
               FAX用紙(PDF)
             </a>
-          </li>
+          </li> -->
           <li class="denkikouji">
             <p class="title">第二種<br class="overdisplay" />電気工事士</p>
             <g-link to="/koujishi-application" class="application-form-link">
@@ -259,7 +259,7 @@
               FAX用紙(PDF)
             </a>
           </li>
-          <li class="denkikoujisekou">
+          <!-- <li class="denkikoujisekou">
             <p class="title">
               1・2級<br class="overdisplay" />電気工事施工管理技士
             </p>
@@ -285,7 +285,7 @@
             >
               FAX用紙 2級(PDF)
             </a>
-          </li>
+          </li> -->
           <li class="kenchiku">
             <p class="title">
               1・2級<br class="overdisplay" />建築施工管理技士
@@ -310,7 +310,7 @@
               FAX用紙 2級(PDF)
             </a>
           </li>
-          <li class="kankouji">
+          <!-- <li class="kankouji">
             <p class="title">
               1・2級<br class="overdisplay" />管工事施工管理技士
             </p>
@@ -333,7 +333,7 @@
             >
               FAX用紙 2級(PDF)
             </a>
-          </li>
+          </li> -->
           <li class="doboku">
             <p class="title">
               1・2級<br class="overdisplay" />土木施工管理技士
@@ -358,7 +358,7 @@
               FAX用紙 2級(PDF)
             </a>
           </li>
-          <li class="kyuusui">
+          <!-- <li class="kyuusui">
             <p class="title">
               給水装置工事<br class="overdisplay" />主任技術者
             </p>
@@ -373,7 +373,7 @@
             >
               FAX用紙 (PDF)
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
       <!-- /default -->

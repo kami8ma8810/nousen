@@ -76,10 +76,10 @@
             :benefits="richtextToHTML($static.denkikoujiSekou1.benefits)"
             :cpds="richtextToHTML($static.denkikoujiSekou1.cpds)"
           />
-          <Application
+          <!-- <Application
             formLink="/denkikouji-s-application"
             faxLink="/denkikouji_1_FAX_31year.pdf"
-          />
+          /> -->
         </div>
         <div v-show="isActive === 2">
           <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
@@ -100,10 +100,10 @@
             :benefits="richtextToHTML($static.denkikoujiSekou2.benefits)"
             :cpds="richtextToHTML($static.denkikoujiSekou2.cpds)"
           />
-          <Application
+          <!-- <Application
             formLink="/denkikouji-s-application"
             faxLink="/denkikouji_2_FAX_31year.pdf"
-          />
+          /> -->
         </div>
         <div v-show="isActive === 3">
           <h3 class="body-title">合格のための受験指導 オンライン講座</h3>
@@ -120,10 +120,10 @@
             "
             :mediaDescription="$static.denkikoujiSekouOnline.mediaDescription"
           />
-          <Application
+          <!-- <Application
             formText="オンライン講座へのお申し込み"
             formLink="/denkikouji-s-application"
-          />
+          /> -->
         </div>
       </div>
     </div>
@@ -218,11 +218,14 @@ export default {
   name: 'koujishi2',
   metaInfo() {
     return {
-      titleTemplate: '1・2級電気工事施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
+      titleTemplate:
+        '1・2級電気工事施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
-					{
-					name: 'description', content: '通学講座・オンライン講座とご自身に合った学習スタイルを選べる受験対策講習会です。担当講師執筆のテキストを使用。経験記述問題の対策も学べます。願書サービス、再受講割引等もご用意。ポイントを押さえた講義をお届けします。'
-				},
+        {
+          name: 'description',
+          content:
+            '通学講座・オンライン講座とご自身に合った学習スタイルを選べる受験対策講習会です。担当講師執筆のテキストを使用。経験記述問題の対策も学べます。願書サービス、再受講割引等もご用意。ポイントを押さえた講義をお届けします。',
+        },
         {
           key: `og:title`,
           property: `og:title`,
