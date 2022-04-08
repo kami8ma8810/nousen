@@ -76,7 +76,7 @@
           />
           <Application
             formLink="/kenchiku-s-application"
-            faxLink="/kenchiku_1_FAX_31year.pdf"
+            faxLink="/kenchiku_FAX_2022year.pdf"
           />
         </div>
         <div v-show="isActive === 2">
@@ -100,7 +100,7 @@
           />
           <Application
             formLink="/kenchiku-s-application"
-            faxLink="/kenchiku_2_FAX_31year.pdf"
+            faxLink="/kenchiku_FAX_2022year.pdf"
           />
         </div>
         <div v-show="isActive === 3">
@@ -216,11 +216,14 @@ export default {
   name: 'koujishi2',
   metaInfo() {
     return {
-      titleTemplate: '1・2級建築施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
+      titleTemplate:
+        '1・2級建築施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
-					{
-					name: 'description', content: '通学講座・オンライン講座とご自身に合った学習スタイルを選べる受験対策講習会です。担当講師執筆のオリジナルテキストを使用。経験記述問題の対策も学べます。願書サービス、再受講割引等もご用意。ポイントを押さえた講義をお届けします。'
-				},
+        {
+          name: 'description',
+          content:
+            '通学講座・オンライン講座とご自身に合った学習スタイルを選べる受験対策講習会です。担当講師執筆のオリジナルテキストを使用。経験記述問題の対策も学べます。願書サービス、再受講割引等もご用意。ポイントを押さえた講義をお届けします。',
+        },
         {
           key: `og:title`,
           property: `og:title`,

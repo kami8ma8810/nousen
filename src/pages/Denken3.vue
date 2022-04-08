@@ -73,7 +73,7 @@
           />
           <Application
             formLink="/denken3-application"
-            faxLink="/3_denken_tuugaku_FAX_31year.pdf"
+            faxLink="/3_denken_FAX_2022year.pdf"
           />
         </div>
         <div v-show="isActive === 2">
@@ -86,7 +86,7 @@
           />
           <Application
             formLink="/denken3-application"
-            faxLink="/3_denken_tuushin_FAX_31year.pdf"
+            faxLink="/3_denken_FAX_2022year.pdf"
           />
         </div>
         <div v-show="isActive === 3">
