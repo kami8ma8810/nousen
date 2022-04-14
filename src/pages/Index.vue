@@ -154,8 +154,10 @@
                   '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。',
                 ],
                 // movieSrc: 'https://www.youtube.com/embed/Z-Hro9L34fw',
-                movieSrc: 'https://www.youtube.com/embed/wb12M0rAYuw',
-                movieText: '※動画は建築施工管理技士の講義です',
+                //movieSrc: 'https://www.youtube.com/embed/wb12M0rAYuw',
+                movieSrc: 'https://www.youtube.com/embed/xquePEivmr8',
+                movieText:
+                  '※動画は第三種電気主任技術者の講義です。基礎講座の動画を一部、3分程度ご覧いただけます。',
               },
               {
                 title: 'front/section05_title3.svg',

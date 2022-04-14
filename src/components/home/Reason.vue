@@ -353,6 +353,7 @@ export default {
     text-align: right;
     @media print, screen and (min-width: 1001px) {
       font-size: 15px;
+      white-space: nowrap;
     }
   }
 }
