@@ -153,8 +153,6 @@
                   '短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ<br>視聴することも可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
                   '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。',
                 ],
-                // movieSrc: 'https://www.youtube.com/embed/Z-Hro9L34fw',
-                //movieSrc: 'https://www.youtube.com/embed/wb12M0rAYuw',
                 movieSrc: 'https://www.youtube.com/embed/xquePEivmr8',
                 movieText:
                   '※動画は第三種電気主任技術者の講義です。基礎講座の動画を一部、3分程度ご覧いただけます。',
