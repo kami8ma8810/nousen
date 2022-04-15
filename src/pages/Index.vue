@@ -153,9 +153,9 @@
                   '短時間でも学習でき、時間をおいて続きから、または学びたい項目だけ<br>視聴することも可能です。<i class=scroll-animation-item>配信期間内は繰り返し試聴できます</i>ので弱点も克服できます。<br>通学講座の講義風景を丸ごと収録した臨場感たっぷりの動画ですので<br>その場で受講しているように頭に入ってきます。',
                   '移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。',
                 ],
-                // movieSrc: 'https://www.youtube.com/embed/Z-Hro9L34fw',
-                movieSrc: 'https://www.youtube.com/embed/wb12M0rAYuw',
-                movieText: '※動画は建築施工管理技士の講義です',
+                movieSrc: 'https://www.youtube.com/embed/xquePEivmr8',
+                movieText:
+                  '※動画は第三種電気主任技術者の講義です。基礎講座の動画を一部、3分程度ご覧いただけます。',
               },
               {
                 title: 'front/section05_title3.svg',
@@ -289,7 +289,7 @@
             <g-link to="/denken3-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
-            <a
+            <!-- <a
               href="/3_denken_tuugaku_FAX_31year.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -305,9 +305,17 @@
               class="application-fax-link"
             >
               FAX用紙 通信(PDF)
+            </a> -->
+            <a
+              href="/3_denken_FAX_2022year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙(PDF)
             </a>
           </li>
-          <li class="denkikouji">
+          <!-- <li class="denkikouji">
             <p class="title">第一種<br class="overdisplay" />電気工事士</p>
             <g-link to="/koujishi-application" class="application-form-link">
               お申し込みフォーム </g-link
@@ -320,14 +328,14 @@
             >
               FAX用紙(PDF)
             </a>
-          </li>
+          </li> -->
           <li class="denkikouji">
             <p class="title">第二種<br class="overdisplay" />電気工事士</p>
             <g-link to="/koujishi-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
             <a
-              href="/2_denki_FAX_31year.pdf"
+              href="/2_denki_FAX_2022year.pdf"
               target="_blank"
               rel="noopener noreferrer"
               class="application-fax-link"
@@ -335,7 +343,7 @@
               FAX用紙(PDF)
             </a>
           </li>
-          <li class="denkikoujisekou">
+          <!-- <li class="denkikoujisekou">
             <p class="title">
               1・2級<br class="overdisplay" />電気工事施工管理技士
             </p>
@@ -361,7 +369,7 @@
             >
               FAX用紙 2級(PDF)
             </a>
-          </li>
+          </li> -->
           <li class="kenchiku">
             <p class="title">
               1・2級<br class="overdisplay" />建築施工管理技士
@@ -369,7 +377,7 @@
             <g-link to="/kenchiku-s-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
-            <a
+            <!-- <a
               href="/kenchiku_1_FAX_31year.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -384,9 +392,17 @@
               class="application-fax-link"
             >
               FAX用紙 2級(PDF)
+            </a> -->
+            <a
+              href="/kenchiku_FAX_2022year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙(PDF)
             </a>
           </li>
-          <li class="kankouji">
+          <!-- <li class="kankouji">
             <p class="title">
               1・2級<br class="overdisplay" />管工事施工管理技士
             </p>
@@ -409,7 +425,7 @@
             >
               FAX用紙 2級(PDF)
             </a>
-          </li>
+          </li> -->
           <li class="doboku">
             <p class="title">
               1・2級<br class="overdisplay" />土木施工管理技士
@@ -417,7 +433,7 @@
             <g-link to="/doboku-s-application" class="application-form-link">
               お申し込みフォーム </g-link
             ><br />
-            <a
+            <!-- <a
               href="/doboku_1_FAX_31year.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -432,9 +448,17 @@
               class="application-fax-link"
             >
               FAX用紙 2級(PDF)
+            </a> -->
+            <a
+              href="/doboku_FAX_2022year.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="application-fax-link"
+            >
+              FAX用紙(PDF)
             </a>
           </li>
-          <li class="kyuusui">
+          <!-- <li class="kyuusui">
             <p class="title">
               給水装置工事<br class="overdisplay" />主任技術者
             </p>
@@ -449,7 +473,7 @@
             >
               FAX用紙 (PDF)
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
       <!-- /default -->
@@ -503,9 +527,9 @@ export default {
   metaInfo() {
     return {
       // title: 'TOP',
-			// title:`能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会${this.$static.metadata.siteName}`,
+      // title:`能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会${this.$static.metadata.siteName}`,
       // title: '能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会',
-			titleTemplate:`能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会`,
+      titleTemplate: `能セン(能力開発研修センター)｜学び方を学ぶ受験対策講習会`,
       meta: [
         {
           name: 'description',

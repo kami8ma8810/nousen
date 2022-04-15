@@ -53,7 +53,7 @@
           />
           <Application
             formLink="/koujishi-application"
-            faxLink="/2_denki_FAX_31year.pdf"
+            faxLink="/2_denki_FAX_2022year.pdf"
           />
         </div>
       </div>
@@ -121,9 +121,11 @@ export default {
     return {
       titleTemplate: '第二種電気工事士 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
-					{
-					name: 'description', content: '短期集中型でリーズナブル！効率よく学べる通学講習会です。近年の出題傾向を分析し、ポイントを押さえた講義をお届けします。技能講習では公表問題を各自作成し講師が個別に採点指導。再受講割引もご用意しています。'
-				},
+        {
+          name: 'description',
+          content:
+            '短期集中型でリーズナブル！効率よく学べる通学講習会です。近年の出題傾向を分析し、ポイントを押さえた講義をお届けします。技能講習では公表問題を各自作成し講師が個別に採点指導。再受講割引もご用意しています。',
+        },
         {
           key: `og:title`,
           property: `og:title`,

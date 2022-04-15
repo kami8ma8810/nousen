@@ -49,10 +49,10 @@
             :benefits="richtextToHTML($static.contentfulQualification.benefits)"
             :cpds="richtextToHTML($static.contentfulQualification.cpds)"
           />
-          <Application
+          <!-- <Application
             formLink="/kyuusui-application"
             faxLink="/kyuusui_FAX_31year.pdf"
-          />
+          /> -->
         </div>
       </div>
     </div>
@@ -117,11 +117,14 @@ export default {
   name: 'kyuusui',
   metaInfo() {
     return {
-      titleTemplate: '給水装置工事主任技術者 受験対策講習会｜能セン-学び方を学ぶ-',
+      titleTemplate:
+        '給水装置工事主任技術者 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
-					{
-					name: 'description', content: '通学スタイルの受験対策講習会です。担当講師執筆のテキストを使用。再受講割引等もご用意。過去問題を分析し、ポイントを押さえた講義をお届けします。'
-				},
+        {
+          name: 'description',
+          content:
+            '通学スタイルの受験対策講習会です。担当講師執筆のテキストを使用。再受講割引等もご用意。過去問題を分析し、ポイントを押さえた講義をお届けします。',
+        },
         {
           key: `og:title`,
           property: `og:title`,

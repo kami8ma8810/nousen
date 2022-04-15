@@ -76,7 +76,7 @@
           />
           <Application
             formLink="/doboku-s-application"
-            faxLink="/doboku_1_FAX_31year.pdf"
+            faxLink="/doboku_FAX_2022year.pdf"
           />
         </div>
         <div v-show="isActive === 2">
@@ -100,7 +100,7 @@
           />
           <Application
             formLink="/doboku-s-application"
-            faxLink="/doboku_2_FAX_31year.pdf"
+            faxLink="/doboku_FAX_2022year.pdf"
           />
         </div>
         <div v-show="isActive === 3">
@@ -214,7 +214,8 @@ export default {
   name: 'koujishi2',
   metaInfo() {
     return {
-      titleTemplate: '1・2級土木施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
+      titleTemplate:
+        '1・2級土木施工管理技士 受験対策講習会｜能セン-学び方を学ぶ-',
       meta: [
         {
           name: 'description',

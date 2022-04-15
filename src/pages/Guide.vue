@@ -11,7 +11,8 @@
             </dl>
             <dl>
               <dt>代表理事</dt>
-              <dd>櫛田 静代</dd>
+              <!-- <dd>櫛田 静代</dd> -->
+              <dd>矢澤 健太郎</dd>
             </dl>
             <dl>
               <dt>所在地</dt>
@@ -81,6 +82,7 @@
           </div>
         </section>
         <p class="alert">令和３年８月１８日　書籍販売の送料変更</p>
+        <p class="alert">令和４年４月１日　代表理事変更</p>
       </div>
     </div>
   </Layout>

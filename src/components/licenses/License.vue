@@ -49,7 +49,10 @@
             >講習内容はコチラ
             <IconBase class="icon"><IconFingerRight /></IconBase>
           </router-link>
-          <a :href="applicationLink" class="application-link"
+          <a
+            v-if="applicationLink"
+            :href="applicationLink"
+            class="application-link"
             >講習会へのお申し込み
             <IconBase class="icon"><IconFingerRight /></IconBase>
           </a>
