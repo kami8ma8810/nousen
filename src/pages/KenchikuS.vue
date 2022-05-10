@@ -36,26 +36,26 @@
           :class="['tab', { active: isActive === 1 }]"
           v-on:click="tabToggle(1)"
         >
-          1級通学講座
+          オンライン<br class="underdisplay" />講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
         <div
           :class="['tab', { active: isActive === 2 }]"
           v-on:click="tabToggle(2)"
         >
-          2級通学講座
+          1級通学講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
         <div
           :class="['tab', { active: isActive === 3 }]"
           v-on:click="tabToggle(3)"
         >
-          オンライン<br class="underdisplay" />講座
+          2級通学講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
       </section>
       <div class="body">
-        <div v-show="isActive === 1">
+        <div v-show="isActive === 2">
           <h3 class="body-title">合格のための受験指導 1級通学講座</h3>
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
@@ -79,7 +79,7 @@
             faxLink="/kenchiku_FAX_2022year.pdf"
           />
         </div>
-        <div v-show="isActive === 2">
+        <div v-show="isActive === 3">
           <h3 class="body-title">合格のための受験指導 2級通学講座</h3>
           <h3 class="body-title">各会場の開催日程</h3>
           <Venue
@@ -103,7 +103,7 @@
             faxLink="/kenchiku_FAX_2022year.pdf"
           />
         </div>
-        <div v-show="isActive === 3">
+        <div v-show="isActive === 1">
           <h3 class="body-title">合格のための受験指導 オンライン講座</h3>
           <Info
             :courseOutline="
