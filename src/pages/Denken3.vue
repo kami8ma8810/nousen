@@ -332,12 +332,12 @@ export default {
   }
 }
 
-.tab:nth-child(2) {
+.tab:nth-child(3) {
   &::before {
     content: url('../assets/img/license_page/icon_home.svg');
   }
 }
-.tab:nth-child(3) {
+.tab:nth-child(1) {
   &::before {
     content: url('../assets/img/license_page/icon_pc.svg');
   }

@@ -352,7 +352,7 @@ export default {
     }
   }
 }
-.tab:nth-child(3) {
+.tab:nth-child(1) {
   &::before {
     content: url('../assets/img/license_page/icon_pc_green.svg');
     display: inline-block;
