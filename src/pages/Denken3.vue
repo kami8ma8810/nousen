@@ -30,22 +30,22 @@
       </header>
       <section class="tab-wrapper">
         <div
-          :class="['tab', { active: isActive === 3 }]"
-          v-on:click="tabToggle(3)"
+          :class="['tab', { active: isActive === 1 }]"
+          v-on:click="tabToggle(1)"
         >
           オンライン<br class="underdisplay" />講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
         <div
-          :class="['tab', { active: isActive === 1 }]"
-          v-on:click="tabToggle(1)"
+          :class="['tab', { active: isActive === 2 }]"
+          v-on:click="tabToggle(2)"
         >
           通学講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
         </div>
         <div
-          :class="['tab', { active: isActive === 2 }]"
-          v-on:click="tabToggle(2)"
+          :class="['tab', { active: isActive === 3 }]"
+          v-on:click="tabToggle(3)"
         >
           通信講座
           <IconBase class="icon"><IconArrowRight /></IconBase>
