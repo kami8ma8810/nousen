@@ -8,8 +8,7 @@
     >
       <div class="fixed-note-inner">
         <p class="fixed-note-text">
-          ただいま２級建築・土木施工管理技士後期願書サービス中！お急ぎ下さい！
-          ただいま２級建築・土木施工管
+          ただいま２級建築・土木施工管理技士後期願書サービス中！<br />お急ぎ下さい！
         </p>
         <img
           class="fixed-note-icon"
