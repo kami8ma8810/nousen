@@ -609,7 +609,7 @@ export default {
       const moveScroll = window.pageYOffset;
       const target = document.getElementById('js-scroll_top');
       const note = document.getElementById('js-scroll_hidden');
-      if (100 < moveScroll) {
+      if (200 < moveScroll) {
         target.classList.add('display_none');
         note.classList.add('is-hidden');
       } else {
