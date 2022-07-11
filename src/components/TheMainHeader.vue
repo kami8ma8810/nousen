@@ -23,10 +23,10 @@
       <div class="information">
         <div class="application">
           <div class="tel overdisplay item">
-            <a href="tel:0356316011">
+            <a href="tel:0356326011">
               <img
                 src="../assets/img/common/tel.svg"
-                alt="03-5631-6011 （祝日を除く平日土日9:00~18:00）"
+                alt="03-5632-6011 （祝日を除く平日土日9:00~18:00）"
               />
             </a>
           </div>
