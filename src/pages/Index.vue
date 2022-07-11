@@ -1,5 +1,32 @@
 <template>
   <Layout>
+    <div
+      id="js-scroll_hidden"
+      :class="{ 'is-hidden': position > 100 }"
+      class="fixed-note"
+      v-show="isShow"
+    >
+      <div class="fixed-note-inner">
+        <p class="fixed-note-text">
+          ただいま２級建築・土木施工管理技士後期願書サービス中！<br />お急ぎ下さい！
+        </p>
+        <img
+          class="fixed-note-icon"
+          src="../assets/img/icon/note.svg"
+          alt=""
+          width="64"
+          height="36"
+        />
+        <button class="fixed-note-close" @click="closeNote">
+          <img
+            src="../assets/img/icon/plus.svg"
+            alt="閉じる"
+            width="25"
+            height="25"
+          />
+        </button>
+      </div>
+    </div>
     <div class="home">
       <section class="section01 hero-inner">
         <div class="qualification-list-wrapper">
@@ -554,6 +581,7 @@ export default {
     return {
       afterImgLoad: false,
       modal: false,
+      isShow: true,
     };
   },
   mounted() {
@@ -572,14 +600,20 @@ export default {
     window.removeEventListener('scroll', this.onScroll);
   },
   methods: {
+    closeNote: function() {
+      this.isShow = !this.isShow;
+    },
     //スクロールしたらスクロールimg非表示
     onScroll() {
       const moveScroll = window.pageYOffset;
       const target = document.getElementById('js-scroll_top');
-      if (0 < moveScroll) {
+      const note = document.getElementById('js-scroll_hidden');
+      if (200 < moveScroll) {
         target.classList.add('display_none');
+        note.classList.add('is-hidden');
       } else {
         target.classList.remove('display_none');
+        note.classList.remove('is-hidden');
       }
     },
     openModal() {
@@ -1259,6 +1293,91 @@ export default {
         }
       }
     }
+  }
+}
+
+.fixed-note {
+  position: fixed !important;
+  bottom: 40px;
+  left: 50%;
+  z-index: 100;
+  width: 680px;
+  transform: translateX(-50%);
+  box-shadow: 5px 5px 10px rgba(#000000, 0.3);
+  background-color: #fff;
+  border: 4px solid #f4891e;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+
+  @media screen and(max-width: 1000px) {
+    bottom: 20px;
+    width: 83%;
+    border-width: 2px;
+    border-radius: 6px;
+  }
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fixed-note-inner {
+  position: relative;
+  z-index: 0;
+  padding: 0.8em 3em;
+
+  @media screen and(max-width: 1000px) {
+    padding: 0.9em 1.5em 0.7em;
+  }
+}
+
+.fixed-note-text {
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b241a;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-justify: inter-character;
+  line-height: 1.7;
+  @media screen and(max-width: 1000px) {
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
+.fixed-note-icon {
+  position: absolute;
+  z-index: 10;
+  top: -18px;
+  left: -43px;
+  width: 54px;
+  @media screen and(max-width: 1000px) {
+    top: -8px;
+    left: -22px;
+    width: 32px;
+  }
+}
+
+.fixed-note-close {
+  position: absolute;
+  z-index: 20;
+  top: 9px;
+  right: 2px;
+  width: 1em;
+  padding: 0.5em;
+  box-sizing: content-box;
+  border: none;
+  background-color: transparent;
+  @media screen and(max-width: 1000px) {
+    top: -5px;
+    right: 2px;
+    width: 0.7em;
+  }
+  img {
+    transform: rotate(45deg);
+    transform-origin: center center;
   }
 }
 </style>

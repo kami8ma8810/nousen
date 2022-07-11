@@ -19,11 +19,11 @@ query {
 </static-query>
 
 <script>
-import LoadingManager from "@/components/LoadingManager.vue";
-import TheMainHeader from "@/components/TheMainHeader.vue";
-import TheMainFooter from "@/components/TheMainFooter.vue";
+import LoadingManager from '@/components/LoadingManager.vue';
+import TheMainHeader from '@/components/TheMainHeader.vue';
+import TheMainFooter from '@/components/TheMainFooter.vue';
 export default {
-  name: "App",
+  name: 'App',
   components: {
     LoadingManager,
     TheMainHeader,
@@ -40,7 +40,7 @@ export default {
       ],
       meta: [
         { key: `og:locale`, property: `og:locale`, content: `ja_JP` },
-        { key: `og:type`, property: `og:type`, content: `website`},
+        { key: `og:type`, property: `og:type`, content: `website` },
         {
           key: `og:site_name`,
           property: `og:site_name`,
@@ -52,8 +52,8 @@ export default {
           content: this.$static.metadata.siteOgImage,
         },
         {
-          name: "google-site-verification",
-          content: "t0mivQD1J0vbPeiIQmbr2AaoXVBc1uKniSoWfLUYxtI",
+          name: 'google-site-verification',
+          content: 't0mivQD1J0vbPeiIQmbr2AaoXVBc1uKniSoWfLUYxtI',
         },
       ],
     };
@@ -71,12 +71,12 @@ export default {
         (changes) => {
           changes.forEach((change) => {
             if (change.isIntersecting) {
-              change.target.classList.add("is-show");
+              change.target.classList.add('is-show');
             }
           });
         },
         {
-          rootMargin: "0px",
+          rootMargin: '0px',
           threshold: [1.0],
         }
       );
@@ -87,36 +87,36 @@ export default {
     returnScrollPosition: function() {
       //スクロールポイント　コンテンツのトップ位置からヘッダーの高さを差し引いた値
       const scrollTopPosition =
-        document.querySelector(".contents").getBoundingClientRect().top +
+        document.querySelector('.contents').getBoundingClientRect().top +
         window.pageYOffset -
-        document.querySelector(".main-header").clientHeight;
+        document.querySelector('.main-header').clientHeight;
 
       this.$SmoothScroll(
         scrollTopPosition,
         400, //duration
         null, //callback
         null, //context
-        "y" //軸
+        'y' //軸
       );
     },
   },
   mounted() {
     document.onscroll = (e) => {
       const scrollingElement =
-        "scrollingElement" in document
+        'scrollingElement' in document
           ? document.scrollingElement
-          : navigator.userAgent.indexOf("WebKit") != -1
+          : navigator.userAgent.indexOf('WebKit') != -1
           ? document.body
           : document.documentElement;
       this.position = scrollingElement.scrollTop;
     };
     const targets = Array.from(
-      document.querySelectorAll(".scroll-animation-item")
+      document.querySelectorAll('.scroll-animation-item')
     );
     this.startIntersectionObserver(targets);
 
     //googleformがある場合は次の質問に行くたびにスクロールポイントをトップに戻す
-    this.googleForm = document.querySelectorAll(".google_form")[0];
+    this.googleForm = document.querySelectorAll('.google_form')[0];
     if (this.googleForm) {
       // this.googleForm.addEventListener('load',this.returnScrollPosition(),false);
       this.googleForm.onload = this.returnScrollPosition;
@@ -131,7 +131,7 @@ export default {
 <style lang="scss">
 .layout {
   // font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+  font-family: '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -204,9 +204,9 @@ select {
   text-transform: none;
 }
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -222,17 +222,17 @@ input::-moz-focus-inner {
 input {
   line-height: normal;
 }
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 textarea {
@@ -270,11 +270,11 @@ em {
   font-style: normal;
 }
 @media print, screen and (min-width: 768px) {
-  a:not([href^="tel"]):not(.comingsoon):hover {
+  a:not([href^='tel']):not(.comingsoon):hover {
     opacity: 0.5;
   }
 }
-a[href^="tel"] {
+a[href^='tel'] {
   cursor: default;
   text-decoration: none;
 }
