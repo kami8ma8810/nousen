@@ -8,7 +8,8 @@
     >
       <div class="fixed-note-inner">
         <p class="fixed-note-text">
-          ただいま２級建築・土木施工管理技士後期願書サービス中！<br />お急ぎ下さい！
+          ２級建築・土木施工管理技士後期
+          通学・オンライン講座好評受付中！１級二次講座もございます！
         </p>
         <img
           class="fixed-note-icon"
