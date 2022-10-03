@@ -25,5 +25,8 @@
   "browserslist": [
     "last 4 versions",
     "ie 11"
-  ]
+  ],
+  "volta": {
+    "node": "12.16.1"
+  }
 }
