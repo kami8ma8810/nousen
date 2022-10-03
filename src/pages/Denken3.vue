@@ -84,10 +84,7 @@
 			</div>
 			<div class="fixed-btn">
 				<a href="/denken3-application">
-					<picture>
-						<source media="(min-width: 1001px)" srcset="../assets/img/common/pc_fixed_btn.svg" />
-						<img src="../assets/img/common/sp_fixed_btn.svg" alt="講座のお申し込み" width="641" height="110" />
-					</picture>
+					<img src="../assets/img/common/fixed_btn.svg" alt="講座のお申し込み" width="534" height="92" />
 				</a>
 			</div>
 		</div>
@@ -372,11 +369,14 @@ export default {
 	position: fixed;
 	z-index: 10;
 	bottom: 10px;
-	left: 50%;
 	width: 84%;
 	max-width: 528px;
+	left: 50%;
 	transform: translateX(-50%);
 	@media print, screen and (min-width: 1001px) {
+		left: auto;
+		right: 10px;
+		transform: none;
 		width: 528px;
 	}
 }
