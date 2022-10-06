@@ -1,42 +1,20 @@
 <template>
 	<Layout>
-		<div
-			id="js-scroll_hidden"
-			:class="{ 'is-hidden': position > 100 }"
-			class="fixed-note"
-			v-show="isShow"
-		>
+		<div id="js-scroll_hidden" :class="{ 'is-hidden': position > 100 }" class="fixed-note" v-show="isShow">
 			<div class="fixed-note-inner">
 				<p class="fixed-note-text">
 					第三種電気主任技術者下期オンライン講座受付開始しました！<br />１０月１４日まで早期割引実施中。お早めにご検討下さい！
 				</p>
-				<img
-					class="fixed-note-icon"
-					src="../assets/img/icon/note.svg"
-					alt=""
-					width="64"
-					height="36"
-				/>
+				<img class="fixed-note-icon" src="../assets/img/icon/note.svg" alt="" width="64" height="36" />
 				<button class="fixed-note-close" @click="closeNote">
-					<img
-						src="../assets/img/icon/plus.svg"
-						alt="閉じる"
-						width="25"
-						height="25"
-					/>
+					<img src="../assets/img/icon/plus.svg" alt="閉じる" width="25" height="25" />
 				</button>
 			</div>
 		</div>
 		<div class="home">
 			<section class="section01 hero-inner">
 				<div class="qualification-list-wrapper">
-					<transition-group
-						v-if="afterImgLoad"
-						appear
-						name="appear-animation"
-						tag="div"
-						class="qualification-list-wrap"
-					>
+					<transition-group v-if="afterImgLoad" appear name="appear-animation" tag="div" class="qualification-list-wrap">
 						<div class="item item01 denken" key="item01">
 							<g-link to="/denken3">
 								<span>電験</span><br />
@@ -110,10 +88,7 @@
 									srcset="../assets/img/front/section01/main_catch_sp.svg"
 									alt="「勉強の時間がない」という問題を解決しよう。"
 								/>
-								<img
-									src="../assets/img/front/section01/main_catch.svg"
-									alt="「勉強の時間がない」という問題を解決しよう。"
-								/>
+								<img src="../assets/img/front/section01/main_catch.svg" alt="「勉強の時間がない」という問題を解決しよう。" />
 							</picture>
 						</div>
 					</transition-group>
@@ -123,9 +98,7 @@
 				</div>
 				<div class="more_qualification">
 					<g-link to="/licenses">
-						資格一覧はこちら<IconBase class="icon"
-							><IconDoubleArrowRight
-						/></IconBase>
+						資格一覧はこちら<IconBase class="icon"><IconDoubleArrowRight /></IconBase>
 					</g-link>
 				</div>
 			</section>
@@ -135,10 +108,7 @@
 			</section>
 			<section class="section03">
 				<h2 class="section-title">
-					<img
-						src="../assets/img/front/reason_main_headline.svg"
-						alt="能センが選ばれる5つの理由"
-					/>
+					<img src="../assets/img/front/reason_main_headline.svg" alt="能センが選ばれる5つの理由" />
 				</h2>
 				<div class="reason-wrapper">
 					<Reason
@@ -181,8 +151,7 @@
 									'移動や宿泊の必要が無く、<i class=scroll-animation-item>予定を制約されることもありません</i>。<br>出張制限のある方や教室での受講を控えたい方にも。',
 								],
 								movieSrc: 'https://www.youtube.com/embed/xquePEivmr8',
-								movieText:
-									'※動画は第三種電気主任技術者の講義です。基礎講座の動画を一部、3分程度ご覧いただけます。',
+								movieText: '※動画は第三種電気主任技術者の講義です。基礎講座の動画を一部、3分程度ご覧いただけます。',
 							},
 							{
 								title: 'front/section05_title3.svg',
@@ -264,16 +233,8 @@
 					/>
 				</div>
 				<div class="last-message">
-					<p>
-						学び方から学べる。<br
-							class="under_display"
-						/>サービスが受講者目線。<br />それが能センです。
-					</p>
-					<img
-						src="../assets/img/common/main_logo.svg"
-						alt="能セン 学び方を学ぶ"
-						class="last-message-logo"
-					/>
+					<p>学び方から学べる。<br class="under_display" />サービスが受講者目線。<br />それが能センです。</p>
+					<img src="../assets/img/common/main_logo.svg" alt="能セン 学び方を学ぶ" class="last-message-logo" />
 				</div>
 				<div class="btn__apply __bottom">
 					<a @click="openModal"
@@ -313,9 +274,7 @@
 				<ul>
 					<li class="denken">
 						<p class="title">第三種<br class="overdisplay" />電気主任技術者</p>
-						<g-link to="/denken3-application" class="application-form-link">
-							お申し込みフォーム </g-link
-						><br />
+						<g-link to="/denken3-application" class="application-form-link"> お申し込みフォーム </g-link><br />
 						<!-- <a
               href="/3_denken_tuugaku_FAX_31year.pdf"
               target="_blank"
@@ -333,12 +292,7 @@
             >
               FAX用紙 通信(PDF)
             </a> -->
-						<a
-							href="/3_denken_FAX_2022year.pdf"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="application-fax-link"
-						>
+						<a href="/3_denken_FAX_2022_after.pdf" target="_blank" class="application-fax-link">
 							FAX用紙(PDF)
 						</a>
 					</li>
@@ -358,15 +312,8 @@
           </li> -->
 					<li class="denkikouji">
 						<p class="title">第二種<br class="overdisplay" />電気工事士</p>
-						<g-link to="/koujishi-application" class="application-form-link">
-							お申し込みフォーム </g-link
-						><br />
-						<a
-							href="/2_denki_FAX_2022year.pdf"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="application-fax-link"
-						>
+						<g-link to="/koujishi-application" class="application-form-link"> お申し込みフォーム </g-link><br />
+						<a href="/2_denki_FAX_2022year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
 							FAX用紙(PDF)
 						</a>
 					</li>
@@ -398,12 +345,8 @@
             </a>
           </li> -->
 					<li class="kenchiku">
-						<p class="title">
-							1・2級<br class="overdisplay" />建築施工管理技士
-						</p>
-						<g-link to="/kenchiku-s-application" class="application-form-link">
-							お申し込みフォーム </g-link
-						><br />
+						<p class="title">1・2級<br class="overdisplay" />建築施工管理技士</p>
+						<g-link to="/kenchiku-s-application" class="application-form-link"> お申し込みフォーム </g-link><br />
 						<!-- <a
               href="/kenchiku_1_FAX_31year.pdf"
               target="_blank"
@@ -420,12 +363,7 @@
             >
               FAX用紙 2級(PDF)
             </a> -->
-						<a
-							href="/kenchiku_FAX_2022year.pdf"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="application-fax-link"
-						>
+						<a href="/kenchiku_FAX_2022year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
 							FAX用紙(PDF)
 						</a>
 					</li>
@@ -454,12 +392,8 @@
             </a>
           </li> -->
 					<li class="doboku">
-						<p class="title">
-							1・2級<br class="overdisplay" />土木施工管理技士
-						</p>
-						<g-link to="/doboku-s-application" class="application-form-link">
-							お申し込みフォーム </g-link
-						><br />
+						<p class="title">1・2級<br class="overdisplay" />土木施工管理技士</p>
+						<g-link to="/doboku-s-application" class="application-form-link"> お申し込みフォーム </g-link><br />
 						<!-- <a
               href="/doboku_1_FAX_31year.pdf"
               target="_blank"
@@ -476,12 +410,7 @@
             >
               FAX用紙 2級(PDF)
             </a> -->
-						<a
-							href="/doboku_FAX_2022year.pdf"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="application-fax-link"
-						>
+						<a href="/doboku_FAX_2022year.pdf" target="_blank" rel="noopener noreferrer" class="application-fax-link">
 							FAX用紙(PDF)
 						</a>
 					</li>
