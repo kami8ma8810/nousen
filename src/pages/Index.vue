@@ -3,7 +3,10 @@
 		<div id="js-scroll_hidden" :class="{ 'is-hidden': position > 100 }" class="fixed-note" v-show="isShow">
 			<div class="fixed-note-inner">
 				<p class="fixed-note-text">
-					第三種電気主任技術者下期オンライン講座受付開始しました！<br />１０月１４日まで早期割引実施中。お早めにご検討下さい！
+					<g-link to="/denken3"
+						>第三種電気主任技術者（下期オンライン講座）好評受付中！<br />問題解法に特化した特選問題講座も新設！
+						詳しくはこちら</g-link
+					>
 				</p>
 				<img class="fixed-note-icon" src="../assets/img/icon/note.svg" alt="" width="64" height="36" />
 				<button class="fixed-note-close" @click="closeNote">
