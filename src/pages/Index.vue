@@ -1270,7 +1270,7 @@ export default {
         }
       }
     }
-    .title {
+		.title {
       color: #000;
       display: flex;
       &:before {
