@@ -97,7 +97,7 @@ export default {
   background-color: #f2f2f2;
   position: relative;
   margin-top: 50px;
-  & /deep/ a {
+  & ::v-deep a {
     text-decoration: underline;
   }
 }
@@ -121,13 +121,13 @@ export default {
   .head {
     background-color: #e60039;
   }
-  .info-section /deep/ a {
+  .info-section ::v-deep a {
     color: #e60039;
   }
-  .course_outline.info-section /deep/ h5 {
+  .course_outline.info-section ::v-deep h5 {
     background: #e60039;
   }
-  .course_outline.info-section /deep/ i {
+  .course_outline.info-section ::v-deep i {
     font-weight: bold;
     color: #e60039;
   }
@@ -136,7 +136,7 @@ export default {
   .head {
     background-color: #b60081;
   }
-  .info-section /deep/ a {
+  .info-section ::v-deep a {
     color: #b60081;
   }
 }
@@ -144,13 +144,13 @@ export default {
   .head {
     background-color: #00a73c;
   }
-  .info-section /deep/ a {
+  .info-section ::v-deep a {
     color: #00a73c;
   }
-  .course_outline.info-section /deep/ h5 {
+  .course_outline.info-section ::v-deep h5 {
     background: #00a73c;
   }
-  .course_outline.info-section /deep/ i {
+  .course_outline.info-section ::v-deep i {
     font-weight: bold;
     color: #00a73c;
   }
@@ -159,7 +159,7 @@ export default {
   .head {
     background-color: #00afcc;
   }
-  .info-section /deep/ a {
+  .info-section ::v-deep a {
     color: #00afcc;
   }
 }
@@ -167,30 +167,30 @@ export default {
 /* オンライン講座 */
 .online{
   &.info-section {
-    /deep/ a {
+    ::v-deep a {
       color: #000;
       font-weight: bold;
     }
-    /deep/ hr{
+    ::v-deep hr{
       margin: 1.5em 0;
     }
   }
 }
 .course_outline.info-section {
-  /deep/ h4 {
+  ::v-deep h4 {
     font-weight: bold;
     margin-top: 3em;
     font-size: 18px;
     color: #3b241a;
   }
-  /deep/ h5 {
+  ::v-deep h5 {
     display: inline;
     padding: 0.4em 0.5em;
     border-radius: 50px;
     font-size: 16px;
     color: #fff;
   }
-  /deep/ h6 {
+  ::v-deep h6 {
     font-weight: bold;
     font-size: 15px;
     margin: 0.5em 0;
@@ -199,12 +199,12 @@ export default {
       display: inline;
   }
   }
-  /deep/ p {
+  ::v-deep p {
     margin: 0.3em 0 0;
   }
 }
 
-.apply.info-section /deep/ i {
+.apply.info-section ::v-deep i {
   font-weight: bold;
   color:#e60039;
 }

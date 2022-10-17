@@ -78,10 +78,10 @@ export default {
     font-size: 20px;
   }
 }
-.news-content /deep/ p:first-child {
+.news-content ::v-deep p:first-child {
   margin-top: 0;
 }
-.news-content /deep/ a {
+.news-content ::v-deep a {
   text-decoration: underline;
 }
 </style>

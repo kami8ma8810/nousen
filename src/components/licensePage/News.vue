@@ -68,7 +68,7 @@ export default {
     padding-left: 0;
     padding-right: 0;
   }
-  /deep/ a {
+  ::v-deep a {
     text-decoration: underline;
     word-break: break-all;
   }

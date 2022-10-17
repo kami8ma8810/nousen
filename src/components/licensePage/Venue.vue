@@ -103,7 +103,7 @@ export default {
   background-color: #f2f2f2;
   position: relative;
   margin-top: 50px;
-  & /deep/ a {
+  & ::v-deep a {
     text-decoration: underline;
   }
 }
@@ -172,7 +172,7 @@ export default {
   }
 }
 .details {
-  /deep/ h1 {
+  ::v-deep h1 {
     display: inline-block;
     font-size: 1em;
     padding: 0 1em;
@@ -192,7 +192,7 @@ export default {
 .address-map {
   border-top: 1px solid #999;
   @media print, screen and (min-width: 1001px) {
-    display: flex;  
+    display: flex;
     align-items: flex-end;
     justify-content: space-between;
   }
@@ -214,18 +214,18 @@ export default {
       color: #e60039;
     }
   }
-  .info-section /deep/ a {
+  .info-section ::v-deep a {
     color: #e60039;
   }
   .venue-section {
-    /deep/ a {
+    ::v-deep a {
       color: #e60039;
     }
     .details {
-      /deep/ h1 {
+      ::v-deep h1 {
         background-color: #e60039;
       }
-      /deep/ b {
+      ::v-deep b {
         color: #e60039;
       }
     }
@@ -241,18 +241,18 @@ export default {
       color: #b60081;
     }
   }
-  .info-section /deep/ a {
+  .info-section ::v-deep a {
     color: #b60081;
   }
   .venue-section {
-    & /deep/ a {
+    & ::v-deep a {
       color: #b60081;
     }
     .details {
-      /deep/ h1 {
+      ::v-deep h1 {
         background-color: #b60081;
       }
-      /deep/ b {
+      ::v-deep b {
         color: #b60081;
       }
     }
@@ -268,18 +268,18 @@ export default {
       color: #00a73c;
     }
   }
-  .info-section /deep/ a {
+  .info-section ::v-deep a {
     color: #00a73c;
   }
   .venue-section {
-    & /deep/ a {
+    & ::v-deep a {
       color: #00a73c;
     }
     .details {
-      /deep/ h1 {
+      ::v-deep h1 {
         background-color: #00a73c;
       }
-      /deep/ b {
+      ::v-deep b {
         color: #00a73c;
       }
     }
@@ -295,18 +295,18 @@ export default {
       color: #00afcc;
     }
   }
-  .info-section /deep/ a {
+  .info-section ::v-deep a {
     color: #00afcc;
   }
   .venue-section {
-    & /deep/ a {
+    & ::v-deep a {
       color: #00afcc;
     }
     .details {
-      /deep/ h1 {
+      ::v-deep h1 {
         background-color: #00afcc;
       }
-      /deep/ b {
+      ::v-deep b {
         color: #00afcc;
       }
     }

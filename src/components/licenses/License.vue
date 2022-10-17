@@ -243,7 +243,7 @@ export default {
 }
 .outline-item {
   border-top: 1px dotted #808080;
-  /deep/ a {
+  ::v-deep a {
     text-decoration: underline;
   }
 }
@@ -300,7 +300,7 @@ export default {
   text-align: center;
   font-weight: bold;
   margin-top: 50px;
-  /deep/ a {
+  ::v-deep a {
     text-decoration: underline;
   }
 }
