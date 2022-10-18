@@ -4,10 +4,7 @@
     <article
       class="news-article"
       v-for="(item, index) in $static.allContentfulNewsPost.edges"
-      :key="index"
-    >
-      <span class="news-date">{{ item.node.date }}<br /> </span>
-      <div class="news-content" v-html="richtextToHTML(item.node.article)" />
+      :key="index"><span class="news-date">{{ item.node.date }}<br /></span><div class="news-content" v-html="richtextToHTML(item.node.article)" />
     </article>
   </div>
 </template>
@@ -78,10 +75,10 @@ export default {
     font-size: 20px;
   }
 }
-.news-content ::v-deep p:first-child {
+.news-content::v-deep p:first-child {
   margin-top: 0;
 }
-.news-content ::v-deep a {
+.news-content::v-deep a {
   text-decoration: underline;
 }
 </style>

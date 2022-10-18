@@ -270,7 +270,9 @@ export default {
   p {
     margin: 0;
   }
-  ::v-deep i {
+}
+
+.reason-explanation::v-deep i {
     background: -webkit-linear-gradient(to right, #f4b073 50%, transparent 50%);
     background: -moz-linear-gradient(to right, #f4b073 50%, transparent 50%);
     background: linear-gradient(to right, #f4b073 50%, transparent 50%);
@@ -281,13 +283,13 @@ export default {
     &.is-show {
       background-position: 0% 0;
     }
-  }
-  ::v-deep span {
+}
+
+.reason-explanation::v-deep span {
     font-size: 13px;
     color: #4d4d4d;
     display: block;
     line-height: 1.6;
-  }
 }
 .reason-more {
   display: block;

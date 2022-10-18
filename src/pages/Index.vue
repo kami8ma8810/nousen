@@ -2,7 +2,6 @@
   <Layout>
     <div
       id="js-scroll_hidden"
-      :class="{ 'is-hidden': position > 100 }"
       class="fixed-note"
       v-show="isShow"
     >

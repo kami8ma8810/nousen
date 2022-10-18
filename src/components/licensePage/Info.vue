@@ -97,7 +97,7 @@ export default {
   background-color: #f2f2f2;
   position: relative;
   margin-top: 50px;
-  & ::v-deep a {
+  ::v-deep a {
     text-decoration: underline;
   }
 }

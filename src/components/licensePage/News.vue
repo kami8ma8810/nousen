@@ -68,10 +68,11 @@ export default {
     padding-left: 0;
     padding-right: 0;
   }
-  ::v-deep a {
+
+}
+.news-inner::v-deep a{
     text-decoration: underline;
     word-break: break-all;
-  }
 }
 .no-contents {
   text-align: center;
