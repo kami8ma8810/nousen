@@ -4,10 +4,7 @@
       <div class="fixed-note-inner">
         <p class="fixed-note-text">
           <g-link to="/denken3"
-            >第三種電気主任技術者（下期オンライン講座）好評受付中！<br /><span
-              style="margin-right:1em"
-              >特選問題講座も新設！受験申請１２/８まで</span
-            ><span style="display:inline-block;">お急ぎ下さい</span></g-link
+            >第三種電気主任技術者（下期オンライン講座）好評配信中！<br />全科目試験日まで視聴無制限！３月中旬まで募集しております</g-link
           >
         </p>
         <img
